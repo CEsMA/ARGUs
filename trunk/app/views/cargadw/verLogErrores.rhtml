@@ -1,0 +1,16 @@
+<h1>Errores de formato para el archivo de entrada.</h1>
+
+<input type="button" class="boton" value="Cerrar esta ventana" onclick="self.close()">
+<% if @errores.nil? %>
+    <h2>No hay errores para mostrar.</h2>
+
+<% else %>
+   <table class="tablaErrores">
+        <% for linea in @errores %>
+           <tr class ="<%= cycle('list-line-odd', 'list-line-even') %>" >
+              <td><%= linea %></td>
+           <tr>
+        <% end %>
+      </table>    
+<% end %>
+<input type="button" class="boton" value="Cerrar esta ventana" onclick="self.close()">

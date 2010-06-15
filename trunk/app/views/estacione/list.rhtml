@@ -1,0 +1,19 @@
+<%= javascript_include_tag :defaults %>
+<h1>Listado de estaciones hidroclimáticas.</h1>
+
+<div class="searchbox">
+  <% form_tag :action => 'show' do %>
+      <%= image_tag("/images/search.gif",:class => "a-img")%>
+      <%= text_field_with_auto_complete :estacione, :nombre , options = {:size => "20", :maxlength => "30", :class =>"textfield", :style => "padding: 0 0 0 20px;"} %>
+  <%= submit_tag "Consultar", :class => "search"%>
+  <% end %>
+  <h5>Para realizar la consulta directa, escriba el nombre exacto de la estaci&oacute;n en este campo</h5>
+</div>
+
+
+
+  <div id="table">
+          <%= render :partial => "list" %>  
+  </div>
+
+

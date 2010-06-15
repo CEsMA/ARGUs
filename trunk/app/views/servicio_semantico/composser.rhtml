@@ -1,0 +1,42 @@
+<h1>Composici&oacute;n y ejecuci&oacute;n de servicios.</h1>
+<h4>Utilice comas como delimitadores para las entradas y las salidas. </h4>
+
+<% if @result.nil? %>
+   <%= form_tag :action => 'consultar' %>    
+           <p><label for="composser_algorithm"> * Algoritmo:</label><br/>
+           <%=text_field_tag 'algoritmo', value = 'SamUnfolding', options = {:readonly => true, :class => "textfield"}%></p>
+            
+             <p><label for="composser_inputs"> * Entradas:</label><br/>
+            <%= text_field_tag "inputs",nil, :class => "textfield" %>
+            <h5> Ejemplo: precipitaci&oacute;n, temperatura, incidencia</h5></p>
+            
+            <p><label for="composser_outputs"> * Salidas:</label><br/>
+            <%= text_field_tag "outputs",nil, :class => "textfield"%>
+             <h5> Ejemplo: mediaEvaporaci&oacute;n, &iacute;ndiceRiesgo</h5></p>
+                   
+            <%= submit_tag 'Componer y ejecutar', options = {:class => "boton"} %>
+    <%= end_form_tag %>
+    
+    
+  
+
+<%else%>
+    <h2> El resultado obtenido para los par&aacute;metros provistos, es el siguiente: </h2>
+    <h3><%= @result%></h3>
+  
+<%end%>
+
+<br/><br/>
+<div class="derecha">
+      <%= link_to image_tag("back4.png",:border => 0 ) +'Regresar  ', :controller => 'servicio', :action => 'list' %>
+      <%= link_to image_tag("home.png",:border => 0 ) +'Inicio  ', :controller=>'usuario', :action => 'welcome' %>
+</div>
+<br/>
+
+
+<script type="text/javascript"> 
+    var field1 = new LiveValidation('inputs', {onlyOnSubmit: true});
+    var field2 = new LiveValidation('outputs', {onlyOnSubmit: true});
+    field1.add(Validate.Presence);   
+    field2.add(Validate.Presence); 
+ </script>

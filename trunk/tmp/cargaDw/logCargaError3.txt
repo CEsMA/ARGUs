@@ -1,0 +1,7 @@
+En la línea 1, el formato de la fecha es inválido.
+En la línea 2, el formato de la fecha es inválido.
+En la línea 3, el formato de la fecha es inválido.
+En la línea 4, el formato de la fecha es inválido.
+En la línea 5, el formato de la fecha es inválido.
+En la línea 6, el formato de la fecha es inválido.
+En la línea 7, el formato de la fecha es inválido.

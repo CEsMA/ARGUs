@@ -1,0 +1,25 @@
+<h1>Detalles de la consulta.</h1>
+
+<% for column in Consulta.content_columns %> 
+      <%= column.human_name %>:
+        <p><%=h @consulta.send(column.name) %></p>
+<% end %>
+
+      <% if @tagscomp.nil? || @tagscomp.to_s.eql?("") %>
+        <h2> La consulta no tiene palabras claves asociadas.</h2>
+      <% else %>
+        <h2> Palabras claves asociadas a la consulta:</h2>
+        <p><h3><%= @tagscomp %></h3></p>
+      <% end %>
+
+<br/>
+<br/>
+
+<div class="derecha">
+    <%= link_to image_tag("back4.png",:border => 0 ) + 'Regresar', :action => 'list' %>
+    <% if (current_usuario.tipo.eql?("Administrador")  || @consulta.usuario_id == current_usuario.id) %>
+		<%= link_to image_tag("editar.png", :border => 0 ) + 'Editar', :action => 'edit', :id => @consulta %> 
+	<% end %>
+</div>
+
+     

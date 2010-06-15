@@ -1,0 +1,27 @@
+<!-- 
+    Presenta el listado de consultas ya filtrado de acuerdo a la palabra clave indicada en la accion listarOpc.
+-->
+
+  <h1> Listado de consultas asociadas a "<%= @tag%>".</h1>
+  <% if @consultasShow.nil? %>
+
+      <h2>No hay consultas para mostrar.</h2>
+
+  <% else %>
+      <table class="table">
+          <% contador = 0 %>
+          <% while contador < (@consultasShow.size)/4 %>
+              <tr class ="<%= cycle('list-line-odd', 'list-line-even') %>" >
+                <td><%= @consultasShow[1+contador*4] %></td>
+                 <td><%= link_to "[Consultar]", :action => "consultarRepositorio", :id=> @consultasShow[contador*4] ,:title => @consultasShow[1+contador*4], :id_pred => @consultasShow[2+contador*4], :sql_query => @consultasShow[3+contador*4]%></td>
+              </tr>
+              <% contador = contador+1 %>
+          <%end%>
+      </table>
+  <%end%>
+
+<br/><br/><br/>
+ <div class="derecha">
+      <%= link_to image_tag("back4.png",:border => 0 ) + 'Regresar', :controller=>'consultasfisicas', :action => 'listarOpc' %>
+      <%= link_to image_tag("home.png",:border => 0 ) + 'Inicio', :controller=>'usuario',:action => 'welcome' %>
+</div>

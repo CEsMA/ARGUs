@@ -1,0 +1,16 @@
+<%= error_messages_for 'variable_hidroclimatica' %>
+
+<!--[form:variable_hidroclimatica]-->
+<p><label for="variable_hidroclimatica_nombre_hc">Nombre</label><br/>
+<%= text_field 'variable_hidroclimatica', 'nombre_hc'  %></p>
+
+<p><label for="variable_hidroclimatica_tipo_hc">Tipo de Variable</label><br/>
+<%= select('variable_hidroclimatica', 'tipo_hc' , { "Simple" => "S", "Derivada" => "D"}) %></p>
+
+<p><label for="variable_hidroclimatica_descripcion_hc">Descripcion</label><br/>
+<%= text_area 'variable_hidroclimatica', 'descripcion_hc'  %></p>
+
+<p><label for="variable_hidroclimatica_acumulada_hc">Variable acumulativa??</label><br/>
+<%= select('variable_hidroclimatica', 'acumulada_hc', { "Si" => "S", "No" => "N"})  %></p>
+<!--[eoform:variable_hidroclimatica]-->
+

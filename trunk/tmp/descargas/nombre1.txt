@@ -1,0 +1,10 @@
+CONSULTA AVANZADA DE USUARIOS<h6>nombre    |    apellido</h6>
+Luis Daniel | Ibanyez
+Edna | Ruckhaus
+Alfredo | Garboza
+Ana Isabel | Prieto
+Beatriz | Avila
+Alfre | Ramirez
+nombre | apellido
+Soraya | Abad-Mota
+Beatriz | Avila
