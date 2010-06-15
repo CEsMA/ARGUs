@@ -1,0 +1,21 @@
+<%= error_messages_for 'solicitude' %>
+
+<p><label for="solicitude_requerimiento">* Asunto/requerimiento:</label><br/>
+<%= select("solicitude", "requerimiento", Requerimiento.find(:all).collect {|c| c.requerimiento }) %></p>
+
+<p><label for="solicitude_comentarios">Comentarios:</label><br/>
+<%= text_area 'solicitude', 'comentarios', options = {:cols => 50, :rows => 5, :maxlength => 250, :class => "textfield"} %>
+
+<p><label for="solicitude_prioridad"> Prioridad: </label><br/>
+<select id="solicitude_prioridad" name="solicitude[prioridad]">
+    <option value="No prioritario">No prioritario</option>
+    <option value="Normal">Normal</option>
+    <option value="Urgente">Urgente</option>
+</select></p>
+
+<script type="text/javascript">
+    var field1 = new LiveValidation('solicitude_comentarios', {onlyOnSubmit: true});
+    field1.add( Validate.Length, { maximum: 250 })
+</script>
+
+

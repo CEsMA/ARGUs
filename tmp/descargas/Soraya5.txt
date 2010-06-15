@@ -1,0 +1,2 @@
+Obtener el nombre de las estaciones que contengan cierta letra o frase. <i><b>El caracter '%' sirve de "comodín". Por ejemplo, si se desea conocer las estaciones que empiecen por la letra 'G', se debe colocar 'G%'. Si se desea conocer las estaciones que contengan la sílaba 'LAR', se debe colocar '%LAR%'.</b></i><h6>nombre</h6>
+COROZO-PANDO 

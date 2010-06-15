@@ -1,0 +1,59 @@
+<%= javascript_include_tag :defaults %>
+<%= stylesheet_link_tag "/javascripts/jscalendar-1.0/calendar-win2k-cold-1.css" %>
+<%= javascript_include_tag "jscalendar-1.0/calendar.js" %>
+<%= javascript_include_tag "jscalendar-1.0/lang/calendar-es.js" %>
+<%= javascript_include_tag "jscalendar-1.0/calendar-setup.js" %>
+
+<%= error_messages_for 'usuario' %>
+
+<h1>Editar usuario.</h1>
+
+<% form_tag :action => 'update', :id => @usuario, :unico => "unico" do %>
+	
+	<p><label for="usuario_nombre">* Nombre:</label><br/>
+	<%= text_field 'usuario', 'nombre', options = {:size => "20", :maxlength => "20", :class =>"textfield"}   %></p>
+	
+	<p><label for="usuario_apellido">* Apellido</label><br/>
+	<%= text_field 'usuario', 'apellido', options = {:size => "20", :maxlength => "20", :class =>"textfield"}  %></p>
+
+	<p><label for="usuario_fecha_nacimiento">* Fecha de Nacimiento:</label><br/>
+        <%= date_select 'usuario', 'fecha_nacimiento', options = {:class => "textfield"} %>
+	
+	<p><label for="usuario_telefono">Tel&eacute;fono:</label><br/>
+	<%= text_field 'usuario', 'telefono', options = {:size => "20", :maxlength => "12", :class =>"textfield"}    %></p>
+	
+	<p><label for="usuario_nivel_estudio">* Nivel estudio:</label><br/>
+	<%= text_field 'usuario', 'nivel_estudio', options = {:size => "25", :maxlength => "25", :class =>"textfield"}  %></p>
+	
+	<p><label for="usuario_campo_trabajo">* Campo trabajo:</label><br/>
+	<%= text_field 'usuario', 'campo_trabajo', options = {:size => "30", :maxlength => "30", :class =>"textfield"}  %></p>
+	
+	<p><label for="usuario_direccion_hab">Direccion habitaci&oacute;n:</label><br/>
+        <%= text_area 'usuario', 'direccion_hab', "cols" => 50, "rows" => 4, "maxlength" => 200%></p>
+	
+	<p><label for="usuario_email">* Email:</label><br/>
+	<%= text_field 'usuario', 'email_address', options = {:size => "30", :maxlength => "30",:class =>"textfield"}  %></p>
+  <%= submit_tag 'Actualizar', :class => "boton" %>
+<% end %>
+
+<div class="derecha">
+    <%= link_to image_tag("back4.png",:border => 0 ) + 'Regresar', :action => 'modificar', :id => @usuario %>
+</div>
+
+
+<script type="text/javascript"> 
+    var field4 = new LiveValidation('usuario_nombre', {onlyOnSubmit: true});
+    var field5 = new LiveValidation('usuario_apellido', {onlyOnSubmit: true});
+    var field6 = new LiveValidation('usuario_telefono', {onlyOnBlur: true});
+    var field7 = new LiveValidation('usuario_nivel_estudio', {onlyOnSubmit: true});
+    var field8 = new LiveValidation('usuario_campo_trabajo', {onlyOnSubmit: true});
+    var field10 = new LiveValidation('usuario_email_address', {onlyOnBlur: true});    
+    var field11 = new LiveValidation('usuario_fecha_nacimiento', {onlyOnSubmit: true});
+    field4.add(Validate.Presence); 
+    field5.add(Validate.Presence); 
+    field6.add(Validate.Numericality, {minimum: 100000, maximum: 999999999999});
+    field7.add(Validate.Presence);   
+    field8.add(Validate.Presence); 
+    field10.add(Validate.Email); 
+    field11.add(Validate.Presence); 
+ </script>

@@ -1,0 +1,79 @@
+ EJEMPLO DEL ARCHIVO QUE DEBE PROVEERSE:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+	1.80 | MedicionComentario | 12/21/2007 | 15:30 | observaTiempo | diario | nivelAgrega I
+	129.0 | medicion buena | 10/21/2007 | 02:30 | observaTiempo | semanal | nivelAgrega I
+	1.0 | medicion bajita | 10/22/2007 | 04:30 || horario | nivelAgrega I
+	98.0 | medicion muy alta | 9/21/2006 | 16:30 || mensual | nivelAgrega I
+	12.0 | nada que decir | 12/12/2007 | 02:30 || diario | nivelAgrega I
+	13.0 | muy mal esta medicion | 02/10/2007 | 04:30 | | diario | nivelAgrega I
+	19.2 || 02/20/2005 | 16:30 || mensual | nivelAgrega I
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	EXPLICACION Y DETALLES DEL FORMATO QUE DEBE PROVEERSE
+*******************************************************************************************************
+  Para realizar la carga de un paquete de datos al repositorio usted deberá proveer un archivo de texto plano, donde todas sus líneas deben apegarse al formato que a continuación se presenta:
+       Medida | ObservM | Fecha | Hora | ObservT | Granularidad | NivelAg
+
+  Como se oberva en la especificación que se encuentra dentro del cuadro, cada línea debe con-
+tener siete parámetros, cada uno separado por “|”. Algunos parámetros son opcionales, pero los
+delimitadores son OBLIGATORIOS, en consecuencia, toda línea SIEMPRE debe contener seis “|”.
+
+  A continuación se describen los elementos que deben (y en algunos casos, pueden) incluirse como
+parte de cada medición:                     
+   1. Medida: representa el valor numérico de la medición que se desea registrar.
+            Tipo y restricciones: elemento de tipo flotante, sin restricciones de valores mínimo o máximo.
+            Ejemplo: 3.33, 2.78, 18, 189.02.
+            Mandatorio u opcional: MANDATORIO.
+
+   2. ObservM: cualquier comentario u observación que se desee hacer sobre el valor de la medición.
+	    Tipo y restricciones: expresión de tipo alfa-numérico de hasta 255 caracteres.
+            Mandatorio u opcional: OPCIONAL.
+
+   3. Fecha: día, mes y año en que se realizó la medición.
+            Tipo y restricciones: debe regirse por el formato MM/DD/YYYY, donde MM, DD y YYYY deben ser mes, día y año 	 
+              válidos respectivamente.
+            Ejemplo: 12/21/1990, 01/02/2002, 07/29/2006.
+            Mandatorio u opcional: MANDATORIO.
+
+   4. Hora: hora y minuto en que se realizó la medición.
+            Tipo y restricciones: debe regirse por el formato HH:MM, donde HH y MM deben ser hora y minuto válidos 
+	      expresados bajo estándar 24H.
+	    Ejemplo: 12:23, 01:03, 17:40.
+            Mandatorio u opcional: MANDATORIO.
+
+   5. ObservT: cualquier comentario u observación que se desee hacer sobre la fecha y hora de la medición.
+           Tipo y restricciones: expresión de tipo alfa-numérico de hasta 255 caracteres.
+           Mandatorio u opcional: OPCIONAL.
+
+   6. Granularidad: se refiere a la periodicidad con que son tomadas las mediciones.
+           Tipo y restricciones: expresión de tipo alfa-numérico de hasta 30 caracteres, el cual debe ser un tipo 
+             válido en el sistema.
+           Ejemplo: diario, mensual, semanal.
+           Mandatorio u opcional: MANDATORIO.
+
+   7. NivelAg: se refiere al nivel de agregación asociado a la medida, es decir, cuantas modificaciones ha sufrido la  
+        medida por intervención humana.
+
+
+
+
+   Para aquellos parámetros que indican como parte de sus restricciones que “debe ser un tipo válido
+en el sistema”, póngase en contacto con el administrador para conocer cuáles son los posibles valores
+considerados como permitidos en ese momento.
+
+   NOTA: Si usted intenta cargar algún archivo con valores no permitidos o que no se adapte al
+formato de carga exigido, el módulo de validación hará que la operación de registro de mediciones
+falle y le mostrará un log que indica línea a línea, todos los problemas que debe resolver para que el
+archivo pueda ser cargado al repositorio de manera exitosa.
+
+   Todas las mediciones contenidas en un archivo de entrada, deben estar asociadas a una misma:
+variable, estación hidroclimática y unidad de medición. Todos estos parámetros deben ser provistos
+por usted en la pantalla del módulo de carga de datos.
+
+
+
+					          Creado el 28/02/2008 por G. Tepedino y A. Garboza. 
+*******************************************************************************************************
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

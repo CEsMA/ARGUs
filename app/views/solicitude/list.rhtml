@@ -1,0 +1,48 @@
+<h1>Listado de solicitudes.</h1>
+
+<% if @solicitudes.nil? || @solicitudes.size == 0  %>
+    <h2> No hay solicitudes para mostrar. </h2>
+<% else %>
+  
+    <table class="tabla">
+      <tr>
+        <th><%= "Prioridad" %></th>
+        <th><%= "Requerimiento" %></th>
+        <th><%= "Comentarios" %></th>
+      </tr>
+
+    <% for solicitude in @solicitudes %>
+      <tr class ="<%= cycle('list-line-odd', 'list-line-even') %>" > 
+        <td><%=h solicitude.prioridad %></td>
+        <td><%=h solicitude.requerimiento.to_s.slice(0,50) %></td>
+        <td><%=h solicitude.comentarios.to_s.slice(0,50) %></td>
+        <td><%= link_to image_tag("ver1.png",:border => 0 ), :action => 'show', :id => solicitude %></td>
+         <% if solicitude.atendido_por == 0 %>
+            <td><%= link_to 'Atender', :action => 'update', :id => solicitude.id %></td>
+         <% end %>
+       </tr>
+    <% end %>
+    </table>
+
+<% end %> 
+  
+<% if @tipo.eql?("historico") %>
+  <br/>
+    <div class="centrado">
+      <%= link_to image_tag("arrowIzq2.png", :border => 0 ), { :page => @solicitude_pages.current.previous } if @solicitude_pages.current.previous %>
+      <%= link_to image_tag("arrowIzq2.png", :border => 0 ), { :page => @solicitude_pages.current.next } if @solicitude_pages.current.next %> 
+    </div>
+      <p><%= link_to 'Solicitudes por atender', :action => 'list', :tipo => "no_atendidas" %> |
+         <%= link_to 'Añadir requerimientos', :controller => 'requerimiento',:action => 'list'%></p>
+    <br />
+<% else %>
+    <p><%= link_to 'Histórico de solicitudes', :action => 'list'%> |
+    <%= link_to 'Añadir requerimientos', :controller => 'requerimiento',:action => 'list'%></p>
+<% end %>
+
+
+<br/><br/>
+<div class="derecha">
+      <%= link_to image_tag("home.png",:border => 0 ) +'Inicio  ', :controller=>'usuario', :action => 'welcome' %>
+</div>
+

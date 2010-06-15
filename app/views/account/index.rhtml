@@ -1,0 +1,61 @@
+
+<% if (logged_in?) 
+	if current_usuario.tipo == "Administrador" %>
+	<div class="derecha">
+		<h2>Bienvenid@, <%= current_usuario.nombre %></h2>
+	</div>
+	<h1>Administrador </h1>
+	<p>
+             <h3>
+		Bienvenido a su sección de administración, desde acá podrá
+		administrar usuarios, servicios, secciones de fenómenos 
+		naturales y vínculos de interés.
+             </h3>
+	</p>
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+        <div class="derecha">
+            <%= image_tag "arbol.jpg"%>
+        </div>
+    
+	<% end
+	if current_usuario.tipo == "Proveedor" %>
+	<div class="derecha">
+		<h2>Bienvenid@, <%= current_usuario.nombre %></h2>
+	</div>
+	<h1>Proveedor de recursos oficiales </h1>
+	<p>
+             <h3>
+		Bienvenido a su sección de proveedor de datos oficiales,
+		desde acá podrá solicitar operaciones de administración de servicios, 
+		administrar sus recursos oficiales, vínculos de interés, 
+		realizar consultas avanzadas al repositorio, y listar, buscar y
+		ejecutar servicios.
+             </h3>
+	</p>
+        <br/><br/><br/><br/>
+        <div class="derecha">
+            <%= image_tag "proveedor.jpg"%>
+        </div>
+	<% end
+	if current_usuario.tipo == "Investigador" %>
+	<div class="derecha">
+		<h2>Bienvenid@, <%= current_usuario.nombre %></h2>
+	</div>
+	<h1>Investigador </h1>
+	<p>  
+             <h3>
+		Bienvenido a su sección de investigación, desde acá usted podrá 
+		administrar sus recursos y vínculos de interés no oficiales, 
+		realizar consultas a los datos del repositorio y listar, buscar 
+		y ejecutar servicios.
+             </h3>
+        </p>
+        <br/><br/><br/><br/>
+        <div class="derecha">
+            <%= image_tag "investigador3.jpg"%>
+        </div>
+	<% end %>
+<% else %>
+	<h1> Disculpe, usted no posee los permisos para acceder a esta página </h1>
+<% end %>
+

@@ -1,0 +1,78 @@
+<script language="JavaScript">
+	function chequearDatos() {
+		if (document.getElementById("old").value == "" || document.getElementById("new").value == "" || document.getElementById("newrep").value == "") {
+			alert('Error: Recuerde proveer todos los campos');
+			return false;
+		}
+	}
+</script>
+
+
+
+<h1> Recuperaci&oacute;n de contrase&ntilde;a. </h1>
+<h2>Opciones de clave de acceso temporal.</h2>
+
+<table>
+    <tr>
+      <th>Olvid&eacute; mi contrase&ntilde;a y deseo una clave temporal.</th>
+      <th>Ya poseo mi clave temporal, y deseo utilizarla.</th>
+    </tr>
+    
+
+    <tr>
+        <td>
+            <%= form_tag :action => 'olvidoContrasena' %>
+                    <p><label for="loginA">Nombre de usuario (login): </label><br/>
+                    <%= text_field_tag :loginA, nil, options = {:class => "textfield"}  %><p>
+               <%= submit_tag "Enviarme clave temporal", :class => "boton"%> 
+            <%= end_form_tag %>
+        </td>
+        <td>
+            <%= form_tag :action => 'updatepasswordClaveTemp'%>
+
+                <p><label for="login">Nombre de usuario (login): </label><br/>
+               <%= text_field_tag :login, params[:login], options = {:size => "30", :maxlength => "40", :class => "textfield"}  %></p>
+   
+                <p><label for="old" >Clave temporal: </label><br/>
+                <%= text_field_tag :old, params[:old], options = {:size => "30", :maxlength => "100", :class => "textfield"}  %></p>
+                
+                <p><label for="new" >Nueva contrase&ntilde;a: </label><br/>
+                <%= password_field_tag :new, params[:new], options = {:size => "30", :maxlength => "40", :class => "textfield"} %></p>
+
+                <p><label for="newrep">Repetir nueva contrase&ntilde;a: </label><br/>
+                <%= password_field_tag :newrep, params[:newrep], options = {:size => "30", :maxlength => "40", :class => "textfield"} %></p>
+
+              <%= submit_tag "Actualizar clave", :class => "boton", :onclick => "chequearDatos();" %>
+            <%= end_form_tag %>
+        </td>
+     </tr>
+</table>
+
+<br/>
+
+<div class="derecha">
+    <%= link_to image_tag("back4.png",:border => 0 ) + 'Regresar', {:action => 'welcome', :controller => 'usuario'} %>
+</div>
+<br/>
+<br/>
+
+
+<h2>Pasos para recuperar su contrase&ntilde;a.</h2>
+<ol>
+    <li>En el formulario que se presenta a arriba, provea en el formulario de la izquierda su nombre de usuario y presione "Enviarme clave temporal".</li>
+    <li>El sistema proceder&aacute; a enviarle en los pr&oximos minutos una clave temporal.</li>
+    <li>Revise su correo y copie su clave temporal.</li>
+    <li>A continuaci&oacute;n, provea en el formulario presentado arriba a la derecha de la pantalla, su clave temporal y la que desea sea su nueva clave de acceso al sistema.</li>
+    <li>Presione "Actualizar clave".</li>
+</ol>
+
+<h4>Por razones de seguridad, el sistema no provee mecanismos para visualizar, ni reutilizar la contrase&ntilde;a perdida.</h4>
+
+
+<br/>
+<div class="derecha">
+    <%= link_to image_tag("back4.png",:border => 0 ) + 'Regresar', {:action => 'welcome', :controller => 'usuario'} %>
+</div>
+<br/>
+<br/>        
+        
