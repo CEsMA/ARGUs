@@ -22,7 +22,7 @@
 
 <br/><br/><br/>
  <div class="derecha">
-      <%  link_to 'Listar por Categoria.', :controller=>'consultasfisicas', :action => 'listarOpc' %>
+      <%= link_to image_tag("categorias.gif",:border => 0 ) + 'Categorias', :controller=>'consultasfisicas', :action => 'listarOpc' %>
       <%= link_to image_tag("back4.png",:border => 0 ) + 'Regresar', :controller=>'consultasfisicas', :action => 'listarOpc' %>
       <%= link_to image_tag("home.png",:border => 0 ) + 'Inicio', :controller=>'usuario',:action => 'welcome' %>
 </div>

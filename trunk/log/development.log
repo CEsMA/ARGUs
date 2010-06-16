@@ -46728,3 +46728,773 @@ Processing ConsultasfisicasController#listar (for 127.0.0.1 at 2010-06-14 02:23:
 Rendering  within layouts/application
 Rendering consultasfisicas/listar
 Completed in 0.04796 (20 reqs/sec) | Rendering: 0.02545 (53%) | DB: 0.00890 (18%) | 200 OK [http://localhost/consultasfisicas/listar]
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+GeoreferenceController: missing default helper path georeference_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+ServicioController: missing default helper path servicio_helper
+ContactenosController: missing default helper path contactenos_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+CargadwController: missing default helper path cargadw_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /var/argus_development/argushidro/trunk/config/environment.rb:78)
+
+
+Processing UsuarioController#welcome (for 127.0.0.1 at 2010-06-15 13:22:28) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.05592 (17 reqs/sec) | Rendering: 0.05455 (97%) | 200 OK [http://localhost/]
+
+
+Processing EstacioneController#georeferenciame (for 127.0.0.1 at 2010-06-15 13:22:31) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"georeferenciame", "controller"=>"estacione"}
+
+
+Errno::ECONNREFUSED (Connection refused - connect(2)):
+    /usr/lib/ruby/1.8/net/http.rb:560:in `initialize'
+    /usr/lib/ruby/1.8/net/http.rb:560:in `open'
+    /usr/lib/ruby/1.8/net/http.rb:560:in `connect'
+    /usr/lib/ruby/1.8/timeout.rb:53:in `timeout'
+    /usr/lib/ruby/1.8/timeout.rb:93:in `timeout'
+    /usr/lib/ruby/1.8/net/http.rb:560:in `connect'
+    /usr/lib/ruby/1.8/net/http.rb:553:in `do_start'
+    /usr/lib/ruby/1.8/net/http.rb:542:in `start'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:115:in `start'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:104:in `get_content'
+    /usr/lib/ruby/1.8/wsdl/xmlSchema/importer.rb:64:in `fetch'
+    /usr/lib/ruby/1.8/wsdl/xmlSchema/importer.rb:30:in `import'
+    /usr/lib/ruby/1.8/wsdl/importer.rb:18:in `import'
+    /usr/lib/ruby/1.8/soap/wsdlDriver.rb:124:in `import'
+    /usr/lib/ruby/1.8/soap/wsdlDriver.rb:28:in `initialize'
+    /app/controllers/estacione_controller.rb:210:in `new'
+    /app/controllers/estacione_controller.rb:210:in `georeferenciame'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /home/luis/.gem/ruby/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/bin/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/bin/mongrel_rails:282
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:22:44) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.190521)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.060117)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.45404 (2 reqs/sec) | Rendering: 0.05495 (12%) | DB: 0.25064 (55%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listar (for 127.0.0.1 at 2010-06-15 13:22:50) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listar", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.049056)[0m   [0;1mSELECT distinct c.texto_pregunta, c.id_pred, c.sql_query, ctag.consulta_id FROM consultas c, consultatags ctag WHERE ctag.consulta_id = c.id;[0m
+  [4;35;1mSQL (0.001905)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listar
+Completed in 0.09832 (10 reqs/sec) | Rendering: 0.03337 (33%) | DB: 0.05096 (51%) | 200 OK [http://localhost/consultasfisicas/listar]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 13:22:51) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/stylesheets/images/img04.gif" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /home/luis/.gem/ruby/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/bin/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/bin/mongrel_rails:282
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:35:10) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.001446)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001826)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.04380 (22 reqs/sec) | Rendering: 0.02962 (67%) | DB: 0.00327 (7%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:35:19) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.001501)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001891)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.04563 (21 reqs/sec) | Rendering: 0.03075 (67%) | DB: 0.00339 (7%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:36:33) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.001405)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001944)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.04546 (21 reqs/sec) | Rendering: 0.03114 (68%) | DB: 0.00335 (7%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 13:36:34) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/images/categorias.png" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /home/luis/.gem/ruby/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/bin/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/bin/mongrel_rails:282
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:36:42) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.001432)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.000985)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.02568 (38 reqs/sec) | Rendering: 0.01282 (49%) | DB: 0.00242 (9%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 13:36:43) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/images/categorias.png" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /home/luis/.gem/ruby/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/bin/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/bin/mongrel_rails:282
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:37:13) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000845)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001236)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.02431 (41 reqs/sec) | Rendering: 0.01418 (58%) | DB: 0.00208 (8%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 13:37:13) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/images/categorias.png" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /home/luis/.gem/ruby/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/bin/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/bin/mongrel_rails:282
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:39:07) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.001500)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001942)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.03983 (25 reqs/sec) | Rendering: 0.02499 (62%) | DB: 0.00344 (8%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:39:09) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000834)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001003)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.02054 (48 reqs/sec) | Rendering: 0.01236 (60%) | DB: 0.00184 (8%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:39:10) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000833)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.000994)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.02376 (42 reqs/sec) | Rendering: 0.01219 (51%) | DB: 0.00183 (7%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:39:10) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000918)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001227)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.02168 (46 reqs/sec) | Rendering: 0.01321 (60%) | DB: 0.00215 (9%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:39:11) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000781)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001110)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.11649 (8 reqs/sec) | Rendering: 0.10909 (93%) | DB: 0.00189 (1%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:39:11) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000916)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001050)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.02102 (47 reqs/sec) | Rendering: 0.01287 (61%) | DB: 0.00197 (9%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:39:11) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000828)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001143)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.01964 (50 reqs/sec) | Rendering: 0.01221 (62%) | DB: 0.00197 (10%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:39:24) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.001529)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001895)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.03899 (25 reqs/sec) | Rendering: 0.02491 (63%) | DB: 0.00342 (8%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:39:25) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000967)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001014)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.01969 (50 reqs/sec) | Rendering: 0.01221 (61%) | DB: 0.00198 (10%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:40:37) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.001451)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001845)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.04020 (24 reqs/sec) | Rendering: 0.02626 (65%) | DB: 0.00330 (8%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listar (for 127.0.0.1 at 2010-06-15 13:40:46) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listar", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.005740)[0m   [0;1mSELECT distinct c.texto_pregunta, c.id_pred, c.sql_query, ctag.consulta_id FROM consultas c, consultatags ctag WHERE ctag.consulta_id = c.id;[0m
+  [4;35;1mSQL (0.001060)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listar
+Completed in 0.02982 (33 reqs/sec) | Rendering: 0.01111 (37%) | DB: 0.00680 (22%) | 200 OK [http://localhost/consultasfisicas/listar]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listar (for 127.0.0.1 at 2010-06-15 13:41:05) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listar", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.002801)[0m   [0;1mSELECT distinct c.texto_pregunta, c.id_pred, c.sql_query, ctag.consulta_id FROM consultas c, consultatags ctag WHERE ctag.consulta_id = c.id;[0m
+  [4;35;1mSQL (0.000968)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listar
+Completed in 0.02265 (44 reqs/sec) | Rendering: 0.01175 (51%) | DB: 0.00377 (16%) | 200 OK [http://localhost/consultasfisicas/listar]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:41:07) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000880)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001010)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.02118 (47 reqs/sec) | Rendering: 0.01394 (65%) | DB: 0.00189 (8%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listar (for 127.0.0.1 at 2010-06-15 13:41:38) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listar", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.005900)[0m   [0;1mSELECT distinct c.texto_pregunta, c.id_pred, c.sql_query, ctag.consulta_id FROM consultas c, consultatags ctag WHERE ctag.consulta_id = c.id;[0m
+  [4;35;1mSQL (0.001792)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listar
+Completed in 0.03122 (32 reqs/sec) | Rendering: 0.00983 (31%) | DB: 0.00769 (24%) | 200 OK [http://localhost/consultasfisicas/listar]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 13:41:39) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/stylesheets/images/img04.gif" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /home/luis/.gem/ruby/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/bin/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/bin/mongrel_rails:282
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:43:21) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000859)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001106)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.02293 (43 reqs/sec) | Rendering: 0.01501 (65%) | DB: 0.00196 (8%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#lista (for 127.0.0.1 at 2010-06-15 13:43:23) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"lista", "controller"=>"consultasfisicas"}
+
+
+ActionController::UnknownAction (No action responded to lista):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /home/luis/.gem/ruby/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/bin/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/bin/mongrel_rails:282
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:43:34) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000860)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.000996)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.02244 (44 reqs/sec) | Rendering: 0.01392 (62%) | DB: 0.00186 (8%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listar (for 127.0.0.1 at 2010-06-15 13:43:35) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listar", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.005596)[0m   [0;1mSELECT distinct c.texto_pregunta, c.id_pred, c.sql_query, ctag.consulta_id FROM consultas c, consultatags ctag WHERE ctag.consulta_id = c.id;[0m
+  [4;35;1mSQL (0.001793)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listar
+Completed in 0.04288 (23 reqs/sec) | Rendering: 0.02217 (51%) | DB: 0.00739 (17%) | 200 OK [http://localhost/consultasfisicas/listar]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-15 13:43:37) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.000839)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.001155)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.02052 (48 reqs/sec) | Rendering: 0.01295 (63%) | DB: 0.00199 (9%) | 200 OK [http://localhost/consultasfisicas/listarOpc]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listar (for 127.0.0.1 at 2010-06-15 13:43:44) [GET]
+  Session ID: 1adee0bff8422a420696372e6af6d3a5
+  Parameters: {"action"=>"listar", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.005741)[0m   [0;1mSELECT distinct c.texto_pregunta, c.id_pred, c.sql_query, ctag.consulta_id FROM consultas c, consultatags ctag WHERE ctag.consulta_id = c.id;[0m
+  [4;35;1mSQL (0.001822)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listar
+Completed in 0.04247 (23 reqs/sec) | Rendering: 0.02083 (49%) | DB: 0.00756 (17%) | 200 OK [http://localhost/consultasfisicas/listar]
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+GeoreferenceController: missing default helper path georeference_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+ServicioController: missing default helper path servicio_helper
+ContactenosController: missing default helper path contactenos_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+CargadwController: missing default helper path cargadw_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /var/argus_development/argushidro/trunk/config/environment.rb:78)
+
+
+Processing UsuarioController#welcome (for 127.0.0.1 at 2010-06-16 09:14:45) [GET]
+  Session ID: fd0f04842e49768e9858c11c787d9f14
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.04379 (22 reqs/sec) | Rendering: 0.04214 (96%) | 200 OK [http://localhost/]
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+
+
+Processing ConsultasfisicasController#listarOpc (for 127.0.0.1 at 2010-06-16 09:14:47) [GET]
+  Session ID: fd0f04842e49768e9858c11c787d9f14
+  Parameters: {"action"=>"listarOpc", "controller"=>"consultasfisicas"}
+  [4;36;1mConsultatag Load (0.197111)[0m   [0;1mSELECT tag as nombre, count(*) as ocur FROM consultatags GROUP BY tag ORDER BY tag ;[0m
+Rendering  within layouts/application
+Rendering consultasfisicas/listarOpc
+  [4;35;1mSQL (0.059325)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'consultatags'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.49366 (2 reqs/sec) | Rendering: 0.04581 (9%) | DB: 0.25644 (51%) | 200 OK [http://localhost/consultasfisicas/listarOpc]

@@ -30,5 +30,6 @@
       <%if current_usuario.nil?%>
         <%= link_to image_tag("back4.png",:border => 0 ) + 'Regresar', :controller=>'consulta', :action => 'list' %>
       <%end%>
+      <%= link_to image_tag("lista.gif",:border => 0 ) + 'Ver Todas', :controller=>'consultasfisicas', :action => 'listar' %>
       <%= link_to image_tag("home.png",:border => 0 ) + 'Inicio', :controller=>'usuario',:action => 'welcome' %>
 </div>
