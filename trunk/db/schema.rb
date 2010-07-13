@@ -2,89 +2,113 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 7) do
+ActiveRecord::Schema.define() do
 
   create_table "activewarehouse_schema_info", :id => false, :force => true do |t|
     t.column "version", :integer
   end
 
-  create_table "afecta_fvhc", :id => false, :force => true do |t|
-    t.column "id_fenomeno_fvhc",     :string, :limit => 20,  :null => false
-    t.column "id_varhidroclim_fvhc", :string, :limit => 100, :null => false
+  create_table "afecta_fvhcs", :force => true do |t|
+    t.column "id_fenomeno_fvhc",     :integer, :null => false
+    t.column "id_varhidroclim_fvhc", :integer, :null => false
   end
 
   create_table "areaintereses", :force => true do |t|
-    t.column "interes", :string, :limit => 50
+    t.column "interes", :string, :limit => 50, :null => false
+  end
+
+  create_table "atributos", :force => true do |t|
+    t.column "nombre",              :string
+    t.column "valor",               :string
+    t.column "solicitudreporte_id", :string
   end
 
   create_table "consultas", :force => true do |t|
     t.column "usuario_id",     :integer, :null => false
-    t.column "texto_pregunta", :text
+    t.column "texto_pregunta", :text,    :null => false
+    t.column "id_pred",        :integer
+    t.column "pred",           :boolean
+    t.column "sql_query",      :text
   end
 
   create_table "consultatags", :force => true do |t|
     t.column "consulta_id", :integer,               :null => false
-    t.column "tag",         :string,  :limit => 30
+    t.column "tag",         :string,  :limit => 30, :null => false
   end
 
   create_table "estacion_dimension", :force => true do |t|
-    t.column "altura_est",   :float
     t.column "nombre_est",   :string
     t.column "latitud_est",  :float
     t.column "longitud_est", :float
+    t.column "altura_est",   :integer
   end
 
-  add_index "estacion_dimension", ["altura_est"], :name => "index_estacion_dimension_on_altura_est"
-  add_index "estacion_dimension", ["latitud_est"], :name => "index_estacion_dimension_on_latitud_est"
-  add_index "estacion_dimension", ["longitud_est"], :name => "index_estacion_dimension_on_longitud_est"
-  add_index "estacion_dimension", ["nombre_est"], :name => "index_estacion_dimension_on_nombre_est"
-
   create_table "estaciones", :force => true do |t|
-    t.column "latitud",     :float,                  :null => false
-    t.column "longitud",    :float,                  :null => false
-    t.column "pais",        :string,  :limit => 80,  :null => false
-    t.column "informacion", :string,  :limit => 300, :null => false
-    t.column "nombre",      :string,  :limit => 100
-    t.column "estado_id",   :integer,                :null => false
-    t.column "codigo_omm",  :string,  :limit => 100
-    t.column "altura",      :integer
+    t.column "id_tipo",             :string, :limit => 1,  :null => false
+    t.column "serial_e",            :string, :limit => 4,  :null => false
+    t.column "codigo_omm",          :text
+    t.column "nombre",              :text,                 :null => false
+    t.column "latitud",             :float
+    t.column "longitud",            :float
+    t.column "altura",              :float
+    t.column "estado_acron",        :string, :limit => 2
+    t.column "categoria_e",         :text
+    t.column "sub_categoria_e",     :text
+    t.column "caracteristicas_e",   :text
+    t.column "forma_captura_datos", :string, :limit => 12
+    t.column "carta",               :string, :limit => 4
+    t.column "ope",                 :text
+    t.column "fecha_inst",          :date
+    t.column "fecha_elim",          :date
+    t.column "ser_org",             :string, :limit => 8
+    t.column "org",                 :string, :limit => 15
+    t.column "operada",             :string, :limit => 2
+    t.column "tipo_estacion",       :string, :limit => 40
+    t.column "actual",              :string, :limit => 2
   end
 
   create_table "estados", :force => true do |t|
-    t.column "nombre", :string, :limit => 40, :null => false
+    t.column "acronimo_estado", :string, :limit => 2,  :null => false
+    t.column "nombre",          :string, :limit => 30
+    t.column "forma_ubicacion", :text
   end
 
-  create_table "fenomeno_meteorologico", :id => false, :force => true do |t|
-    t.column "nombre_f",       :string, :limit => 20,  :null => false
+  create_table "fenomeno_meteorologicos", :force => true do |t|
+    t.column "nombre_f",       :string, :limit => 20
     t.column "descrip_f",      :string, :limit => 150
     t.column "lugar_geo_f",    :string, :limit => 200
     t.column "primera_obs_f",  :date
     t.column "periodicidad_f", :string, :limit => 15
   end
 
-  create_table "incide_tof", :id => false, :force => true do |t|
+  create_table "incide_tofs", :force => true do |t|
     t.column "id_tipo_objeto_tof", :string, :limit => 20, :null => false
     t.column "id_fenomeno_tof",    :string, :limit => 20, :null => false
   end
 
+  create_table "instituciones", :force => true do |t|
+    t.column "acronimo_i",     :string, :limit => 15, :null => false
+    t.column "nombre_i",       :text,                 :null => false
+    t.column "mision_i",       :text
+    t.column "tipo_i",         :text
+    t.column "alcance_i",      :text
+    t.column "departamento_i", :text
+    t.column "cargo_i",        :text
+    t.column "persona_i",      :text
+  end
+
   create_table "medidavarhc_facts", :force => true do |t|
     t.column "tiempo_id",          :integer, :null => false
-    t.column "estacion_id",        :integer, :null => false
     t.column "unidad_id",          :integer, :null => false
+    t.column "estacion_id",        :integer, :null => false
     t.column "nivelagregacion_id", :integer, :null => false
     t.column "variable_id",        :integer, :null => false
     t.column "valor_m",            :float,   :null => false
     t.column "observacion_m",      :string
   end
 
-  add_index "medidavarhc_facts", ["estacion_id"], :name => "index_medidavarhc_facts_on_estacion_id"
-  add_index "medidavarhc_facts", ["nivelagregacion_id"], :name => "index_medidavarhc_facts_on_nivelagregacion_id"
-  add_index "medidavarhc_facts", ["tiempo_id"], :name => "index_medidavarhc_facts_on_tiempo_id"
-  add_index "medidavarhc_facts", ["unidad_id"], :name => "index_medidavarhc_facts_on_unidad_id"
-  add_index "medidavarhc_facts", ["variable_id"], :name => "index_medidavarhc_facts_on_variable_id"
-
-  create_table "medio", :id => false, :force => true do |t|
-    t.column "nombre_med",          :string, :limit => 100, :null => false
+  create_table "medios", :force => true do |t|
+    t.column "nombre_med",          :string, :limit => 100
     t.column "descripcion_med",     :string, :limit => 400
     t.column "propiedades_med",     :string, :limit => 400
     t.column "id_tipo_instrumento", :string, :limit => 100
@@ -108,37 +132,60 @@ ActiveRecord::Schema.define(:version => 7) do
     t.column "nivel_agregacion", :string
   end
 
-  add_index "nivelagregacion_dimension", ["nivel_agregacion"], :name => "index_nivelagregacion_dimension_on_nivel_agregacion"
+  create_table "parametros", :id => false, :force => true do |t|
+    t.column "codigo_param", :string, :limit => 4,  :null => false
+    t.column "nombre_param", :text,                 :null => false
+    t.column "tipo_param",   :string, :limit => 25, :null => false
+  end
 
-  create_table "periodo_operacion", :id => false, :force => true do |t|
+  create_table "periodo_operacions", :force => true do |t|
     t.column "estacion_id_po",  :integer, :null => false
     t.column "fecha_inicio_po", :date,    :null => false
     t.column "fecha_fin_po",    :date,    :null => false
   end
 
-  create_table "puede_medir_vtins", :id => false, :force => true do |t|
-    t.column "id_varhidroclim_vtins", :string, :limit => 100, :null => false
-    t.column "id_tipo_ins_vtins",     :string, :limit => 20,  :null => false
+  create_table "puede_medir_vtins", :force => true do |t|
+    t.column "id_varhidroclim_vtins", :integer, :null => false
+    t.column "id_tipo_ins_vtins",     :integer, :null => false
   end
 
-  create_table "se_asocia_vhcto", :id => false, :force => true do |t|
-    t.column "id_varhidroclim_vhcto", :string, :limit => 100, :null => false
-    t.column "id_tipo_objeto_vhcto",  :string, :limit => 20,  :null => false
+  create_table "reportepentahos", :force => true do |t|
+    t.column "usuarios_id",         :integer
+    t.column "solicitudreporte_id", :integer
+    t.column "link",                :string
+    t.column "privado",             :boolean, :default => true
   end
 
-  create_table "se_mide_vuni", :id => false, :force => true do |t|
-    t.column "id_varhidroclim_vuni", :string,  :limit => 100, :null => false
-    t.column "id_unid_vuni",         :integer,                :null => false
+  create_table "reportes", :force => true do |t|
+    t.column "usuario_id",           :integer
+    t.column "link",                 :string
+    t.column "privado",              :boolean, :default => true
+    t.column "solicitud_reporte_id", :integer
   end
 
-  create_table "se_observa", :id => false, :force => true do |t|
-    t.column "estacion_id", :integer,                :null => false
-    t.column "nombre_hc",   :string,  :limit => 100, :null => false
+  create_table "requerimientos", :force => true do |t|
+    t.column "requerimiento", :string, :limit => 50,  :null => false
+    t.column "detalles",      :string, :limit => 250
   end
 
-  create_table "se_relaciona_vseto", :id => false, :force => true do |t|
-    t.column "id_varsocioe_vseto",   :string, :limit => 100, :null => false
-    t.column "id_tipo_objeto_vseto", :string, :limit => 20,  :null => false
+  create_table "se_asocia_vhctos", :force => true do |t|
+    t.column "id_varhidroclim_vhcto", :integer, :null => false
+    t.column "id_tipo_objeto_vhcto",  :integer, :null => false
+  end
+
+  create_table "se_mide_vunis", :force => true do |t|
+    t.column "id_varhidroclim_vuni", :integer, :null => false
+    t.column "id_unid_vuni",         :integer, :null => false
+  end
+
+  create_table "se_observas", :force => true do |t|
+    t.column "id_estacion", :integer, :null => false
+    t.column "id_variable", :integer, :null => false
+  end
+
+  create_table "se_relaciona_vsetos", :force => true do |t|
+    t.column "id_varsocioe_vseto",   :integer, :null => false
+    t.column "id_tipo_objeto_vseto", :integer, :null => false
   end
 
   create_table "servicios", :force => true do |t|
@@ -157,6 +204,27 @@ ActiveRecord::Schema.define(:version => 7) do
     t.column "value",      :string, :limit => 6
     t.column "created_at", :date
     t.column "updated_at", :date
+  end
+
+  create_table "solicitud_reportes", :force => true do |t|
+    t.column "usuario_id", :integer
+    t.column "fecha_sol",  :date
+    t.column "fecha_res",  :date
+    t.column "privado",    :boolean, :default => true
+  end
+
+  create_table "solicitudes", :force => true do |t|
+    t.column "solicitante",   :integer,                :null => false
+    t.column "prioridad",     :string,  :limit => 20,  :null => false
+    t.column "atendido_por",  :integer
+    t.column "requerimiento", :string,  :limit => 50,  :null => false
+    t.column "comentarios",   :string,  :limit => 250
+  end
+
+  create_table "solicitudreportes", :force => true do |t|
+    t.column "usuario_id", :integer
+    t.column "creacion",   :date
+    t.column "resolucion", :date
   end
 
   create_table "table_reports", :force => true do |t|
@@ -178,42 +246,34 @@ ActiveRecord::Schema.define(:version => 7) do
   end
 
   create_table "tiempo_dimension", :force => true do |t|
-    t.column "tiempo",        :date
-    t.column "dia",           :integer
-    t.column "anio",          :integer
-    t.column "mes",           :integer
-    t.column "hora",          :time
     t.column "unidad_t",      :string
     t.column "observacion_t", :string
+    t.column "tiempo",        :date
+    t.column "dia",           :integer
+    t.column "mes",           :integer
+    t.column "anio",          :integer
+    t.column "hora",          :time
   end
 
-  add_index "tiempo_dimension", ["anio"], :name => "index_tiempo_dimension_on_anio"
-  add_index "tiempo_dimension", ["dia"], :name => "index_tiempo_dimension_on_dia"
-  add_index "tiempo_dimension", ["hora"], :name => "index_tiempo_dimension_on_hora"
-  add_index "tiempo_dimension", ["mes"], :name => "index_tiempo_dimension_on_mes"
-  add_index "tiempo_dimension", ["observacion_t"], :name => "index_tiempo_dimension_on_observacion_t"
-  add_index "tiempo_dimension", ["tiempo"], :name => "index_tiempo_dimension_on_tiempo"
-  add_index "tiempo_dimension", ["unidad_t"], :name => "index_tiempo_dimension_on_unidad_t"
-
-  create_table "tipo_instrumento", :id => false, :force => true do |t|
-    t.column "nombre_ti",           :string, :limit => 100, :null => false
-    t.column "tipo_ti",             :string, :limit => 1
-    t.column "tipo_registrador_ti", :string, :limit => 2
-    t.column "descripcion_ti",      :string, :limit => 400
-    t.column "restriccion_ti",      :string, :limit => 200
+  create_table "tipo_estaciones", :id => false, :force => true do |t|
+    t.column "codigo_tipo", :string, :limit => 2,  :null => false
+    t.column "nombre_tipo", :string, :limit => 50
   end
 
-  create_table "tipo_objeto", :id => false, :force => true do |t|
-    t.column "nombre_generico_to", :string, :limit => 20,  :null => false
+  create_table "tipo_instrumentos", :force => true do |t|
+    t.column "nombre_ti",           :string,  :limit => 100
+    t.column "tipo_ti",             :string,  :limit => 1
+    t.column "tipo_registrador_ti", :string,  :limit => 2
+    t.column "descripcion_ti",      :string,  :limit => 400
+    t.column "restriccion_ti",      :string,  :limit => 200
+    t.column "id_medio",            :integer
+  end
+
+  create_table "tipo_objetos", :force => true do |t|
+    t.column "nombre_generico_to", :string, :limit => 20
     t.column "clase_to",           :string, :limit => 1
     t.column "descrip_to",         :string, :limit => 150
     t.column "alcance_geo_to",     :string, :limit => 200
-  end
-
-  create_table "unidad", :id => false, :force => true do |t|
-    t.column "id_unid",       :integer,                :null => false
-    t.column "nombre_unid",   :string,  :limit => 100, :null => false
-    t.column "acronimo_unid", :string,  :limit => 20
   end
 
   create_table "unidad_dimension", :force => true do |t|
@@ -221,8 +281,10 @@ ActiveRecord::Schema.define(:version => 7) do
     t.column "observacion_u",   :string
   end
 
-  add_index "unidad_dimension", ["observacion_u"], :name => "index_unidad_dimension_on_observacion_u"
-  add_index "unidad_dimension", ["unidad_medida_u"], :name => "index_unidad_dimension_on_unidad_medida_u"
+  create_table "unidads", :force => true do |t|
+    t.column "nombre_unid",   :string, :limit => 100, :null => false
+    t.column "acronimo_unid", :string, :limit => 20
+  end
 
   create_table "usuarios", :force => true do |t|
     t.column "login",                     :string, :limit => 40,  :null => false
@@ -251,22 +313,20 @@ ActiveRecord::Schema.define(:version => 7) do
   end
 
   create_table "variable_dimension", :force => true do |t|
+    t.column "id_var",         :integer, :null => false
     t.column "observacion_hc", :string
     t.column "nombre_hc",      :string
   end
 
-  add_index "variable_dimension", ["nombre_hc"], :name => "index_variable_dimension_on_nombre_hc"
-  add_index "variable_dimension", ["observacion_hc"], :name => "index_variable_dimension_on_observacion_hc"
-
-  create_table "variable_hidroclimatica", :id => false, :force => true do |t|
-    t.column "nombre_hc",      :string, :limit => 100, :null => false
+  create_table "variable_hidroclimaticas", :force => true do |t|
+    t.column "nombre_hc",      :string, :limit => 100
     t.column "tipo_hc",        :string, :limit => 1
     t.column "descripcion_hc", :string, :limit => 400
     t.column "acumulada_hc",   :string, :limit => 1
   end
 
-  create_table "variable_socioeconomica", :id => false, :force => true do |t|
-    t.column "nombre_vse",      :string, :limit => 100, :null => false
+  create_table "variable_socioeconomicas", :force => true do |t|
+    t.column "nombre_vse",      :string, :limit => 100
     t.column "descripcion_vse", :string, :limit => 400
   end
 
