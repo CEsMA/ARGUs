@@ -1,0 +1,29 @@
+<h1>Listado de reportes.</h1>
+
+<table>
+  <tr>
+  <%if @nohay %>
+    <h2>En estos momentos no hay reportes que satisfagan su consulta.</h2>
+<%else%>
+
+  <th>Titulo</th>
+  <th>&nbsp;Comentario</th>
+  <th>&nbsp;Link</th>
+ 
+  </tr>
+  <% for reportepentaho in @reportepentahos %>
+    <td>&nbsp;<%=h reportepentaho.titulo%></td>
+    <td>&nbsp;<%=h reportepentaho.comentario%></td>
+    <td>&nbsp;<%=h reportepentaho.link%></td>
+  <%end%>
+
+
+  <%end%>
+</table>
+
+<%= link_to 'Pagina anterior', { :page => @reportepentaho_pages.current.previous } if @reportepentaho_pages.current.previous %>
+<%= link_to 'Proxima pagina', { :page => @reportepentaho_pages.current.next } if @reportepentaho_pages.current.next %>
+
+<br />
+
+

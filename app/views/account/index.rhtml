@@ -54,7 +54,22 @@
         <div class="derecha">
             <%= image_tag "investigador3.jpg"%>
         </div>
-	<% end %>
+	<% end
+        if current_usuario.tipo == "Consultor" %>
+        	<div class="derecha">
+		<h2>Bienvenid@, <%= current_usuario.nombre %></h2>
+	</div>
+	<h1>Consultor </h1>
+	<p>
+             <h3>
+		Bienvenido a su sección de Consultoria, desde acá usted podrá
+		listar las solicitudes de reportes de los usuarios. Asi mismo
+                podra tomar la responsabilidad de resolver dichas solicitudes
+                y publicar los reportes asociados. 
+             </h3>
+        </p>
+        <br/><br/><br/><br/>
+	<% end%>
 <% else %>
 	<h1> Disculpe, usted no posee los permisos para acceder a esta página </h1>
 <% end %>

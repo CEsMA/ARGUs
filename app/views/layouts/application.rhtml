@@ -148,7 +148,7 @@ function checkMaxLength() {
 				<li> <%= link_to "Servicios", :controller => "servicio", :action => "busquedaservicios" %></li>
 				<li> <%= link_to "Consultas", :controller => "consulta", :action => "list" %></li>
 				<li> <%= link_to "Consola SQL", :controller => "consultasfisicas", :action => "injectionQuery" %></li>
-	            <li> <%= link_to "Cargar mediciones", :controller => "cargadw", :action => "parser" %></li>
+                                <li> <%= link_to "Cargar mediciones", :controller => "cargadw", :action => "parser" %></li>
 				<li> <%= link_to "Reportes acumulados", :controller => "reportes", :action => "index" %></li>
 				<li> <%= link_to 'Solicitud para el Administrador', :controller => 'solicitude' , :action => 'new' %> </li>
 				<li> <%= link_to "Mis vínculos de interés", :controller => "vinculotag", :action => "listmisvinculos" %></li>
@@ -157,7 +157,10 @@ function checkMaxLength() {
 				<li> <%= link_to "Estaciones hidroclimaticas", :controller => "estacione", :action => "list" %></li>
 				<li> <%= link_to "Servicios", :controller => "servicio", :action => "busquedaservicios" %></li>
 				<li> <%= link_to "Mis vínculos de interés", :controller => "vinculotag", :action => "listmisvinculos" %></li>
-			<% end %>
+                                <li> <%= link_to "Reportes", :controller => "solicitudreportes", :action => "menu" %></li>
+			<% elsif current_usuario.tipo == "Consultor" %>
+                                <li> <%= link_to "Reportes", :controller => "solicitudreportes", :action => "menu" %></li>
+                        <% end %>
 			<!-- Para todos y cierro el "ul" -->
 			<li> <%= link_to "Modificar mis datos", :controller => "usuario", :action => "modificar", :id => current_usuario.id %></li>
 		</ul>
