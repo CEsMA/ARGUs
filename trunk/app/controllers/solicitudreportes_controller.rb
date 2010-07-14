@@ -93,7 +93,7 @@ class SolicitudreportesController < ApplicationController
     @solicitudreporte.consultor_id = current_usuario.id
     @solicitudreporte.status = 2
     @solicitudreporte.save
-    redirect_to :action => 'list'
+    redirect_to :action => 'menu'
   end
 
   def menu

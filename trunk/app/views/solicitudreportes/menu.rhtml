@@ -13,7 +13,8 @@
           <ul>
             <li><h2><%= link_to 'Crear Solicitud', :action => 'new' %></h2></li>
             <li><h2><%= link_to 'Listar Solicitudes', :action => 'list' %></h2></li>
-            <li><h2><%= link_to 'Listar Reportes', :controller=> 'reportepentaho', :action => 'list' %></h2></li>
+            <li><h2><%= link_to 'Listar Reportes que yo solicite', :controller=> 'reportepentahos', :action => 'list', :tipo => 'propios' %></h2></li>
+            <li><h2><%= link_to 'Listar Reportes publicos', :controller=> 'reportepentahos', :action => 'list', :tipo => 'publicos' %></h2></li>
           </ul>
   <%end%>
   <%if current_usuario.tipo == 'Consultor'%>
@@ -23,8 +24,8 @@
           <li><h2><%= link_to 'Listar Solicitudes asignadas', :action => 'list', :tipo => 'asignadas' %></h2></li>
           <li><h2><%= link_to 'Listar Solicitudes resueltas', :action => 'list', :tipo => 'resueltas' %></h2></li>
           <li><h2><%= link_to 'Listar Solicitudes resueltas por mi', :action => 'list', :tipo => 'resueltaspormi' %></h2></li>
-          <li><h2><%= link_to 'Listar Reportes resueltos por mi', :controller=> 'reportepentaho', :action => 'list', :tipo => 'resueltospormi' %></h2></li>
-          <li><h2><%= link_to 'Listar Reportes', :controller=> 'reportepentaho', :action => 'list', :tipo => 'todos' %></h2></li>
+          <li><h2><%= link_to 'Listar Reportes resueltos por mi', :controller=> 'reportepentahos', :action => 'list', :tipo => 'resueltospormi' %></h2></li>
+          <li><h2><%= link_to 'Listar Reportes', :controller=> 'reportepentahos', :action => 'list', :tipo => 'todos' %></h2></li>
         </ul>
   <%end%>
 <% else %>
