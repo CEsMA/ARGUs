@@ -16,11 +16,11 @@ class ReportepentahosController < ApplicationController
             "JOIN reportepentahos ON solicitudreportes.id = reportepentahos.solicitudreporte_id AND
               usuario_id = '#{current_usuario.id}'")
       end
-      if params[:tipo] == "propios" then
+      if params[:tipo] == "publicos" then
      # join de la solicitud y el reporte resuelto (status 3) de caracter publico
         @reportepentaho_pages, @reportepentahos = paginate(:solicitudreportes, :select => 'titulo, comentario, link', :conditions => "status = 3", :per_page => 20, :joins =>
             "JOIN reportepentahos ON solicitudreportes.id = reportepentahos.solicitudreporte_id AND
-              privado = FALSO")
+              privado = FALSE")
       end
     end
     if current_usuario.tipo == 'Consultor' then

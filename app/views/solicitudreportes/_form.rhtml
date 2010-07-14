@@ -10,11 +10,6 @@
 <p><label for="solicitudreporte_estacion">Estacion</label><br/>
 <%= text_field 'solicitudreporte', 'estacion'  %></p>
 
-<p><label for="solicitudreporte_estacion2">Estacion</label><br/>
-<%= estaciones = Estacione.find(:all)
-    collection_select(:estacione, :codigo_omm, estaciones, :codigo_omm, :codigo_omm,
-    options ={:prompt => "-Seleccione una estacion"}, :class =>"estacion") %></p>
-
 <p><label for="solicitudreporte_estado">Estado</label><br/>
   <%= estados = Estado.find(:all)
     collection_select(:estado, :nombre, estados, :nombre, :nombre,
