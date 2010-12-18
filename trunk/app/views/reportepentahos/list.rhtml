@@ -1,20 +1,22 @@
-<h1>Listado de reportes.</h1>
+<h1>Lista de reportes:</h1>
 
-<table>
+<table BORDER="1">
   <tr>
   <%if @nohay %>
     <h2>En estos momentos no hay reportes que satisfagan su consulta.</h2>
 <%else%>
 
-  <th>Titulo</th>
-  <th>&nbsp;Comentario</th>
-  <th>&nbsp;Link</th>
+  <th align="center"><h2>Titulo</h2></th>
+  <th align="center"><h2>&nbsp;Comentario</h2></th>
+  <th align="center"><h2>&nbsp;Link</h2></th>
  
   </tr>
   <% for reportepentaho in @reportepentahos %>
-    <td>&nbsp;<%=h reportepentaho.titulo%></td>
-    <td>&nbsp;<%=h reportepentaho.comentario%></td>
-    <td>&nbsp;<%=h reportepentaho.link%></td>
+    <TR>
+    <td align="center"><h4i>&nbsp;<%=h reportepentaho.titulo%></h4i></td>
+    <td align="center"><h4i>&nbsp;<%=h reportepentaho.comentarioreporte%></h4i></td>
+    <td align="center"><h4i>&nbsp;<%= link_to "Visitar", reportepentaho.link%></h4i></td>
+    </TR>
   <%end%>
 
 

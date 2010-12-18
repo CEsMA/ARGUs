@@ -8,17 +8,36 @@ class ReportepentahosController < ApplicationController
   verify :method => :post, :only => [ :destroy, :create, :update ],
          :redirect_to => { :action => :list }
 
+  def prueba
+      @reportes = Reportepentaho.find(:all)
+
+      csv_string = FasterCSV.generate do |csv|
+        # header row
+        csv << ["usuario", "solicitud", "link", "comentario", "privado"]
+        # data rows
+        @reportes.each do |reporte|
+          csv << [reporte.usuarios_id, reporte.solicitudreporte_id, reporte.link, reporte.comentarioreporte, reporte.privado]
+        end
+      end
+
+      # send it to the browsah
+      send_data csv_string,
+                :type => 'text/csv; charset=iso-8859-1; header=present',
+                :disposition => "attachment; filename=reportes.csv"
+      
+  end
+
   def list
     if current_usuario.tipo == 'Investigador' then
       if params[:tipo] == "propios" then
      # join de la solicitud y el reporte resuelto (estatus 3) de una solicitud hecha por el usuario conectado
-        @reportepentaho_pages, @reportepentahos = paginate(:solicitudreportes, :select => 'titulo, comentario, link', :conditions => "status = 3", :per_page => 20, :joins =>
+        @reportepentaho_pages, @reportepentahos = paginate(:solicitudreportes, :select => 'titulo, comentarioreporte, link', :conditions => "status = 3", :per_page => 20, :joins =>
             "JOIN reportepentahos ON solicitudreportes.id = reportepentahos.solicitudreporte_id AND
               usuario_id = '#{current_usuario.id}'")
       end
       if params[:tipo] == "publicos" then
      # join de la solicitud y el reporte resuelto (status 3) de caracter publico
-        @reportepentaho_pages, @reportepentahos = paginate(:solicitudreportes, :select => 'titulo, comentario, link', :conditions => "status = 3", :per_page => 20, :joins =>
+        @reportepentaho_pages, @reportepentahos = paginate(:solicitudreportes, :select => 'titulo, comentarioreporte, link', :conditions => "status = 3", :per_page => 20, :joins =>
             "JOIN reportepentahos ON solicitudreportes.id = reportepentahos.solicitudreporte_id AND
               privado = FALSE")
       end
@@ -26,14 +45,13 @@ class ReportepentahosController < ApplicationController
     if current_usuario.tipo == 'Consultor' then
        if params[:tipo] == "resueltospormi" then
      # join de la solicitud y el reporte resuelto (status 3) de caracter publico
-        @reportepentaho_pages, @reportepentahos = paginate(:solicitudreportes, :select => 'titulo, comentario, link', :conditions => "status = 3", :per_page => 20, :joins =>
+        @reportepentaho_pages, @reportepentahos = paginate(:solicitudreportes, :select => 'titulo, comentarioreporte, link', :conditions => "status = 3", :per_page => 20, :joins =>
             "JOIN reportepentahos ON solicitudreportes.id = reportepentahos.solicitudreporte_id AND
               consultor_id = '#{current_usuario.id}'")
        end
        if params[:tipo] == "todos" then
      # join de la solicitud y el reporte resuelto (status 3) de caracter publico
-        @reportepentaho_pages, @reportepentahos = paginate(:solicitudreportes, :select => 'titulo, comentario, link', :conditions => "status = 3", :per_page => 20, :joins =>
-            "JOIN reportepentahos ON solicitudreportes.id = reportepentahos.solicitudreporte_id")
+        @reportepentaho_pages, @reportepentahos = paginate(:reportepentahos, :select => 'titulo, comentarioreporte, link', :per_page => 20)
        end
     end
         
@@ -62,9 +80,11 @@ class ReportepentahosController < ApplicationController
     @reportepentaho = Reportepentaho.new(params[:reportepentaho])
     @reportepentaho.usuarios_id = current_usuario.id
     @reportepentaho.solicitudreporte_id = params[:solicitud]
-    @solcambia = Solicitudreporte.find(params[:solicitud])
-    @solcambia.status = 3
-    @solcambia.save
+    if params[:solicitud]
+      @solcambia = Solicitudreporte.find(params[:solicitud])
+      @solcambia.status = 3
+      @solcambia.save
+    end
     if @reportepentaho.save
       flash[:notice] = 'El reporte fue publicado exitosamente.'
       redirect_to :controller => 'solicitudreportes', :action => 'menu'

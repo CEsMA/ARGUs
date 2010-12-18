@@ -26,6 +26,8 @@
           <li><h2><%= link_to 'Listar Solicitudes resueltas por mi', :action => 'list', :tipo => 'resueltaspormi' %></h2></li>
           <li><h2><%= link_to 'Listar Reportes resueltos por mi', :controller=> 'reportepentahos', :action => 'list', :tipo => 'resueltospormi' %></h2></li>
           <li><h2><%= link_to 'Listar Reportes', :controller=> 'reportepentahos', :action => 'list', :tipo => 'todos' %></h2></li>
+
+          <li><h2><%= link_to 'Prueba Reportes csv', :controller=> 'reportepentahos', :action => 'prueba'%></h2></li>
         </ul>
   <%end%>
 <% else %>
