@@ -4,6 +4,7 @@ class CreateReportepentahos < ActiveRecord::Migration
       t.column :usuarios_id, :integer
       t.column :solicitudreporte_id, :integer
       t.column :link, :string
+      t.column :comentario, :string
       t.column :privado, :boolean, :default => true
     end
   end

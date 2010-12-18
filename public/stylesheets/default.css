@@ -186,9 +186,17 @@ a:hover {
 
 #colTwo h4 {
 	margin-top: 0;
-	font-size: 12px;
+	font-size: 33px;
 	font-weight: normal;
         color: #87A019;
+        padding-left: 8px;
+}
+
+#colTwo h4i {
+	margin-top: 0;
+	font-size: 12px;
+	font-weight: normal;
+        color: #000000;
         padding-left: 8px;
 }
 

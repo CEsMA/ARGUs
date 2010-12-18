@@ -67,6 +67,7 @@ ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(
 
 USE_SSL = true
  require 'application'
+ require 'fastercsv'
  ActionController::Routing.possible_controllers.each do |c|
   "#{c.camelize}Controller".constantize
  end 
