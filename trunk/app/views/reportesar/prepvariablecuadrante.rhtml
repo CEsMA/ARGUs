@@ -1,0 +1,20 @@
+<h1>Por favor seleccione la variable y especifique las cotas de altura para generar su reporte.</h1>
+
+<% form_tag :action => 'variablecuadrante' do %>
+  <p><label for="Variable">Variable:</label><br/>
+    <%= collection_select("variable", "id", @variables, :id, :nombre_hc ) %>
+
+  <p><label for="longinferior">Longitud Inferior:</label><br/>
+    <%= text_field_tag 'longinferior'%></p>
+
+  <p><label for="longsuperior">Longitud Superior:</label><br/>
+    <%= text_field_tag 'longsuperior'%></p>
+
+  <p><label for="latinferior">Latitud Inferior:</label><br/>
+    <%= text_field_tag 'latinferior'%></p>
+
+  <p><label for="latsuperior">Latitud Superior:</label><br/>
+    <%= text_field_tag 'latsuperior'%></p>
+
+  <p><%= submit_tag "Generar", options = {:class => "boton"} %></p>
+<% end %>
