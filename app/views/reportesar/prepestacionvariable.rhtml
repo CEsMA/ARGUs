@@ -1,0 +1,11 @@
+<h1>Por favor seleccione la variable y la estacion para generar su reporte.</h1>
+
+<% form_tag :action => 'estacionvariable' do %>
+  <p><label for="Variable">Variable:</label><br/>
+    <%= collection_select("variable", "id", @variables, :id, :nombre_hc ) %>
+
+  <p><label for="Estacion">Estacion:</label><br/>
+    <%= collection_select("estacion", "id", @estaciones, :id, :nombre_est ) %>
+
+  <p><%= submit_tag "Generar", options = {:class => "boton"} %></p>
+<% end %>

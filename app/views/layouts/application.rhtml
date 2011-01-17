@@ -88,7 +88,8 @@ function checkMaxLength() {
 		<li> <%= link_to "Vínculos de interés", :controller => "vinculotag", :action => 'busquedavinculos' %></li>
 		<!-- Solo los NO Registrados (no logueados) ven esta opción -->
 		<li> <%= link_to "Georeferenciación de estaciones", :controller => "estacione", :action => "georeferenciame" %></li>
-		<li> <%= link_to "Repositorio", :controller => "consultasfisicas", :action => "listarOpc" %></li>
+		<li> <%= link_to "Reportes CSV", :controller => "reportesar", :action => "listado" %></li>
+                <li> <%= link_to "Repositorio", :controller => "consultasfisicas", :action => "listarOpc" %></li>
 		<!-- Si no está logueado, veo la forma para entrar, si estoy en inicio. Cierro el "ul" -->
 		<% unless (logged_in?) %>
 		  </ul>
