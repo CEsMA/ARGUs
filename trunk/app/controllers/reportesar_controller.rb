@@ -464,6 +464,125 @@ WHERE
                 filename="+VariableDimensionAr.find(var).nombre_hc+"_cuad_"+latinf+","+latsup+","+longinf+","+longsup+"_"+inf+"_a_"+sup+"M.csv"
 
   end
+  
+  def prepvariableestado
+    @variables = VariableDimensionAr.find(:all, :order => 'nombre_hc ASC')
+    @variables.each{|v|
+      v.nombre_hc =  v.nombre_hc+' ('+v.id.to_s+')'
+    }
+    @estados = Estado.find(:all, :order => 'nombre ASC')
+  end
+
+  def variableestado
+    var = params[:variable]
+    var = var[:id]
+    edo = params[:estado]
+    edo = edo[:acronimo]
+    
+    @registros = MedidavarhcFactAr.find_by_sql 'SELECT
+           "medidavarhc_facts"."valor_m",
+           "tiempo_dimension"."tiempo",
+           "tiempo_dimension"."hora",
+           "nivelagregacion_dimension"."nivel_agregacion",
+           "variable_dimension"."nombre_hc",
+           "unidad_dimension"."unidad_medida_u",
+           "estaciones"."nombre",
+           "estaciones"."latitud",
+           "estaciones"."longitud",
+           "estaciones"."altura"
+      FROM
+           "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+           INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+           INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+           INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+           INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+      WHERE
+                "medidavarhc_facts"."variable_id" = '+var+'
+                AND "estaciones"."estado_acron" LIKE \''+edo+'\'
+                  ORDER BY
+                    "tiempo_dimension"."tiempo"'
+                    
+          csv_string = FasterCSV.generate do |csv|
+         #header row
+        csv << ["Valor", "Unidad de medida", "Tiempo", "Latitud", "Longitud", "Estacion"]
+        # data rows
+        @registros.each do |registro|
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.estado_acron, registro.latitud, registro.longitud, registro.nombre]
+        end
+      end
+
+    render_text "Su reporte se produjo con exito."
+      # send it to the browsah
+      send_data csv_string,
+              :type => 'text/csv; charset=iso-8859-1; header=present',
+               :disposition => "attachment;
+                filename="+VariableDimensionAr.find(var).nombre_hc+"_estado_"+edo+".csv"
+  end
+
+  def prepvariableestadofechas
+    @variables = VariableDimensionAr.find(:all, :order => 'nombre_hc ASC')
+    @variables.each{|v|
+      v.nombre_hc =  v.nombre_hc+' ('+v.id.to_s+')'
+    }
+    @estados = Estado.find(:all, :order => 'nombre ASC')
+  end
+
+  def variableestadofechas
+    var = params[:variable]
+    var = var[:id]
+    edo = params[:estado]
+    edo = edo[:acronimo]
+    fecha = params[:date]
+    ai = fecha[:anho_inicial].to_s
+    mi = fecha[:mes_inicial].to_s
+    di = fecha[:dia_inicial].to_s
+    af = fecha[:anho_final].to_s
+    mf = fecha[:mes_final].to_s
+    df = fecha[:dia_final].to_s
+
+
+    @registros = MedidavarhcFactAr.find_by_sql 'SELECT
+           "medidavarhc_facts"."valor_m",
+           "tiempo_dimension"."tiempo",
+           "tiempo_dimension"."hora",
+           "nivelagregacion_dimension"."nivel_agregacion",
+           "variable_dimension"."nombre_hc",
+           "unidad_dimension"."unidad_medida_u",
+           "estaciones"."nombre",
+           "estaciones"."latitud",
+           "estaciones"."longitud",
+           "estaciones"."altura"
+      FROM
+           "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+           INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+           INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+           INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+           INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+      WHERE
+                "medidavarhc_facts"."variable_id" = '+var+'
+		AND "estaciones"."estado_acron" LIKE \''+edo+'\'
+                AND "tiempo_dimension"."tiempo" >= date \''+ai+'-'+mi+'-'+di+'\'
+                AND "tiempo_dimension"."tiempo" <= date \''+af+'-'+mf+'-'+df+'\'
+                  ORDER BY
+                    "tiempo_dimension"."tiempo"'
+
+      csv_string = FasterCSV.generate do |csv|
+         #header row
+        csv << ["Valor", "Unidad de medida", "Tiempo", "Latitud", "Longitud", "Estacion"]
+        # data rows
+        @registros.each do |registro|
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud, registro.longitud, registro.nombre]
+        end
+      end
+
+    render_text "Su reporte se produjo con exito."
+      # send it to the browsah
+      send_data csv_string,
+              :type => 'text/csv; charset=iso-8859-1; header=present',
+               :disposition => "attachment;
+                filename="+VariableDimensionAr.find(var).nombre_hc+"_estado_"+edo+".csv"
+
+  end
 
   def listado
     
