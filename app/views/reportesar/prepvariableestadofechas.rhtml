@@ -1,15 +1,11 @@
-<h1>Por favor seleccione la variable y la estacion para generar su reporte. El reporte estara
-  limitado por las fechas que especifique.</h1>
+<h1>Por favor seleccione la variable y el estado para generar su reporte.</h1>
 
-<% form_tag :action => 'alturavariablefecha' do %>
+<% form_tag :action => 'variableestadofechas' do %>
   <p><label for="Variable">Variable:</label><br/>
     <%= collection_select("variable", "id", @variables, :id, :nombre_hc ) %>
-
-  <p><label for="cotainferior">Cota Inferior:</label><br/>
-    <%=text_field_tag("cotainferior", params[:cotainferior] || "0", :autocomplete => "off" ) %></p>
-
-  <p><label for="cotasuperior">Cota Superior:</label><br/>
-   <%=text_field_tag("cotasuperior", params[:cotasuperior] || "4767", :autocomplete => "off" ) %></p>
+  
+  <p><label for="Estado">Estado:</label><br/>
+    <%= collection_select("estado", "acronimo", @estados, :acronimo_estado, :nombre ) %>
 
   <p><label for="FechaInicio">Fecha Inicial:</label></p>
     <%=  select_day(1, :field_name => 'dia_inicial', :prompt => 'Elija el dia') %> <h4i>/</h4i>

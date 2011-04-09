@@ -5,10 +5,10 @@
     <%= collection_select("variable", "id", @variables, :id, :nombre_hc ) %>
 
   <p><label for="cotainferior">Cota Inferior:</label><br/>
-    <%= text_field_tag 'cotainferior'%></p>
+    <%=text_field_tag("cotainferior", params[:cotainferior] || "0", :autocomplete => "off" ) %></p>
 
   <p><label for="cotasuperior">Cota Superior:</label><br/>
-    <%= text_field_tag 'cotasuperior'%></p>
+    <%=text_field_tag("cotasuperior", params[:cotasuperior] || "4767", :autocomplete => "off" ) %></p>
 
   <p><%= submit_tag "Generar", options = {:class => "boton"} %></p>
 <% end %>
