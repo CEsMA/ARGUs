@@ -489,6 +489,7 @@ WHERE
            "estaciones"."nombre",
            "estaciones"."latitud",
            "estaciones"."longitud",
+           "estaciones"."estado_acron",
            "estaciones"."altura"
       FROM
            "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
