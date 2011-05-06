@@ -6,22 +6,22 @@
     <%= collection_select("variable", "id", @variables, :id, :nombre_hc ) %>
 
   <p><label for="longinferior">Longitud Inferior:</label><br/>
-    <%= text_field_tag 'longinferior'%></p>
+    <%= text_field_tag 'longinferior', "-73"%></p>
 
   <p><label for="longsuperior">Longitud Superior:</label><br/>
-    <%= text_field_tag 'longsuperior'%></p>
+    <%= text_field_tag 'longsuperior', "0"%></p>
 
   <p><label for="latinferior">Latitud Inferior:</label><br/>
-    <%= text_field_tag 'latinferior'%></p>
+    <%= text_field_tag 'latinferior', "0"%></p>
 
   <p><label for="latsuperior">Latitud Superior:</label><br/>
-    <%= text_field_tag 'latsuperior'%></p>
+    <%= text_field_tag 'latsuperior', "15.7"%></p>
 
   <p><label for="cotainferior">Cota Inferior:</label><br/>
-    <%= text_field_tag 'cotainferior'%></p>
+    <%= text_field_tag 'cotainferior', "0"%></p>
 
   <p><label for="cotasuperior">Cota Superior:</label><br/>
-    <%= text_field_tag 'cotasuperior'%></p>
+    <%= text_field_tag 'cotasuperior', "4767"%></p>
 
   <p><%= submit_tag "Generar", options = {:class => "boton"} %></p>
 <% end %>

@@ -6,16 +6,16 @@
     <%= collection_select("variable", "id", @variables, :id, :nombre_hc ) %>
 
   <p><label for="longinferior">Longitud Inferior:</label><br/>
-    <%= text_field_tag 'longinferior'%></p>
+    <%= text_field_tag 'longinferior', "-73"%></p>
 
   <p><label for="longsuperior">Longitud Superior:</label><br/>
-    <%= text_field_tag 'longsuperior'%></p>
+    <%= text_field_tag 'longsuperior', "0"%></p>
 
   <p><label for="latinferior">Latitud Inferior:</label><br/>
-    <%= text_field_tag 'latinferior'%></p>
+    <%= text_field_tag 'latinferior', "0"%></p>
 
   <p><label for="latsuperior">Latitud Superior:</label><br/>
-    <%= text_field_tag 'latsuperior'%></p>
+    <%= text_field_tag 'latsuperior', "15.7"%></p>
 
   <p><label for="FechaInicio">Fecha Inicial:</label></p>
     <%=  select_day(1, :field_name => 'dia_inicial', :prompt => 'Elija el dia') %> <h4i>/</h4i>
