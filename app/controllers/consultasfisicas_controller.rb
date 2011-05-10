@@ -525,7 +525,7 @@ class ConsultasfisicasController < ApplicationController
      # Consulta Nro. 6
    elsif (params[:id_pred].to_i == 6)
             x1ok, x2ok, y1ok,y2ok = 0,0,0,0
-            @resultados << "<h4>A continuación los estadísticos para las mediciones del <b>#{params[:rangoFecha][:fecha_inicio]} al #{params[:rangoFecha][:fecha_fin]}</b> para la variable <b>#{params[:nombre_var]["nombre_var"]}</b> en las estaciones seleccionadas</h4>"
+            @resultados << "<h4>A continuación los estad'isticos para las mediciones del <b>#{params[:rangoFecha][:fecha_inicio]} al #{params[:rangoFecha][:fecha_fin]}</b> para la variable <b>#{params[:nombre_var]["nombre_var"]}</b> en las estaciones seleccionadas</h4>"
             @estacione = Estacione.find(:all)
             if (params[:tipoOperacion].to_s.eql?("ventana") && !(params[:longA].nil?) && !(params[:longB].nil?) && !(params[:latA].nil?) && !(params[:latB].nil?))
                # cambio los puntos para adaptarse al formato
@@ -596,7 +596,7 @@ class ConsultasfisicasController < ApplicationController
                         min = sql.execute("select valor_m, t.tiempo, t.unidad_t from tiempo_dimension t, medidavarhc_facts med where (#{where_clause}) AND med.tiempo_id = t.id AND '#{params[:rangoFecha][:fecha_inicio]}' <= t.tiempo AND t.tiempo <= '#{params[:rangoFecha][:fecha_fin]}' AND valor_m = (select min(valor_m) from tiempo_dimension t, medidavarhc_facts med where (#{where_clause}) AND med.tiempo_id = t.id AND '#{params[:rangoFecha][:fecha_inicio]}' <= t.tiempo AND t.tiempo <= '#{params[:rangoFecha][:fecha_fin]}')")                      
                         unless min[0].nil? 
                           respuesta << "<li>#{min[0][0].to_f} "
-                          respuesta << "el día <b>#{min[0][1].to_s}</b> tomado en una medición #{min[0][2].to_s} </li>"
+                          respuesta << "el d'ia <b>#{min[0][1].to_s}</b> tomado en una medición #{min[0][2].to_s} </li>"
                         else
                           respuesta << "<td>No </td>"
                         end
@@ -608,7 +608,7 @@ class ConsultasfisicasController < ApplicationController
                         max = sql.execute("select valor_m, t.tiempo, unidad_t from tiempo_dimension t, medidavarhc_facts med where (#{where_clause}) AND med.tiempo_id = t.id AND '#{params[:rangoFecha][:fecha_inicio]}' <= t.tiempo AND t.tiempo <= '#{params[:rangoFecha][:fecha_fin]}' AND valor_m = (select max(valor_m) from tiempo_dimension t, medidavarhc_facts med where (#{where_clause}) AND med.tiempo_id = t.id AND '#{params[:rangoFecha][:fecha_inicio]}' <= t.tiempo AND t.tiempo <= '#{params[:rangoFecha][:fecha_fin]}')")
                         unless max[0].nil? 
                           respuesta << "<li>#{max[0][0].to_f} "
-                          respuesta << "el día <b>#{max[0][1].to_s}</b>, tomado en una medición #{max[0][2].to_s} </li>"
+                          respuesta << "el d'ia <b>#{max[0][1].to_s}</b>, tomado en una medición #{max[0][2].to_s} </li>"
                         else
                           respuesta << "<td>No </td>"
                         end

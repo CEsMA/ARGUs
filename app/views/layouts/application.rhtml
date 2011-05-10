@@ -85,7 +85,7 @@ function checkMaxLength() {
       <h1>Opciones generales</h1>
       <ul class="sidemenu">
         <li><%= link_to "Inicio", :controller => "usuario", :action => "welcome" %></li>
-		<li> <%= link_to "Vínculos de interés", :controller => "vinculotag", :action => 'busquedavinculos' %></li>
+		<li> <%= link_to "V'inculos de interés", :controller => "vinculotag", :action => 'busquedavinculos' %></li>
 		<!-- Solo los NO Registrados (no logueados) ven esta opción -->
 		<li> <%= link_to "Georeferenciación de estaciones", :controller => "estacione", :action => "georeferenciame" %></li>
 		<li> <%= link_to "Reportes CSV", :controller => "reportesar", :action => "listado" %></li>
@@ -137,7 +137,7 @@ function checkMaxLength() {
 				<ul class="sidemenu">
 				<li> <%= link_to "Usuarios", :controller => "usuario", :action => "list" %></li>
 				<li> <%= link_to "Servicios", :controller => "servicio", :action => "list" %></li>
-				<li> <%= link_to "Vínculos", :controller => "vinculotag", :action => "listmisvinculos" %></li>
+				<li> <%= link_to "V'inculos", :controller => "vinculotag", :action => "listmisvinculos" %></li>
 				<li> <%= link_to "Consultas", :controller => "consulta", :action => "list" %></li>
 				<li> <%= link_to "Areas de interés", :controller => "areainterese", :action => "list" %></li>
 				<li> <%= link_to "Solicitudes", :controller => "solicitude", :action => "list" %></li>
@@ -152,12 +152,12 @@ function checkMaxLength() {
                                 <li> <%= link_to "Cargar mediciones", :controller => "cargadw", :action => "parser" %></li>
 				<li> <%= link_to "Reportes acumulados", :controller => "reportes", :action => "index" %></li>
 				<li> <%= link_to 'Solicitud para el Administrador', :controller => 'solicitude' , :action => 'new' %> </li>
-				<li> <%= link_to "Mis vínculos de interés", :controller => "vinculotag", :action => "listmisvinculos" %></li>
+				<li> <%= link_to "Mis v'inculos de interés", :controller => "vinculotag", :action => "listmisvinculos" %></li>
 				<!-- Para los investigadores -->
 			<% elsif current_usuario.tipo == "Investigador" %>
 				<li> <%= link_to "Estaciones hidroclimaticas", :controller => "estacione", :action => "list" %></li>
 				<li> <%= link_to "Servicios", :controller => "servicio", :action => "busquedaservicios" %></li>
-				<li> <%= link_to "Mis vínculos de interés", :controller => "vinculotag", :action => "listmisvinculos" %></li>
+				<li> <%= link_to "Mis v'inculos de interés", :controller => "vinculotag", :action => "listmisvinculos" %></li>
                                 <li> <%= link_to "Reportes", :controller => "solicitudreportes", :action => "menu" %></li>
 			<% elsif current_usuario.tipo == "Consultor" %>
                                 <li> <%= link_to "Reportes", :controller => "solicitudreportes", :action => "menu" %></li>
