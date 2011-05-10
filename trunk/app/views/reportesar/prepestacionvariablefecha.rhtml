@@ -6,17 +6,17 @@
     <%= collection_select("variable", "id", @variables, :id, :nombre_hc ) %>
 
   <p><label for="Estacion">Estacion:</label><br/>
-    <%= collection_select("estacion", "id", @estaciones, :id, :nombre_est ) %>
+    <%= collection_select("estacion", "id", @estaciones, :id, :nombre) %>
 
   <p><label for="FechaInicio">Fecha Inicial:</label></p>
     <%=  select_day(1, :field_name => 'dia_inicial', :prompt => 'Elija el dia') %> <h4i>/</h4i>
     <%= select_month(1, :use_month_numbers => true, :field_name => 'mes_inicial') %> <h4i>/</h4i>
-    <%= select_year(1960, :field_name => 'anho_inicial', :start_year => 1960, :end_year => 2020) %>
+    <%= select_year(1960, :field_name => 'anho_inicial', :start_year => 1891, :end_year => 2020) %>
 
   <p><label for="FechaInicio">Fecha Final:</label></p>
     <%=  select_day(1, :field_name => 'dia_final', :prompt => 'Elija el dia') %> <h4i>/</h4i>
     <%= select_month(1, :use_month_numbers => true, :field_name => 'mes_final') %> <h4i>/</h4i>
-    <%= select_year(1960, :field_name => 'anho_final', :start_year => 1960, :end_year => 2020) %>
+    <%= select_year(1960, :field_name => 'anho_final', :start_year => 1891, :end_year => 2020) %>
 
   <p><%= submit_tag "Generar", options = {:class => "boton"} %></p>
 <% end %>

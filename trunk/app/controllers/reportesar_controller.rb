@@ -1,9 +1,56 @@
 class ReportesarController < ApplicationController
 
+  def prepvariable
+    @variables = VariableDimensionAr.find(:all, :order => 'nombre_hc ASC')
+    @variables.each{|v|
+      v.nombre_hc =  v.nombre_hc+' ('+v.id.to_s+')'
+    }
+  end
+
+  def variable
+    var = params[:variable]
+    var = var[:id]
+    variable = VariableDimensionAr.find(var).nombre_hc.to_s
+    nombre = variable+".csv"
+
+    @registros = MedidavarhcFactAr.find_by_sql 'SELECT
+           "medidavarhc_facts"."valor_m",
+           "tiempo_dimension"."tiempo",
+           "nivelagregacion_dimension"."nivel_agregacion",
+           "unidad_dimension"."unidad_medida_u",
+           "estacion_dimension"."nombre_est"
+         FROM
+           "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+           INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+           INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
+           INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+           INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+         WHERE
+            "medidavarhc_facts"."variable_id" = '+var+'
+         ORDER BY
+            "estacion_dimension"."nombre_est"'
+
+
+      csv_string = FasterCSV.generate do |csv|
+        # header row
+        csv << ["Valor", "Unidad de medida", "Fecha", "Estacion"]
+        # data rows
+        @registros.each do |registro|
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.nombre_est]
+        end
+      end
+
+      # send it to the browsah
+      send_data csv_string,
+              :type => 'text/csv; charset=iso-8859-1; header=present',
+               :disposition => "attachment; filename=\"#{nombre}\""
+
+  end
+
   def prepestacionvariable
-    @estaciones = EstacionDimensionAr.find(:all, :order => 'nombre_est ASC')
+    @estaciones = Estacione.find(:all, :order => 'nombre ASC')
     @estaciones.each{|e|
-      e.nombre_est =  e.nombre_est+' ('+e.id.to_s+')'
+      e.nombre =  e.nombre+' ('+e.serial_e.to_s+')'
     }
     @variables = VariableDimensionAr.find(:all, :order => 'nombre_hc ASC')
     @variables.each{|v|
@@ -16,6 +63,8 @@ class ReportesarController < ApplicationController
     var = var[:id]
     est = params[:estacion]
     est = est[:id]
+    variable = VariableDimensionAr.find(var).nombre_hc.to_s
+    nombre = variable + "_" +EstacionDimensionAr.find(est).nombre_est.to_s + ".csv"
       
     @registros = MedidavarhcFactAr.find_by_sql 'SELECT
            "medidavarhc_facts"."valor_m",
@@ -31,11 +80,13 @@ class ReportesarController < ApplicationController
            INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
          WHERE
             "medidavarhc_facts"."variable_id" = '+var+'
-          AND "medidavarhc_facts"."estacion_id" = '+est+''
+          AND "medidavarhc_facts"."estacion_id" = '+est+'
+         ORDER BY
+            "tiempo_dimension"."tiempo"'
 
       csv_string = FasterCSV.generate do |csv|
         # header row
-        csv << ["Valor", "Unidad de medida", "Tiempo", "estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Estacion"]
         # data rows
         @registros.each do |registro|
           csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.nombre_est]
@@ -45,14 +96,14 @@ class ReportesarController < ApplicationController
       # send it to the browsah
       send_data csv_string,
               :type => 'text/csv; charset=iso-8859-1; header=present',
-               :disposition => "attachment; filename=reportes_"+VariableDimensionAr.find(var).nombre_hc+"_"+EstacionDimensionAr.find(est).nombre_est+".csv"
+               :disposition => "attachment; filename=\"#{nombre}\""
 
   end
 
   def prepestacionvariablefecha
-    @estaciones = EstacionDimensionAr.find(:all, :order => 'nombre_est ASC')
+    @estaciones = Estacione.find(:all, :order => 'nombre ASC')
     @estaciones.each{|e|
-      e.nombre_est =  e.nombre_est+' ('+e.id.to_s+')'
+      e.nombre =  e.nombre+' ('+e.serial_e.to_s+')'
     }
     @variables = VariableDimensionAr.find(:all, :order => 'nombre_hc ASC')
     @variables.each{|v|
@@ -91,7 +142,7 @@ class ReportesarController < ApplicationController
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Tiempo", "estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Estacion"]
         # data rows
         @registros.each do |registro|
           csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.nombre_est]
@@ -101,7 +152,7 @@ class ReportesarController < ApplicationController
       # send it to the browsah
       send_data csv_string,
               :type => 'text/csv; charset=iso-8859-1; header=present',
-               :disposition => "attachment; filename=reportes_"+VariableDimensionAr.find(var).nombre_hc+"_"+EstacionDimensionAr.find(est).nombre_est+".csv"
+               :disposition => "attachment; filename=\""+VariableDimensionAr.find(var).nombre_hc+"_"+EstacionDimensionAr.find(est).nombre_est+".csv\""
 
   end
 
@@ -126,18 +177,24 @@ class ReportesarController < ApplicationController
      "estacion_dimension"."nombre_est",
      "estacion_dimension"."altura_est"
 FROM
-     "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
-     INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
-     INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
-     INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+     "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" =
+     "tiempo_dimension"."id"
+     INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" =
+     "estacion_dimension"."id"
+     INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" =
+     "nivelagregacion_dimension"."id"
+     INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" =
+     "unidad_dimension"."id"
 WHERE
      "medidavarhc_facts"."variable_id" = '+var+'
  AND "estacion_dimension"."altura_est" >= '+inf+'
- AND "estacion_dimension"."altura_est" <= '+sup+''
+ AND "estacion_dimension"."altura_est" <= '+sup+'
+ORDER BY
+     "estacion_dimension"."nombre_est"'
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Tiempo", "Altura", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Altura", "Estacion"]
         # data rows
         @registros.each do |registro|
           csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.altura_est, registro.nombre_est]
@@ -148,7 +205,7 @@ WHERE
       # send it to the browsah
       send_data csv_string,
               :type => 'text/csv; charset=iso-8859-1; header=present',
-               :disposition => "attachment; filename=reportes_"+VariableDimensionAr.find(var).nombre_hc+"_de_"+inf.to_s+"_a_"+sup+"metros.csv"
+               :disposition => "attachment; filename=\""+VariableDimensionAr.find(var).nombre_hc+"_de_"+inf.to_s+"_a_"+sup+"metros.csv\""
 
   end
 
@@ -187,12 +244,12 @@ WHERE
         AND "estacion_dimension"."altura_est" <= '+sup+'
         AND "tiempo_dimension"."tiempo" >= date \''+fecha[:anho_inicial].to_s+'-'+fecha[:mes_inicial].to_s+'-'+fecha[:dia_inicial].to_s+'\'
         AND "tiempo_dimension"."tiempo" <= date \''+fecha[:anho_final].to_s+'-'+fecha[:mes_final].to_s+'-'+fecha[:dia_final].to_s+'\'
-                ORDER BY
-                  "tiempo_dimension"."tiempo"'
+      ORDER BY
+        "estacion_dimension"."nombre_est", "tiempo_dimension"."tiempo"'
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Tiempo", "Altura", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Altura", "Estacion"]
         # data rows
         @registros.each do |registro|
           csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.altura_est, registro.nombre_est]
@@ -203,7 +260,7 @@ WHERE
       # send it to the browsah
       send_data csv_string,
               :type => 'text/csv; charset=iso-8859-1; header=present',
-               :disposition => "attachment; filename=reportes_"+VariableDimensionAr.find(var).nombre_hc+"_de_"+inf.to_s+"_a_"+sup+"metros.csv"
+               :disposition => "attachment; filename=\""+VariableDimensionAr.find(var).nombre_hc+"_de_"+inf.to_s+"_a_"+sup+"metros.csv\""
 
   end
 
@@ -240,12 +297,12 @@ WHERE
  	AND "estacion_dimension"."latitud_est" <= '+latsup+'
  	AND "estacion_dimension"."longitud_est" >= '+longinf+'
  	AND "estacion_dimension"."longitud_est" <= '+longsup+'
-                ORDER BY
-                  "tiempo_dimension"."tiempo"'
+ORDER BY
+        "estacion_dimension"."nombre_est", "tiempo_dimension"."tiempo"'
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Tiempo", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
         # data rows
         @registros.each do |registro|
           csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.nombre_est]
@@ -257,7 +314,7 @@ WHERE
       send_data csv_string,
               :type => 'text/csv; charset=iso-8859-1; header=present',
                :disposition => "attachment;
-                  filename="+VariableDimensionAr.find(var).nombre_hc+"_cuadrante_"+latinf+","+latsup+","+longinf+","+longsup+".csv"
+                  filename=\""+VariableDimensionAr.find(var).nombre_hc+"_cuadrante_"+latinf+","+latsup+","+longinf+","+longsup+".csv\""
 
   end
 
@@ -308,12 +365,12 @@ WHERE
           AND "estacion_dimension"."longitud_est" <= '+longsup+'
           AND "tiempo_dimension"."tiempo" >= date \''+ai+'-'+mi+'-'+di+'\'
           AND "tiempo_dimension"."tiempo" <= date \''+af+'-'+mf+'-'+df+'\'
-                        ORDER BY
-                          "tiempo_dimension"."tiempo"'
+        ORDER BY
+          "estacion_dimension"."nombre_est", "tiempo_dimension"."tiempo"'
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Tiempo", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
         # data rows
         @registros.each do |registro|
           csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.nombre_est]
@@ -325,7 +382,7 @@ WHERE
       send_data csv_string,
               :type => 'text/csv; charset=iso-8859-1; header=present',
                :disposition => "attachment; 
-                      filename="+nombrevar+"_cuadrante_"+latinf+","+latsup+","+longinf+","+longsup+".csv"
+                      filename=\""+nombrevar+"_cuadrante_"+latinf+","+latsup+","+longinf+","+longsup+".csv\""
     #_del_"+di+"/"+mi+"/"+ai+"_al_"+df+"/"+mf+"/"+af+"_cuadrante:"+latinf+","+latsup+","+longinf+","+longsup+
   end
 
@@ -372,12 +429,12 @@ WHERE
           AND "estacion_dimension"."latitud_est" <= '+latsup+'
           AND "estacion_dimension"."longitud_est" >= '+longinf+'
           AND "estacion_dimension"."longitud_est" <= '+longsup+'
-                              ORDER BY
-                                "tiempo_dimension"."tiempo"'
+        ORDER BY
+          "estacion_dimension"."nombre_est", "tiempo_dimension"."tiempo"'
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Tiempo", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
         # data rows
         @registros.each do |registro|
           csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.nombre_est]
@@ -389,7 +446,7 @@ WHERE
       send_data csv_string,
               :type => 'text/csv; charset=iso-8859-1; header=present',
                :disposition => "attachment;
-                filename="+VariableDimensionAr.find(var).nombre_hc+"_cuad_"+latinf+","+latsup+","+longinf+","+longsup+"_"+inf+"_a_"+sup+"M.csv"
+                filename=\""+VariableDimensionAr.find(var).nombre_hc+"_cuad_"+latinf+","+latsup+","+longinf+","+longsup+"_"+inf+"_a_"+sup+"M.csv\""
 
   end
 
@@ -444,12 +501,12 @@ WHERE
                 AND "estacion_dimension"."longitud_est" <= '+longsup+'
                 AND "tiempo_dimension"."tiempo" >= date \''+ai+'-'+mi+'-'+di+'\'
                 AND "tiempo_dimension"."tiempo" <= date \''+af+'-'+mf+'-'+df+'\'
-                  ORDER BY
-                    "tiempo_dimension"."tiempo"'
+       ORDER BY
+        "estacion_dimension"."nombre_est", "tiempo_dimension"."tiempo"'
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Tiempo", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
         # data rows
         @registros.each do |registro|
           csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.nombre_est]
@@ -461,7 +518,7 @@ WHERE
       send_data csv_string,
               :type => 'text/csv; charset=iso-8859-1; header=present',
                :disposition => "attachment;
-                filename="+VariableDimensionAr.find(var).nombre_hc+"_cuad_"+latinf+","+latsup+","+longinf+","+longsup+"_"+inf+"_a_"+sup+"M.csv"
+                filename=\""+VariableDimensionAr.find(var).nombre_hc+"_cuad_"+latinf+","+latsup+","+longinf+","+longsup+"_"+inf+"_a_"+sup+"M.csv\""
 
   end
   
@@ -500,12 +557,12 @@ WHERE
       WHERE
                 "medidavarhc_facts"."variable_id" = '+var+'
                 AND "estaciones"."estado_acron" LIKE \''+edo+'\'
-                  ORDER BY
-                    "tiempo_dimension"."tiempo"'
+  ORDER BY
+        "estaciones"."nombre", "tiempo_dimension"."tiempo"'
                     
           csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Tiempo", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
         # data rows
         @registros.each do |registro|
           csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.estado_acron, registro.latitud, registro.longitud, registro.nombre]
@@ -517,7 +574,7 @@ WHERE
       send_data csv_string,
               :type => 'text/csv; charset=iso-8859-1; header=present',
                :disposition => "attachment;
-                filename="+VariableDimensionAr.find(var).nombre_hc+"_estado_"+edo+".csv"
+                filename=\""+VariableDimensionAr.find(var).nombre_hc+"_estado_"+edo+".csv\""
   end
 
   def prepvariableestadofechas
@@ -564,12 +621,12 @@ WHERE
 		AND "estaciones"."estado_acron" LIKE \''+edo+'\'
                 AND "tiempo_dimension"."tiempo" >= date \''+ai+'-'+mi+'-'+di+'\'
                 AND "tiempo_dimension"."tiempo" <= date \''+af+'-'+mf+'-'+df+'\'
-                  ORDER BY
-                    "tiempo_dimension"."tiempo"'
+    ORDER BY
+        "estaciones"."nombre", "tiempo_dimension"."tiempo"'
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Tiempo", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
         # data rows
         @registros.each do |registro|
           csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud, registro.longitud, registro.nombre]
@@ -581,7 +638,7 @@ WHERE
       send_data csv_string,
               :type => 'text/csv; charset=iso-8859-1; header=present',
                :disposition => "attachment;
-                filename="+VariableDimensionAr.find(var).nombre_hc+"_estado_"+edo+".csv"
+                filename=\""+VariableDimensionAr.find(var).nombre_hc+"_estado_"+edo+".csv\""
 
   end
 

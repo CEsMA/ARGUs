@@ -44,7 +44,7 @@ class ConsultaController < ApplicationController
     error = ""
       puts "empiezo a validar!"
       if (query.eql?("") || query.nil?) &&
-        error << "Debe ingresar una consulta SQL valida. SQL provisto vacío."
+        error << "Debe ingresar una consulta SQL valida. SQL provisto vac'io."
         #raise SQLInvalido
       elsif !chequeoQuery(query)
         error << "Su consulta posee operaciones destructivas para el repositorio."

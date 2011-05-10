@@ -145,7 +145,7 @@ class CargadwController < ApplicationController
    def formatoValido(archivoArray)
     lineasError = []
       if archivoArray.length < 1
-         lineasError.push("El archivo provisto no posee la información mínima requerida. Por favor revise el formato.")
+         lineasError.push("El archivo provisto no posee la información m'inima requerida. Por favor revise el formato.")
      else
         # Validacion para las mediciones del archivo:
         #    a) Longitud = 7.      b) Presencia de valores obligatorios.
@@ -158,14 +158,14 @@ class CargadwController < ApplicationController
             arrayMedicion.map {|x| x.strip.chomp}
             
             if arrayMedicion.length != 7
-               lineasError.push("En la línea #{numLinea}, el número de datos es distinto a 7.")
+               lineasError.push("En la l'inea #{numLinea}, el número de datos es distinto a 7.")
             else              
               if arrayMedicion[0].nil? || arrayMedicion[2].nil? || arrayMedicion[3].nil? || arrayMedicion[5].nil? || arrayMedicion[6].nil? || arrayMedicion[0] == "" || arrayMedicion[2] == "" || arrayMedicion[3] == "" || arrayMedicion[5] == ""  || arrayMedicion[6] == ""
-                 lineasError.push("En la línea #{numLinea}, únicamente las observaciones para 'medicion' y 'tiempo' son opcionales.")
+                 lineasError.push("En la l'inea #{numLinea}, únicamente las observaciones para 'medicion' y 'tiempo' son opcionales.")
               end
 
               unless isAFloat(arrayMedicion[0].strip.chomp)
-                 lineasError.push("En la línea #{numLinea}, recuerde que: el valor de la medición debe ser de tipo numérico.")
+                 lineasError.push("En la l'inea #{numLinea}, recuerde que: el valor de la medición debe ser de tipo numérico.")
               end
             
               # Validacion para la fecha de acuerdo al calendario gregoriano.
@@ -177,7 +177,7 @@ class CargadwController < ApplicationController
                   raise FechaInvalida
                 end  
               rescue
-                lineasError.push("En la línea #{numLinea}, el formato de la fecha es inválido.")
+                lineasError.push("En la l'inea #{numLinea}, el formato de la fecha es inválido.")
               end
             
           
@@ -185,10 +185,10 @@ class CargadwController < ApplicationController
               begin
                 hora = arrayMedicion[3].split(":")
                 if hora[0].to_i>23 || hora[0].to_i<1 || hora[1].to_i<1 || hora[1].to_i>59
-                    lineasError.push("En la línea #{numLinea}, el formato de la hora es inválido.")
+                    lineasError.push("En la l'inea #{numLinea}, el formato de la hora es inválido.")
                 end
               rescue
-                  lineasError.push("En la línea #{numLinea}, el formato de la hora es inválido.")
+                  lineasError.push("En la l'inea #{numLinea}, el formato de la hora es inválido.")
               end            
               
               # Se chequea que la granularidad de las mediciones este dentro de las permitidas. Para agregar una nueva como
@@ -196,7 +196,7 @@ class CargadwController < ApplicationController
               unless arrayMedicion[5].nil?
                 granularidades = ["horario","diario","semanal","mensual","anual"]
                 if !granularidades.include?(arrayMedicion[5].to_s.strip.chomp.downcase)
-                 lineasError.push("En la línea #{numLinea}, la granularidad de la medición debe ser una de los siguientes: #{granularidades.join(", ")}.")
+                 lineasError.push("En la l'inea #{numLinea}, la granularidad de la medición debe ser una de los siguientes: #{granularidades.join(", ")}.")
                 end
               end
               
@@ -205,7 +205,7 @@ class CargadwController < ApplicationController
                 agregaciones =  agregaciones.to_a.collect {|x| x.to_s.strip.chomp.downcase}
                 
                 if !agregaciones.include?(arrayMedicion[6].to_s.strip.chomp.downcase)
-                 lineasError.push("En la línea #{numLinea}, el nivel de agregación provisto no está registrado en el sistema.")
+                 lineasError.push("En la l'inea #{numLinea}, el nivel de agregación provisto no está registrado en el sistema.")
                 end
               end
          end

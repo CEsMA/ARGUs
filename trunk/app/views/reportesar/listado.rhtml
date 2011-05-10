@@ -1,10 +1,19 @@
 <h1>Listado de los reportes CSV disponibles:</h1>
 
 <table border="1">
+
+
   <tr>
     <th align="center"><h2> Titulo </h2></th>
     <th align="center"><h2>&nbsp;Descripcion</h2></th>
   </tr>
+
+  <tr>
+    <td align="center"><h4i><%= link_to "Variable", :controller => "reportesar", :action => "prepvariable" %></h4i></td>
+    <td align="center"><h4i>Se especifica una variable y se proveen todas
+           las mediciones de la misma</h4i></td>
+  </tr>
+
   <tr>
     <td align="center"><h4i><%= link_to "Variable y Estacion", :controller => "reportesar", :action => "prepestacionvariable" %></h4i></td>
     <td align="center"><h4i>Se especifica una estacion y una variable y se proveen todas
