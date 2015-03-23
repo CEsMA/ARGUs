@@ -44888,3 +44888,681 @@ Processing UsuarioController#welcome (for 159.90.14.49 at 2015-03-23 15:34:18) [
 Rendering  within layouts/application
 Rendering usuario/welcome
 Completed in 0.07424 (13 reqs/sec) | Rendering: 0.07255 (97%) | 200 OK [http://159.90.14.203/]
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+ServicioController: missing default helper path servicio_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+DescargasController: missing default helper path descargas_helper
+GeoreferenceController: missing default helper path georeference_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /home/fabio/ARGUs/config/environment.rb:79)
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+ServicioController: missing default helper path servicio_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+DescargasController: missing default helper path descargas_helper
+GeoreferenceController: missing default helper path georeference_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /home/fabio/ARGUs/config/environment.rb:79)
+
+
+Processing ReportesarController#listado (for 159.90.14.49 at 2015-03-23 16:01:09) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"action"=>"listado", "controller"=>"reportesar"}
+Rendering  within layouts/application
+Rendering reportesar/listado
+Completed in 0.01639 (60 reqs/sec) | Rendering: 0.01547 (94%) | 200 OK [http://159.90.14.203/reportesar/listado]
+
+
+Processing ReportesarController#prepvariableestadofechas (for 159.90.14.49 at 2015-03-23 16:01:14) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"action"=>"prepvariableestadofechas", "controller"=>"reportesar"}
+  [4;36;1mVariableDimensionAr Load (0.251498)[0m   [0;1mSELECT * FROM variable_dimension ORDER BY nombre_hc ASC[0m
+  [4;35;1mSQL (0.106775)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mEstado Load (0.042435)[0m   [0;1mSELECT * FROM estados ORDER BY nombre ASC[0m
+Rendering  within layouts/application
+Rendering reportesar/prepvariableestadofechas
+  [4;35;1mSQL (0.001543)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'estados'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.81912 (1 reqs/sec) | Rendering: 0.01388 (1%) | DB: 0.40225 (49%) | 200 OK [http://159.90.14.203/reportesar/prepvariableestadofechas]
+
+
+Processing ReportesarController#variableestadofechas (for 159.90.14.49 at 2015-03-23 16:01:23) [POST]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"variable"=>{"id"=>"52"}, "estado"=>{"acronimo"=>"AM"}, "action"=>"variableestadofechas", "date"=>{"dia_inicial"=>"1", "mes_inicial"=>"1", "dia_final"=>"1", "anho_final"=>"1960", "anho_inicial"=>"1960", "mes_final"=>"2"}, "controller"=>"reportesar", "commit"=>"Generar"}
+  [4;36;1mMedidavarhcFactAr Load (39.914878)[0m   [0;1mSELECT
+ "medidavarhc_facts"."valor_m",
+ "tiempo_dimension"."tiempo",
+ "tiempo_dimension"."hora",
+ "nivelagregacion_dimension"."nivel_agregacion",
+ "variable_dimension"."nombre_hc",
+ "unidad_dimension"."unidad_medida_u",
+ "estaciones"."nombre",
+ "estaciones"."latitud",
+ "estaciones"."longitud",
+ "estaciones"."altura"
+ FROM
+ "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+ INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+ INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+ INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+ INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+ WHERE
+ "medidavarhc_facts"."variable_id" = 52
+		AND "estaciones"."estado_acron" LIKE 'AM'
+ AND "tiempo_dimension"."tiempo" >= date '1960-1-1'
+ AND "tiempo_dimension"."tiempo" <= date '1960-2-1'
+ ORDER BY
+ "estaciones"."nombre", "tiempo_dimension"."tiempo"[0m
+  [4;35;1mSQL (0.012785)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'medidavarhc_facts'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mSQL (0.001310)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mVariableDimensionAr Load (0.000477)[0m   [0mSELECT * FROM variable_dimension WHERE (variable_dimension."id" = 52) [0m
+Sending data 
+Completed in 39.96078 (0 reqs/sec) | Rendering: 0.00006 (0%) | DB: 39.92945 (99%) | 200 OK [http://159.90.14.203/reportesar/variableestadofechas]
+
+
+Processing ReportesarController#listado (for 159.90.14.49 at 2015-03-23 16:02:27) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"action"=>"listado", "controller"=>"reportesar"}
+Rendering  within layouts/application
+Rendering reportesar/listado
+Completed in 0.00623 (160 reqs/sec) | Rendering: 0.00528 (84%) | DB: 0.00000 (0%) | 200 OK [http://159.90.14.203/reportesar/listado]
+
+
+Processing ReportesarController#prepvariableparalelepipedofechas (for 159.90.14.49 at 2015-03-23 16:02:39) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"action"=>"prepvariableparalelepipedofechas", "controller"=>"reportesar"}
+  [4;36;1mVariableDimensionAr Load (0.001772)[0m   [0;1mSELECT * FROM variable_dimension ORDER BY nombre_hc ASC[0m
+  [4;35;1mSQL (0.001026)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering reportesar/prepvariableparalelepipedofechas
+Completed in 0.02005 (49 reqs/sec) | Rendering: 0.00919 (45%) | DB: 0.00280 (13%) | 200 OK [http://159.90.14.203/reportesar/prepvariableparalelepipedofechas]
+
+
+Processing ReportesarController#listado (for 159.90.14.49 at 2015-03-23 16:03:06) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"action"=>"listado", "controller"=>"reportesar"}
+Rendering  within layouts/application
+Rendering reportesar/listado
+Completed in 0.00716 (139 reqs/sec) | Rendering: 0.00596 (83%) | DB: 0.00000 (0%) | 200 OK [http://159.90.14.203/reportesar/listado]
+
+
+Processing ReportesarController#prepvariableestadofechas (for 159.90.14.49 at 2015-03-23 16:03:08) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"action"=>"prepvariableestadofechas", "controller"=>"reportesar"}
+  [4;36;1mVariableDimensionAr Load (0.001785)[0m   [0;1mSELECT * FROM variable_dimension ORDER BY nombre_hc ASC[0m
+  [4;35;1mSQL (0.001027)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mEstado Load (0.000828)[0m   [0;1mSELECT * FROM estados ORDER BY nombre ASC[0m
+Rendering  within layouts/application
+Rendering reportesar/prepvariableestadofechas
+  [4;35;1mSQL (0.001170)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'estados'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.02672 (37 reqs/sec) | Rendering: 0.00885 (33%) | DB: 0.00481 (18%) | 200 OK [http://159.90.14.203/reportesar/prepvariableestadofechas]
+
+
+Processing ReportesarController#prepestacionvariablefecha (for 159.90.14.49 at 2015-03-23 16:04:33) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"action"=>"prepestacionvariablefecha", "controller"=>"reportesar"}
+  [4;36;1mEstacione Load (0.112521)[0m   [0;1mSELECT * FROM estaciones ORDER BY nombre ASC[0m
+  [4;35;1mSQL (0.001444)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'estaciones'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mVariableDimensionAr Load (0.001763)[0m   [0;1mSELECT * FROM variable_dimension ORDER BY nombre_hc ASC[0m
+  [4;35;1mSQL (0.001042)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering reportesar/prepestacionvariablefecha
+Completed in 0.61500 (1 reqs/sec) | Rendering: 0.13258 (21%) | DB: 0.11677 (18%) | 200 OK [http://159.90.14.203/reportesar/prepestacionvariablefecha]
+
+
+Processing ReportesarController#estacionvariablefecha (for 159.90.14.49 at 2015-03-23 16:04:39) [POST]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"variable"=>{"id"=>"83"}, "action"=>"estacionvariablefecha", "date"=>{"dia_inicial"=>"1", "mes_inicial"=>"1", "dia_final"=>"10", "anho_final"=>"1960", "anho_inicial"=>"1960", "mes_final"=>"1"}, "estacion"=>{"id"=>"11966"}, "controller"=>"reportesar", "commit"=>"Generar"}
+  [4;36;1mMedidavarhcFactAr Load (0.147916)[0m   [0;1mSELECT
+ "medidavarhc_facts"."valor_m",
+ "tiempo_dimension"."tiempo",
+ "nivelagregacion_dimension"."nivel_agregacion",
+ "unidad_dimension"."unidad_medida_u",
+ "estacion_dimension"."nombre_est"
+ FROM
+ "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+ INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+ INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
+ INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+ INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+ WHERE
+ "medidavarhc_facts"."variable_id" = 83
+ AND "medidavarhc_facts"."estacion_id" = 11966
+ AND "tiempo_dimension"."tiempo" >= date '1960-1-1'
+ AND "tiempo_dimension"."tiempo" <= date '1960-1-10'
+ ORDER BY
+ "tiempo_dimension"."tiempo"[0m
+  [4;35;1mSQL (0.001202)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mVariableDimensionAr Load (0.000461)[0m   [0;1mSELECT * FROM variable_dimension WHERE (variable_dimension."id" = 83) [0m
+  [4;35;1mSQL (0.001113)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'estacion_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mEstacionDimensionAr Load (0.029082)[0m   [0;1mSELECT * FROM estacion_dimension WHERE (estacion_dimension."id" = 11966) [0m
+Sending data 
+Completed in 0.19691 (5 reqs/sec) | Rendering: 0.00012 (0%) | DB: 0.17977 (91%) | 200 OK [http://159.90.14.203/reportesar/estacionvariablefecha]
+
+
+Processing ApplicationController#index (for 159.90.14.49 at 2015-03-23 16:04:42) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/stylesheets/images/img04.gif" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ReportesarController#prepvariableestadofechas (for 159.90.14.49 at 2015-03-23 16:05:00) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"action"=>"prepvariableestadofechas", "controller"=>"reportesar"}
+  [4;35;1mVariableDimensionAr Load (0.001785)[0m   [0mSELECT * FROM variable_dimension ORDER BY nombre_hc ASC[0m
+  [4;36;1mSQL (0.001198)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mEstado Load (0.000856)[0m   [0mSELECT * FROM estados ORDER BY nombre ASC[0m
+Rendering  within layouts/application
+Rendering reportesar/prepvariableestadofechas
+  [4;36;1mSQL (0.001222)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'estados'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.11391 (8 reqs/sec) | Rendering: 0.00964 (8%) | DB: 0.00506 (4%) | 200 OK [http://159.90.14.203/reportesar/prepvariableestadofechas]
+
+
+Processing ReportesarController#variableestadofechas (for 159.90.14.49 at 2015-03-23 16:05:04) [POST]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"variable"=>{"id"=>"83"}, "estado"=>{"acronimo"=>"AM"}, "action"=>"variableestadofechas", "date"=>{"dia_inicial"=>"1", "mes_inicial"=>"1", "dia_final"=>"10", "anho_final"=>"1960", "anho_inicial"=>"1960", "mes_final"=>"1"}, "controller"=>"reportesar", "commit"=>"Generar"}
+  [4;35;1mMedidavarhcFactAr Load (1.550182)[0m   [0mSELECT
+ "medidavarhc_facts"."valor_m",
+ "tiempo_dimension"."tiempo",
+ "tiempo_dimension"."hora",
+ "nivelagregacion_dimension"."nivel_agregacion",
+ "variable_dimension"."nombre_hc",
+ "unidad_dimension"."unidad_medida_u",
+ "estaciones"."nombre",
+ "estaciones"."latitud",
+ "estaciones"."longitud",
+ "estaciones"."altura"
+ FROM
+ "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+ INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+ INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+ INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+ INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+ WHERE
+ "medidavarhc_facts"."variable_id" = 83
+		AND "estaciones"."estado_acron" LIKE 'AM'
+ AND "tiempo_dimension"."tiempo" >= date '1960-1-1'
+ AND "tiempo_dimension"."tiempo" <= date '1960-1-10'
+ ORDER BY
+ "estaciones"."nombre", "tiempo_dimension"."tiempo"[0m
+  [4;36;1mSQL (0.001301)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mVariableDimensionAr Load (0.000477)[0m   [0mSELECT * FROM variable_dimension WHERE (variable_dimension."id" = 83) [0m
+Sending data 
+Completed in 1.56530 (0 reqs/sec) | Rendering: 0.00006 (0%) | DB: 1.55196 (99%) | 200 OK [http://159.90.14.203/reportesar/variableestadofechas]
+
+
+Processing ApplicationController#index (for 159.90.14.49 at 2015-03-23 16:05:08) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/stylesheets/images/img04.gif" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ReportesarController#variableestadofechas (for 159.90.14.49 at 2015-03-23 16:05:55) [POST]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"variable"=>{"id"=>"83"}, "estado"=>{"acronimo"=>"AM"}, "action"=>"variableestadofechas", "date"=>{"dia_inicial"=>"1", "mes_inicial"=>"1", "dia_final"=>"10", "anho_final"=>"1960", "anho_inicial"=>"1960", "mes_final"=>"1"}, "controller"=>"reportesar", "commit"=>"Generar"}
+  [4;36;1mMedidavarhcFactAr Load (0.373304)[0m   [0;1mSELECT
+ "medidavarhc_facts"."valor_m",
+ "tiempo_dimension"."tiempo",
+ "tiempo_dimension"."hora",
+ "nivelagregacion_dimension"."nivel_agregacion",
+ "variable_dimension"."nombre_hc",
+ "unidad_dimension"."unidad_medida_u",
+ "estaciones"."nombre",
+ "estaciones"."latitud",
+ "estaciones"."longitud",
+ "estaciones"."altura"
+ FROM
+ "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+ INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+ INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+ INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+ INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+ WHERE
+ "medidavarhc_facts"."variable_id" = 83
+		AND "estaciones"."estado_acron" LIKE 'AM'
+ AND "tiempo_dimension"."tiempo" >= date '1960-1-1'
+ AND "tiempo_dimension"."tiempo" <= date '1960-1-10'
+ ORDER BY
+ "estaciones"."nombre", "tiempo_dimension"."tiempo"[0m
+  [4;35;1mSQL (0.001208)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mVariableDimensionAr Load (0.000452)[0m   [0;1mSELECT * FROM variable_dimension WHERE (variable_dimension."id" = 83) [0m
+Sending data 
+Completed in 0.38513 (2 reqs/sec) | Rendering: 0.00005 (0%) | DB: 0.37496 (97%) | 200 OK [http://159.90.14.203/reportesar/variableestadofechas]
+
+
+Processing ReportesarController#prepvariableestadofechas (for 159.90.14.49 at 2015-03-23 16:06:05) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"action"=>"prepvariableestadofechas", "controller"=>"reportesar"}
+  [4;35;1mVariableDimensionAr Load (0.001754)[0m   [0mSELECT * FROM variable_dimension ORDER BY nombre_hc ASC[0m
+  [4;36;1mSQL (0.001002)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mEstado Load (0.000962)[0m   [0mSELECT * FROM estados ORDER BY nombre ASC[0m
+Rendering  within layouts/application
+Rendering reportesar/prepvariableestadofechas
+  [4;36;1mSQL (0.001279)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'estados'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Completed in 0.09593 (10 reqs/sec) | Rendering: 0.00954 (9%) | DB: 0.00500 (5%) | 200 OK [http://159.90.14.203/reportesar/prepvariableestadofechas]
+
+
+Processing ReportesarController#variableestadofechas (for 159.90.14.49 at 2015-03-23 16:06:09) [POST]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"variable"=>{"id"=>"83"}, "estado"=>{"acronimo"=>"AM"}, "action"=>"variableestadofechas", "date"=>{"dia_inicial"=>"1", "mes_inicial"=>"1", "dia_final"=>"12", "anho_final"=>"1960", "anho_inicial"=>"1960", "mes_final"=>"1"}, "controller"=>"reportesar", "commit"=>"Generar"}
+  [4;35;1mMedidavarhcFactAr Load (0.337304)[0m   [0mSELECT
+ "medidavarhc_facts"."valor_m",
+ "tiempo_dimension"."tiempo",
+ "tiempo_dimension"."hora",
+ "nivelagregacion_dimension"."nivel_agregacion",
+ "variable_dimension"."nombre_hc",
+ "unidad_dimension"."unidad_medida_u",
+ "estaciones"."nombre",
+ "estaciones"."latitud",
+ "estaciones"."longitud",
+ "estaciones"."altura"
+ FROM
+ "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+ INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+ INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+ INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+ INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+ WHERE
+ "medidavarhc_facts"."variable_id" = 83
+		AND "estaciones"."estado_acron" LIKE 'AM'
+ AND "tiempo_dimension"."tiempo" >= date '1960-1-1'
+ AND "tiempo_dimension"."tiempo" <= date '1960-1-12'
+ ORDER BY
+ "estaciones"."nombre", "tiempo_dimension"."tiempo"[0m
+  [4;36;1mSQL (0.001236)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mVariableDimensionAr Load (0.000471)[0m   [0mSELECT * FROM variable_dimension WHERE (variable_dimension."id" = 83) [0m
+Sending data 
+Completed in 0.34997 (2 reqs/sec) | Rendering: 0.00006 (0%) | DB: 0.33901 (96%) | 200 OK [http://159.90.14.203/reportesar/variableestadofechas]
+
+
+Processing ReportesarController#variableestadofechas (for 159.90.14.49 at 2015-03-23 16:06:27) [POST]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"variable"=>{"id"=>"21"}, "estado"=>{"acronimo"=>"AM"}, "action"=>"variableestadofechas", "date"=>{"dia_inicial"=>"1", "mes_inicial"=>"1", "dia_final"=>"12", "anho_final"=>"1960", "anho_inicial"=>"1960", "mes_final"=>"1"}, "controller"=>"reportesar", "commit"=>"Generar"}
+  [4;36;1mMedidavarhcFactAr Load (1.229975)[0m   [0;1mSELECT
+ "medidavarhc_facts"."valor_m",
+ "tiempo_dimension"."tiempo",
+ "tiempo_dimension"."hora",
+ "nivelagregacion_dimension"."nivel_agregacion",
+ "variable_dimension"."nombre_hc",
+ "unidad_dimension"."unidad_medida_u",
+ "estaciones"."nombre",
+ "estaciones"."latitud",
+ "estaciones"."longitud",
+ "estaciones"."altura"
+ FROM
+ "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+ INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+ INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+ INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+ INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+ WHERE
+ "medidavarhc_facts"."variable_id" = 21
+		AND "estaciones"."estado_acron" LIKE 'AM'
+ AND "tiempo_dimension"."tiempo" >= date '1960-1-1'
+ AND "tiempo_dimension"."tiempo" <= date '1960-1-12'
+ ORDER BY
+ "estaciones"."nombre", "tiempo_dimension"."tiempo"[0m
+  [4;35;1mSQL (0.001206)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mVariableDimensionAr Load (0.000451)[0m   [0;1mSELECT * FROM variable_dimension WHERE (variable_dimension."id" = 21) [0m
+Sending data 
+Completed in 1.24186 (0 reqs/sec) | Rendering: 0.00006 (0%) | DB: 1.23163 (99%) | 200 OK [http://159.90.14.203/reportesar/variableestadofechas]
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+ServicioController: missing default helper path servicio_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+DescargasController: missing default helper path descargas_helper
+GeoreferenceController: missing default helper path georeference_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /home/fabio/ARGUs/config/environment.rb:79)
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+ServicioController: missing default helper path servicio_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+DescargasController: missing default helper path descargas_helper
+GeoreferenceController: missing default helper path georeference_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /home/fabio/ARGUs/config/environment.rb:79)
+
+
+Processing ReportesarController#variableestadofechas (for 159.90.14.49 at 2015-03-23 16:07:30) [POST]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"action"=>"variableestadofechas", "date"=>{"dia_inicial"=>"1", "mes_final"=>"1", "anho_inicial"=>"1960", "mes_inicial"=>"1", "anho_final"=>"1960", "dia_final"=>"12"}, "estado"=>{"acronimo"=>"AM"}, "controller"=>"reportesar", "variable"=>{"id"=>"21"}, "commit"=>"Generar"}
+  [4;36;1mMedidavarhcFactAr Load (0.760152)[0m   [0;1mSELECT
+ "medidavarhc_facts"."valor_m",
+ "tiempo_dimension"."tiempo",
+ "tiempo_dimension"."hora",
+ "nivelagregacion_dimension"."nivel_agregacion",
+ "variable_dimension"."nombre_hc",
+ "unidad_dimension"."unidad_medida_u",
+ "estaciones"."nombre",
+ "estaciones"."latitud",
+ "estaciones"."longitud",
+ "estaciones"."altura"
+ FROM
+ "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+ INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+ INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+ INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+ INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+ WHERE
+ "medidavarhc_facts"."variable_id" = 21
+		AND "estaciones"."estado_acron" LIKE 'AM'
+ AND "tiempo_dimension"."tiempo" >= date '1960-1-1'
+ AND "tiempo_dimension"."tiempo" <= date '1960-1-12'
+ ORDER BY
+ "estaciones"."nombre", "tiempo_dimension"."tiempo"[0m
+  [4;35;1mSQL (0.003418)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mVariableDimensionAr Load (0.000544)[0m   [0;1mSELECT * FROM variable_dimension WHERE (variable_dimension."id" = 21) [0m
+Sending data 
+Completed in 0.85137 (1 reqs/sec) | Rendering: 0.00006 (0%) | DB: 0.76411 (89%) | 200 OK [http://159.90.14.203/reportesar/variableestadofechas]
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+ServicioController: missing default helper path servicio_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+DescargasController: missing default helper path descargas_helper
+GeoreferenceController: missing default helper path georeference_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /home/fabio/ARGUs/config/environment.rb:79)
+
+
+Processing ReportesarController#variableestadofechas (for 159.90.14.49 at 2015-03-23 16:10:57) [POST]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"estado"=>{"acronimo"=>"AM"}, "action"=>"variableestadofechas", "variable"=>{"id"=>"21"}, "controller"=>"reportesar", "date"=>{"dia_inicial"=>"1", "mes_inicial"=>"1", "anho_final"=>"1960", "dia_final"=>"12", "anho_inicial"=>"1960", "mes_final"=>"1"}, "commit"=>"Generar"}
+  [4;36;1mMedidavarhcFactAr Load (0.769950)[0m   [0;1mSELECT
+ "medidavarhc_facts"."valor_m",
+ "tiempo_dimension"."tiempo",
+ "tiempo_dimension"."hora",
+ "nivelagregacion_dimension"."nivel_agregacion",
+ "variable_dimension"."nombre_hc",
+ "unidad_dimension"."unidad_medida_u",
+ "estaciones"."nombre",
+ "estaciones"."latitud",
+ "estaciones"."longitud",
+ "estaciones"."altura"
+ FROM
+ "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+ INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+ INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+ INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+ INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+ WHERE
+ "medidavarhc_facts"."variable_id" = 21
+		AND "estaciones"."estado_acron" LIKE 'AM'
+ AND "tiempo_dimension"."tiempo" >= date '1960-1-1'
+ AND "tiempo_dimension"."tiempo" <= date '1960-1-12'
+ ORDER BY
+ "estaciones"."nombre", "tiempo_dimension"."tiempo"[0m
+  [4;35;1mSQL (0.003797)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mVariableDimensionAr Load (0.000681)[0m   [0;1mSELECT * FROM variable_dimension WHERE (variable_dimension."id" = 21) [0m
+Sending data 
+Completed in 0.86040 (1 reqs/sec) | Rendering: 0.00008 (0%) | DB: 0.77443 (90%) | 200 OK [http://159.90.14.203/reportesar/variableestadofechas]
+
+
+Processing ApplicationController#index (for 159.90.14.49 at 2015-03-23 16:11:01) [GET]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/stylesheets/images/img04.gif" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ReportesarController#variableestadofechas (for 159.90.14.49 at 2015-03-23 16:11:11) [POST]
+  Session ID: 11c464912cce287061c17a1353ff99b3
+  Parameters: {"estado"=>{"acronimo"=>"AM"}, "action"=>"variableestadofechas", "variable"=>{"id"=>"20"}, "controller"=>"reportesar", "date"=>{"dia_inicial"=>"1", "mes_inicial"=>"1", "anho_final"=>"1960", "dia_final"=>"12", "anho_inicial"=>"1960", "mes_final"=>"1"}, "commit"=>"Generar"}
+  [4;35;1mMedidavarhcFactAr Load (0.163638)[0m   [0mSELECT
+ "medidavarhc_facts"."valor_m",
+ "tiempo_dimension"."tiempo",
+ "tiempo_dimension"."hora",
+ "nivelagregacion_dimension"."nivel_agregacion",
+ "variable_dimension"."nombre_hc",
+ "unidad_dimension"."unidad_medida_u",
+ "estaciones"."nombre",
+ "estaciones"."latitud",
+ "estaciones"."longitud",
+ "estaciones"."altura"
+ FROM
+ "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+ INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+ INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+ INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+ INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+ WHERE
+ "medidavarhc_facts"."variable_id" = 20
+		AND "estaciones"."estado_acron" LIKE 'AM'
+ AND "tiempo_dimension"."tiempo" >= date '1960-1-1'
+ AND "tiempo_dimension"."tiempo" <= date '1960-1-12'
+ ORDER BY
+ "estaciones"."nombre", "tiempo_dimension"."tiempo"[0m
+  [4;36;1mSQL (0.001473)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'medidavarhc_facts'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mSQL (0.001351)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mVariableDimensionAr Load (0.000484)[0m   [0;1mSELECT * FROM variable_dimension WHERE (variable_dimension."id" = 20) [0m
+Sending data 
+Completed in 0.24920 (4 reqs/sec) | Rendering: 0.00006 (0%) | DB: 0.16695 (66%) | 200 OK [http://159.90.14.203/reportesar/variableestadofechas]

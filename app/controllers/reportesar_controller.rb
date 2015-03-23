@@ -13,7 +13,7 @@ class ReportesarController < ApplicationController
     variable = VariableDimensionAr.find(var).nombre_hc.to_s
     nombre = variable+".csv"
 
-    @registros = MedidavarhcFactAr.find_by_sql 'SELECT
+@registros = MedidavarhcFactAr.find_by_sql 'SELECT
            "medidavarhc_facts"."valor_m",
            "tiempo_dimension"."tiempo",
            "nivelagregacion_dimension"."nivel_agregacion",
@@ -302,10 +302,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Altura","Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, resgitro.altitud_est,registro.nombre_est]
         end
       end
 
@@ -370,10 +370,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud","Altura", "Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.altura_est, registro.nombre_est]
         end
       end
 
@@ -434,10 +434,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud","Altura","Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.altura_est,registro.nombre_est]
         end
       end
 
@@ -506,10 +506,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud","Altura" ,"Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.altura_est, registro.longitud_est, registro.nombre_est]
         end
       end
 
@@ -562,10 +562,10 @@ ORDER BY
                     
           csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Altura","Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.estado_acron, registro.latitud, registro.longitud, registro.nombre]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.estado_acron, registro.latitud, registro.longitud, registro.altura, registro.nombre]
         end
       end
 
@@ -626,10 +626,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Altura","Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud, registro.longitud, registro.nombre]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud, registro.longitud, registro.altura, registro.nombre]
         end
       end
 
