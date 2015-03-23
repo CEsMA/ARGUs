@@ -1,0 +1,90 @@
+<input type="button" class="boton" value="Cerrar esta ventana" onclick="self.close()">
+
+<pre>
+</br>
+</br>
+ <strong>EJEMPLO DEL ARCHIVO QUE DEBE PROVEERSE:</strong>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+	1.80 | MedicionComentario | 12/21/2007 | 15:30 | observaTiempo | diario | nivelAgrega I
+	129.0 | medicion buena | 10/21/2007 | 02:30 | observaTiempo | semanal | nivelAgrega I
+	1.0 | medicion bajita | 10/22/2007 | 04:30 || horario | nivelAgrega I
+	98.0 | medicion muy alta | 9/21/2006 | 16:30 || mensual | nivelAgrega I
+	12.0 | nada que decir | 12/12/2007 | 02:30 || diario | nivelAgrega I
+	13.0 | muy mal esta medicion | 02/10/2007 | 04:30 | | diario | nivelAgrega I
+	19.2 || 02/20/2005 | 16:30 || mensual | nivelAgrega I
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	<strong>EXPLICACION Y DETALLES DEL FORMATO QUE DEBE PROVEERSE</strong>
+**************************************************************
+  Para realizar la carga de un paquete de datos al repositorio usted deberá proveer un archivo de texto plano, 
+donde todas sus l'ineas deben apegarse al formato que a continuación se presenta:
+
+    <strong><h2> Medida | ObservM | Fecha | Hora | ObservT | Granularidad | NivelAg </h2></strong>
+
+  Como se oberva en la especificación que se encuentra dentro del cuadro, cada l'inea debe con-
+tener siete parámetros, cada uno separado por “|”. Algunos parámetros son opcionales, pero los
+delimitadores son OBLIGATORIOS, en consecuencia, toda l'inea SIEMPRE debe contener seis “|”.
+
+  A continuación se describen los elementos que deben (y en algunos casos, pueden) incluirse como
+parte de cada medición:   </br>
+
+  <strong> 1. Medida: </strong> representa el valor numérico de la medición que se desea registrar. </br>
+            Tipo y restricciones: elemento de tipo flotante, sin restricciones de valores m'inimo o máximo. </br>
+            Ejemplo: 3.33, 2.78, 18, 189.02. </br>
+            Mandatorio u opcional: MANDATORIO. </br></br>
+
+   <strong>2. ObservM: </strong> cualquier comentario u observación que se desee hacer sobre el valor de la medición. </br>
+	    Tipo y restricciones: expresión de tipo alfa-numérico de hasta 255 caracteres. </br>
+            Mandatorio u opcional: OPCIONAL. </br></br>
+
+   <strong>3. Fecha: </strong> d'ia, mes y año en que se realizó la medición. </br>
+            Tipo y restricciones: debe regirse por el formato MM/DD/YYYY, donde MM, DD y YYYY deben ser 
+              mes, d'ia y año válidos respectivamente.</br>
+            Ejemplo: 12/21/1990, 01/02/2002, 07/29/2006.</br>
+            Mandatorio u opcional: MANDATORIO. </br></br>
+
+   <strong>4. Hora: </strong> hora y minuto en que se realizó la medición.</br>
+            Tipo y restricciones: debe regirse por el formato HH:MM, donde HH y MM deben ser hora y minuto válidos  </br>
+	      expresados bajo estándar 24H. </br>
+	    Ejemplo: 12:23, 01:03, 17:40.</br>
+            Mandatorio u opcional: MANDATORIO. </br></br>
+
+   <strong>5. ObservT: </strong> cualquier comentario u observación que se desee hacer sobre la fecha y hora de la medición. </br>
+           Tipo y restricciones: expresión de tipo alfa-numérico de hasta 255 caracteres. </br>
+           Mandatorio u opcional: OPCIONAL. </br></br>
+
+   <strong>6. Granularidad: </strong> se refiere a la periodicidad con que son tomadas las mediciones. </br>
+           Tipo y restricciones: expresión de tipo alfa-numérico de hasta 30 caracteres, el cual debe ser un tipo 
+             válido en el sistema. </br>
+           Ejemplo: diario, mensual, semanal. </br>
+           Mandatorio u opcional: MANDATORIO. </br></br>
+
+   <strong>7. NivelAg: </strong> se refiere al nivel de agregación asociado a la medida, es decir, 
+        cuantas modificaciones ha sufrido la medida por intervención humana. </br></br>
+
+
+<pre>
+
+  Para aquellos parámetros que indican como parte de sus restricciones que “debe ser un tipo válido
+en el sistema”, póngase en contacto con el administrador para conocer cuáles son los posibles valores
+considerados como permitidos en ese momento.
+
+   NOTA: Si usted intenta cargar algún archivo con valores no permitidos o que no se adapte al
+formato de carga exigido, el módulo de validación hará que la operación de registro de mediciones
+falle y le mostrará un log que indica l'inea a l'inea, todos los problemas que debe resolver para que el
+archivo pueda ser cargado al repositorio de manera exitosa.
+
+   Todas las mediciones contenidas en un archivo de entrada, deben estar asociadas a una misma:
+variable, estación hidroclimática y unidad de medición. Todos estos parámetros deben ser provistos
+por usted en la pantalla del módulo de carga de datos.
+</pre>
+
+
+************************************>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+          Creado el 28/02/2008 por G. Tepedino y A. Garboza. 
+************************************>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+</br>
+<input type="button" class="boton" value="Cerrar esta ventana" onclick="self.close()">

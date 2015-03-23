@@ -1,0 +1,39 @@
+<%= error_messages_for 'solicitudreporte' %>
+
+<!--[form:solicitudreporte]-->
+<p><label for="solicitudreporte_titulo">Titulo</label><br/>
+<%= text_field 'solicitudreporte', 'titulo'  %></p>
+
+<p><label for="solicitudreporte_variable">Variable</label><br/>
+<%= text_field 'solicitudreporte', 'variable'  %></p>
+
+<p><label for="solicitudreporte_estacion">Estacion</label><br/>
+<%= text_field 'solicitudreporte', 'estacion'  %></p>
+
+<p><label for="solicitudreporte_estado">Estado</label><br/>
+  <%= estados = Estado.find(:all)
+    collection_select(:estado, :nombre, estados, :nombre, :nombre,
+      options ={:prompt => "-Seleccione un estado"}, :class =>"estado") %></p>
+
+<p><label for="solicitudreporte_cotainferior">Cota inferior</label><br/>
+<%= text_field 'solicitudreporte', 'cotainferior'  %></p>
+
+<p><label for="solicitudreporte_cotasuperior">Cota superior</label><br/>
+<%= text_field 'solicitudreporte', 'cotasuperior'  %></p>
+
+<p><label for="solicitudreporte_periododetiempo">Periodo de  tiempo</label><br/>
+<%= text_area 'solicitudreporte', 'periododetiempo'  %></p>
+
+<p><label for="solicitudreporte_granularidad">Granularidad</label><br/>
+<%= text_field 'solicitudreporte', 'granularidad'  %></p>
+
+<p><label for="solicitudreporte_tipoestacion">Tipo de estacion</label><br/>
+<%= text_field 'solicitudreporte', 'tipoestacion'  %></p>
+
+<p><label for="solicitudreporte_institucion">Institucion</label><br/>
+<%= text_field 'solicitudreporte', 'institucion'  %></p>
+
+<p><label for="solicitudreporte_comentario">Comentario</label><br/>
+<%= text_area 'solicitudreporte', 'comentario'  %></p>
+<!--[eoform:solicitudreporte]-->
+

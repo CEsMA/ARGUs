@@ -1,0 +1,33 @@
+<!-- 
+    Permite al usuario escribir y ejecutar su propia consulta, especificandola de forma directa.
+    NOTA: El usuario debe tener conocimientos previos acerca de nociones de BD y lenguaje SQL.
+-->
+
+
+<h1>C&oacute;nsola de consultas personalizadas.</h1>
+
+<%= form_tag :action => 'injectionQuery'%>
+    <h2> Ingrese una consulta.</h2>
+    <%= text_area_tag("query", content = @texto.to_s, options = {:cols => 60, :rows => 5, :maxlength => 300})%>
+    <%= submit_tag 'Consultar', :class=>"boton" %>
+<%= end_form_tag %>
+
+
+<% unless @resultado.nil? || @resultado==[] %>
+    <br/><br/><br/>
+     <h2>Opciones.</h2>
+    <%= link_to image_tag("descargar2.png",:border => 0 ) + 'Descargar resultados', {:controller => 'descargas', :action => 'descargaArchivo', :nombrefile => "./tmp/descargas/#{current_usuario.nombre}#{current_usuario.id}.txt"}%><br/>
+    <%= link_to image_tag("ver1.png",:border => 0 ) + 'Ver resultados', {:action => "injectionQueryResult", :resultado => @resultado}, :target => '_blank'%>
+<% end %>
+
+
+<div class="derecha">
+      <%= link_to image_tag("home.png",:border => 0 ) + 'Inicio', :controller=>'usuario',:action => 'welcome' %>
+</div>
+
+
+
+<script type="text/javascript">
+    var field1 = new LiveValidation('query', {onlyOnSubmit: true});
+    field1.add(Validate.Presence);    
+ </script>

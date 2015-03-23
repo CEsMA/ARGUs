@@ -1,0 +1,65 @@
+<%= javascript_include_tag :defaults %>
+
+<% acceso = false %>
+<%= form_tag :action => 'destroyMultiple' %>
+   <table class="tabla">
+       <tr>
+           <th <%= sort_td_class_helper "Nombre" %>> 
+                <%= sort_link_helper "Nombre", "Nombre" %>      
+            </th>
+
+            <th <%= sort_td_class_helper "Descripcion" %>> 
+                <%= sort_link_helper "Descripcion", "Descripcion" %> 
+            </th>
+            <th <%= sort_td_class_helper "Autor" %>>
+                <%= sort_link_helper "Autor", "Autor" %> 
+            </th>
+            <th <%= sort_td_class_helper "Hab" %>>
+                <%= sort_link_helper "Hab", "Habilitado" %> 
+            </th>
+            <th class="spin">
+              <div class="centrado">
+                  <%= image_tag "load.gif", :id => 'spin', :size=>'15x15', :style => 'display:none;' %>
+              </div>
+            </th>
+          </tr>
+
+         
+          <% for servicio in @servicios %>
+            <tr class ="<%= cycle('list-line-odd', 'list-line-even') %>" >
+              <td><%= servicio.nombre.to_s.slice(0,20) %></td>
+              <td><%= servicio.descripcion.to_s.slice(0,30) %></td>
+              <td><%= servicio.autor.to_s.slice(0,10) %></td>
+              <td><%= servicio.habilitado.to_s.slice(0,5) %></td>
+              <td><%= link_to image_tag("ver1.png",:border => 0 ), :action => 'show', :id => servicio %></td>
+              <% if @whatami.to_i == 0 || servicio.usuario_id.to_i == current_usuario.id %>
+                  <% acceso = true %>
+                  <td><%= link_to image_tag("editar.png", :border => 0 ), :action => 'edit', :id => servicio %></td>
+                  <td><%= check_box_tag 'to_delete[]', "#{servicio.id}" %></td>
+              <% end %>
+             </tr>
+          <% end %>
+    </table>
+<br/>
+
+    <% if @whatami.to_i == 0 || @whatami.to_i == 1  %>
+         <br/>
+         <%= link_to image_tag("crear5.png", :border => 0 )+'Crear servicio', :action => 'new' %>
+			
+		 <% if acceso == true %>
+	         <div class="derecha">
+	            <%= submit_tag 'Eliminar.', :class=>"boton" %>
+	         </div>
+		 <% end %>
+		 
+    <% end %>
+<%= end_form_tag %>
+
+<%= link_to image_tag("arrowIzq2.png", :border => 0 ), { :page => @servicio_pages.current.previous } if @servicio_pages.current.previous %>
+<%= link_to image_tag("arrowDer2.png", :border => 0 ), { :page => @servicio_pages.current.next } if @servicio_pages.current.next %>
+
+<div class="centrado">
+	<h3> Opciones de Servicios Semánticos </h3>
+	<%= link_to 'Componer y ejecutar', :controller => 'servicio_semantico', :action => 'composser' %> <br/>
+	<%= link_to 'Publicar', :controller => 'servicio_semantico', :action => 'publicar' %> <br/><br/><br/>
+</div>

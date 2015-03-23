@@ -1,5 +1,4 @@
 require File.dirname(__FILE__) + '/../test_helper'
-
 class MedidavarhcFactTest < Test::Unit::TestCase
   fixtures :medidavarhc_facts
 

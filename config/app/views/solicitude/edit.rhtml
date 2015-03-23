@@ -1,0 +1,13 @@
+<h1>Editar solicitud</h1>
+
+<% form_tag :action => 'update', :id => @solicitude do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Actualizar', :class => "boton"  %>
+<% end %>
+
+
+<br/>
+<div class="derecha">
+      <%= link_to image_tag("back4.png",:border => 0 ) +'Regresar  ', :action => 'list' %>
+      <%= link_to image_tag("home.png",:border => 0 ) +'Inicio  ', :controller=>'usuario', :action => 'welcome' %>
+</div>

@@ -23,17 +23,21 @@ ActiveRecord::Schema.define() do
     t.column "solicitudreporte_id", :string
   end
 
+  create_table "batches", :force => true do |t|
+    t.column "batch_file",   :string,   :null => false
+    t.column "created_at",   :datetime, :null => false
+    t.column "completed_at", :datetime
+    t.column "status",       :string
+  end
+
   create_table "consultas", :force => true do |t|
     t.column "usuario_id",     :integer, :null => false
-    t.column "texto_pregunta", :text,    :null => false
-    t.column "id_pred",        :integer
-    t.column "pred",           :boolean
-    t.column "sql_query",      :text
+    t.column "texto_pregunta", :text
   end
 
   create_table "consultatags", :force => true do |t|
     t.column "consulta_id", :integer,               :null => false
-    t.column "tag",         :string,  :limit => 30, :null => false
+    t.column "tag",         :string,  :limit => 30
   end
 
   create_table "estacion_dimension", :force => true do |t|
@@ -43,34 +47,25 @@ ActiveRecord::Schema.define() do
     t.column "altura_est",   :integer
   end
 
+  add_index "estacion_dimension", ["altura_est"], :name => "index_estacion_dimension_on_altura_est"
+  add_index "estacion_dimension", ["latitud_est"], :name => "index_estacion_dimension_on_latitud_est"
+  add_index "estacion_dimension", ["longitud_est"], :name => "index_estacion_dimension_on_longitud_est"
+  add_index "estacion_dimension", ["nombre_est"], :name => "index_estacion_dimension_on_nombre_est"
+
   create_table "estaciones", :force => true do |t|
-    t.column "id_tipo",             :string, :limit => 1,  :null => false
-    t.column "serial_e",            :string, :limit => 4,  :null => false
-    t.column "codigo_omm",          :text
-    t.column "nombre",              :text,                 :null => false
-    t.column "latitud",             :float
-    t.column "longitud",            :float
-    t.column "altura",              :float
-    t.column "estado_acron",        :string, :limit => 2
-    t.column "categoria_e",         :text
-    t.column "sub_categoria_e",     :text
-    t.column "caracteristicas_e",   :text
-    t.column "forma_captura_datos", :string, :limit => 12
-    t.column "carta",               :string, :limit => 4
-    t.column "ope",                 :text
-    t.column "fecha_inst",          :date
-    t.column "fecha_elim",          :date
-    t.column "ser_org",             :string, :limit => 8
-    t.column "org",                 :string, :limit => 15
-    t.column "operada",             :string, :limit => 2
-    t.column "tipo_estacion",       :string, :limit => 40
-    t.column "actual",              :string, :limit => 2
+    t.column "latitud",     :float,                  :null => false
+    t.column "longitud",    :float,                  :null => false
+    t.column "pais",        :string,  :limit => 80,  :null => false
+    t.column "informacion", :string,  :limit => 300, :null => false
+    t.column "nombre",      :string,  :limit => 100
+    t.column "codigoomm",   :string,  :limit => 100
+    t.column "altura",      :float
+    t.column "actual",      :string,  :limit => 2
+    t.column "estado_id",   :integer,                :null => false
   end
 
   create_table "estados", :force => true do |t|
-    t.column "acronimo_estado", :string, :limit => 2,  :null => false
-    t.column "nombre",          :string, :limit => 30
-    t.column "forma_ubicacion", :text
+    t.column "nombre", :string, :limit => 40, :null => false
   end
 
   create_table "fenomeno_meteorologicos", :force => true do |t|
@@ -81,20 +76,16 @@ ActiveRecord::Schema.define() do
     t.column "periodicidad_f", :string, :limit => 15
   end
 
-  create_table "incide_tofs", :force => true do |t|
-    t.column "id_tipo_objeto_tof", :string, :limit => 20, :null => false
-    t.column "id_fenomeno_tof",    :string, :limit => 20, :null => false
+  create_table "hilos", :force => true do |t|
+    t.column "titulo", :string, :limit => 50, :null => false
   end
 
-  create_table "instituciones", :force => true do |t|
-    t.column "acronimo_i",     :string, :limit => 15, :null => false
-    t.column "nombre_i",       :text,                 :null => false
-    t.column "mision_i",       :text
-    t.column "tipo_i",         :text
-    t.column "alcance_i",      :text
-    t.column "departamento_i", :text
-    t.column "cargo_i",        :text
-    t.column "persona_i",      :text
+  create_table "jobs", :force => true do |t|
+    t.column "control_file", :string,   :null => false
+    t.column "created_at",   :datetime, :null => false
+    t.column "completed_at", :datetime
+    t.column "status",       :string
+    t.column "batch_id",     :integer
   end
 
   create_table "medidavarhc_facts", :force => true do |t|
@@ -112,6 +103,12 @@ ActiveRecord::Schema.define() do
     t.column "descripcion_med",     :string, :limit => 400
     t.column "propiedades_med",     :string, :limit => 400
     t.column "id_tipo_instrumento", :string, :limit => 100
+  end
+
+  create_table "mensajes", :force => true do |t|
+    t.column "hilo_id",    :integer,                :null => false
+    t.column "usuario_id", :integer,                :null => false
+    t.column "mensaje",    :string,  :limit => 300, :null => false
   end
 
   create_table "metadatos_desc", :primary_key => "id_metadesc", :force => true do |t|
@@ -132,11 +129,7 @@ ActiveRecord::Schema.define() do
     t.column "nivel_agregacion", :string
   end
 
-  create_table "parametros", :id => false, :force => true do |t|
-    t.column "codigo_param", :string, :limit => 4,  :null => false
-    t.column "nombre_param", :text,                 :null => false
-    t.column "tipo_param",   :string, :limit => 25, :null => false
-  end
+  add_index "nivelagregacion_dimension", ["nivel_agregacion"], :name => "index_nivelagregacion_dimension_on_nivel_agregacion"
 
   create_table "periodo_operacions", :force => true do |t|
     t.column "estacion_id_po",  :integer, :null => false
@@ -149,18 +142,19 @@ ActiveRecord::Schema.define() do
     t.column "id_tipo_ins_vtins",     :integer, :null => false
   end
 
+  create_table "records", :force => true do |t|
+    t.column "control_file", :string,  :null => false
+    t.column "natural_key",  :string,  :null => false
+    t.column "crc",          :string,  :null => false
+    t.column "job_id",       :integer, :null => false
+  end
+
   create_table "reportepentahos", :force => true do |t|
     t.column "usuarios_id",         :integer
     t.column "solicitudreporte_id", :integer
     t.column "link",                :string
+    t.column "comentario",          :string
     t.column "privado",             :boolean, :default => true
-  end
-
-  create_table "reportes", :force => true do |t|
-    t.column "usuario_id",           :integer
-    t.column "link",                 :string
-    t.column "privado",              :boolean, :default => true
-    t.column "solicitud_reporte_id", :integer
   end
 
   create_table "requerimientos", :force => true do |t|
@@ -206,13 +200,6 @@ ActiveRecord::Schema.define() do
     t.column "updated_at", :date
   end
 
-  create_table "solicitud_reportes", :force => true do |t|
-    t.column "usuario_id", :integer
-    t.column "fecha_sol",  :date
-    t.column "fecha_res",  :date
-    t.column "privado",    :boolean, :default => true
-  end
-
   create_table "solicitudes", :force => true do |t|
     t.column "solicitante",   :integer,                :null => false
     t.column "prioridad",     :string,  :limit => 20,  :null => false
@@ -222,9 +209,21 @@ ActiveRecord::Schema.define() do
   end
 
   create_table "solicitudreportes", :force => true do |t|
-    t.column "usuario_id", :integer
-    t.column "creacion",   :date
-    t.column "resolucion", :date
+    t.column "titulo",          :string
+    t.column "usuario_id",      :integer
+    t.column "consultor_id",    :integer
+    t.column "creacion",        :date
+    t.column "resolucion",      :date
+    t.column "variable",        :string
+    t.column "estacion",        :string
+    t.column "estado",          :string
+    t.column "cotainferior",    :string
+    t.column "cotasuperior",    :string
+    t.column "periododetiempo", :text
+    t.column "granularidad",    :string
+    t.column "tipoestacion",    :string
+    t.column "institucion",     :string
+    t.column "comentario",      :text
   end
 
   create_table "table_reports", :force => true do |t|
@@ -255,10 +254,8 @@ ActiveRecord::Schema.define() do
     t.column "hora",          :time
   end
 
-  create_table "tipo_estaciones", :id => false, :force => true do |t|
-    t.column "codigo_tipo", :string, :limit => 2,  :null => false
-    t.column "nombre_tipo", :string, :limit => 50
-  end
+  add_index "tiempo_dimension", ["observacion_t"], :name => "index_tiempo_dimension_on_observacion_t"
+  add_index "tiempo_dimension", ["unidad_t"], :name => "index_tiempo_dimension_on_unidad_t"
 
   create_table "tipo_instrumentos", :force => true do |t|
     t.column "nombre_ti",           :string,  :limit => 100
@@ -280,6 +277,9 @@ ActiveRecord::Schema.define() do
     t.column "unidad_medida_u", :string
     t.column "observacion_u",   :string
   end
+
+  add_index "unidad_dimension", ["observacion_u"], :name => "index_unidad_dimension_on_observacion_u"
+  add_index "unidad_dimension", ["unidad_medida_u"], :name => "index_unidad_dimension_on_unidad_medida_u"
 
   create_table "unidads", :force => true do |t|
     t.column "nombre_unid",   :string, :limit => 100, :null => false
@@ -310,12 +310,6 @@ ActiveRecord::Schema.define() do
   create_table "usuarios_intereses", :force => true do |t|
     t.column "usuario_id",      :integer, :null => false
     t.column "areainterese_id", :integer, :null => false
-  end
-
-  create_table "variable_dimension", :force => true do |t|
-    t.column "id_var",         :integer, :null => false
-    t.column "observacion_hc", :string
-    t.column "nombre_hc",      :string
   end
 
   create_table "variable_hidroclimaticas", :force => true do |t|

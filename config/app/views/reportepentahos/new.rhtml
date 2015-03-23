@@ -1,0 +1,9 @@
+<h1>Publicacion de reportes.</h1>
+<%@reportepentaho.solicitudreporte_id = @solid%>
+
+<% form_tag :action => 'create', :solicitud => @sol do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag "Create" %>
+<% end %>
+
+<%= link_to 'Back', :action => 'list' %>

@@ -1,0 +1,14 @@
+<%= error_messages_for 'estacione' %>
+
+<h1>Crear estaci&oacute;n.</h1>
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag "Crear", :class=> "boton" %>
+<% end %>
+
+
+<div class="derecha">
+      <%= link_to image_tag("back4.png",:border => 0 ) + 'Regresar', :action => 'list' %>
+      <%= link_to image_tag("home.png",:border => 0 ) + 'Inicio', :controller=>'usuario', :action => 'welcome' %>
+</div>

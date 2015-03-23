@@ -82,6 +82,6 @@ ActionMailer::Base.server_settings = {
   :domain => "localhost.com",
   :authentication => :plain,
   :user_name => "hidroclima.venezuela",
-  :password => "tesistas2008"
+ :password => "tesistas2008"
 }
 

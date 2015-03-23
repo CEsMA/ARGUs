@@ -1,0 +1,108 @@
+<%= javascript_include_tag :defaults %>
+<%= stylesheet_link_tag "/javascripts/jscalendar-1.0/calendar-win2k-cold-1.css" %>
+<%= javascript_include_tag "jscalendar-1.0/calendar.js" %>
+<%= javascript_include_tag "jscalendar-1.0/lang/calendar-es.js" %>
+<%= javascript_include_tag "jscalendar-1.0/calendar-setup.js" %>
+
+
+<script language="JavaScript">
+	function efectos(tipo) {
+
+
+		if (tipo == "codigoEst") {
+			document.getElementById("codigoEst").style.display = "inline";
+			document.getElementById("otros").style.display = "none";
+			//new Effect.BlindDown(document.getElementById("codigoEst"));
+			//new Effect.BlindUp(document.getElementById("otros"));
+		}
+		if (tipo == "otros") {
+			document.getElementById("codigoEst").style.display = "none";
+			document.getElementById("otros").style.display = "inline";
+			//new Effect.BlindDown(document.getElementById("otros"));
+			//new Effect.BlindUp(document.getElementById("codigoEst"));
+		}
+		
+		if (tipo == "altura") {
+			document.getElementById("altura").style.display = "inline";
+			//new Effect.BlindDown(document.getElementById("altura"));
+		}
+		if (tipo == "noAltura") {
+			document.getElementById("altura").style.display = "none";
+			document.getElementById("altura_min").value="";
+			document.getElementById("altura_max").value="";
+			//new Effect.BlindUp(document.getElementById("altura"));
+		}
+		if (tipo == "fecha") {
+			document.getElementById("fecha").style.display = "inline";
+			//new Effect.BlindDown(document.getElementById("fecha"));
+		}
+		if (tipo == "noFecha") {
+			document.getElementById("fecha").style.display = "none";
+			document.getElementById("fecha_inicio").value="";
+			document.getElementById("fecha_fin").value="";
+			//new Effect.BlindUp(document.getElementById("fecha"));
+		}
+		if (tipo == "estados") {
+			document.getElementById("estados_div").style.display = "inline";
+			//new Effect.BlindDown(document.getElementById("estado"));
+		}
+		if (tipo == "noEstados") {
+			document.getElementById("estados_div").style.display = "none";
+			document.getElementById("estados").value="";
+			//new Effect.BlindUp(document.getElementById("estados"));
+		}
+		if (tipo == "variables") {
+			document.getElementById("variables_div").style.display = "inline";
+			//new Effect.BlindDown(document.getElementById("variables"));
+		}
+		if (tipo == "noVariables") {
+			document.getElementById("variables_div").style.display = "none";
+			document.getElementById("variables").value="";
+			//new Effect.BlindUp(document.getElementById("variables"));
+		}
+
+	}
+</script>
+
+<h2>B&uacute;squeda por par&aacute;metros </h2>
+    <%= form_tag :action => 'busquedavinculos' %>
+        <input type="radio" name="opcion" value="1" onchange="efectos('codigoEst')" />Codigo estacion.<br />
+		<input type="radio" name="opcion" value="2" onchange="efectos('otros')" />Otros parametros.</td>  
+        
+        <div id="codigoEst" style="display: none">
+                <p>Indique el c&oacute;digo de la estaci&oacute;n: <br/>
+				<%= text_field_tag "codigoEst" %>
+				</p>	  
+        </div>
+        
+        
+        <div id="otros" style="display: none">
+            <h3>Altura</h3>
+						Indique el rango de alturas de las estaciones que desea encontrar <br/><br/>
+						<label for="min">M'inimo</label><br/>
+                    	<%= text_field_tag "altura_min", nil, :class => "textfield" %><br/>
+						<label for="max">Máximo</label><br/>
+						<%= text_field_tag "altura_max", nil, :class => "textfield" %>
+					<br/>
+
+            <h3>Rango de fecha</h3>
+						<label for="fecha_inicio">Fecha de inicio de operaciones</label><br/>
+						<%= date_select 'rangoFecha', 'fecha_inicio' , options = {:class => "textfield"} %>
+						
+						<label for="fecha_fin">Fecha de fin de operaciones</label><br/>
+						<%= date_select 'rangoFecha', 'fecha_fin', options = {:class => "textfield"} %>
+					<br/>
+
+            <h3>Estados</h3>
+						Indique los estados en los cuales desea buscar la estación, separados por comas <br/>
+                    	<%= text_field_tag "estados",nil , options = {:class => "textfield"} %>
+					<br/>
+
+            <h3>Variable clim&aacute;ticas que se miden/midieron</h3>
+                    	Indique las variables que miden las estaciones que desea buscar, separadas por un espacio <br/>
+                        <%= text_field_tag "variables",nil , options = {:class => "textfield"} %>
+					<br/>
+        </div>
+		
+		<br/>
+  
