@@ -18,12 +18,14 @@ class ReportesarController < ApplicationController
            "tiempo_dimension"."tiempo",
            "nivelagregacion_dimension"."nivel_agregacion",
            "unidad_dimension"."unidad_medida_u",
-           "estacion_dimension"."nombre_est"
+           "estacion_dimension"."nombre_est",
+	   "estaciones"."serial_e"
          FROM
            "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
            INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
            INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
-           INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+           INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+	   INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
            INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
          WHERE
             "medidavarhc_facts"."variable_id" = '+var+'
@@ -33,10 +35,10 @@ class ReportesarController < ApplicationController
 
       csv_string = FasterCSV.generate do |csv|
         # header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Estacion","Serial Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.nombre_est, registro.serial_e]
         end
       end
 
@@ -71,13 +73,15 @@ class ReportesarController < ApplicationController
            "tiempo_dimension"."tiempo",
            "nivelagregacion_dimension"."nivel_agregacion",
            "unidad_dimension"."unidad_medida_u",
-           "estacion_dimension"."nombre_est"
+           "estacion_dimension"."nombre_est",
+	   "estaciones"."serial_e"
          FROM
            "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
            INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+	   INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
            INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
            INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
-           INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+           INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id" 
          WHERE
             "medidavarhc_facts"."variable_id" = '+var+'
           AND "medidavarhc_facts"."estacion_id" = '+est+'
@@ -86,10 +90,10 @@ class ReportesarController < ApplicationController
 
       csv_string = FasterCSV.generate do |csv|
         # header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Estacion", "Serial Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.nombre_est, registro.serial_e]
         end
       end
       
@@ -125,12 +129,14 @@ class ReportesarController < ApplicationController
            "tiempo_dimension"."tiempo",
            "nivelagregacion_dimension"."nivel_agregacion",
            "unidad_dimension"."unidad_medida_u",
-           "estacion_dimension"."nombre_est"
+           "estacion_dimension"."nombre_est",
+	   "estaciones"."serial_e"
          FROM
            "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
            INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
            INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
-           INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+	   INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+	   INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
            INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
          WHERE
             "medidavarhc_facts"."variable_id" = '+var+'
@@ -142,10 +148,10 @@ class ReportesarController < ApplicationController
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Estacion", "Serial Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.nombre_est, registro.serial_e]
         end
       end
 
@@ -175,7 +181,8 @@ class ReportesarController < ApplicationController
      "tiempo_dimension"."hora",
      "unidad_dimension"."unidad_medida_u",
      "estacion_dimension"."nombre_est",
-     "estacion_dimension"."altura_est"
+     "estacion_dimension"."altura_est",
+     "estaciones"."serial_e"
 FROM
      "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" =
      "tiempo_dimension"."id"
@@ -185,6 +192,7 @@ FROM
      "nivelagregacion_dimension"."id"
      INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" =
      "unidad_dimension"."id"
+     INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
 WHERE
      "medidavarhc_facts"."variable_id" = '+var+'
  AND "estacion_dimension"."altura_est" >= '+inf+'
@@ -194,10 +202,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Altura", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Altura", "Estacion", "Serial Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.altura_est, registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.altura_est, registro.nombre_est, registro.serial_e]
         end
       end
 
@@ -231,11 +239,13 @@ ORDER BY
            "variable_dimension"."nombre_hc",
            "unidad_dimension"."unidad_medida_u",
            "estacion_dimension"."nombre_est",
-           "estacion_dimension"."altura_est"
+           "estacion_dimension"."altura_est",
+	   "estaciones"."serial_e"
       FROM
            "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
            INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
            INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
+	   INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
            INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
            INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
       WHERE
@@ -249,10 +259,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Altura", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Altura", "Estacion", "Serial Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.altura_est, registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.altura_est, registro.nombre_est, registro.serial_e]
         end
       end
 
@@ -285,12 +295,15 @@ ORDER BY
      "unidad_dimension"."unidad_medida_u",
      "estacion_dimension"."nombre_est",
      "estacion_dimension"."latitud_est",
-     "estacion_dimension"."longitud_est"
+     "estacion_dimension"."longitud_est",
+     "estacion_dimension"."altura_est",
+     "estaciones"."serial_e"
 FROM
      "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
      INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
      INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
      INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+     INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
 WHERE
      "medidavarhc_facts"."variable_id" = '+var+'
      AND "estacion_dimension"."latitud_est" >= '+latinf+'
@@ -302,10 +315,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Altura","Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Altura","Estacion","Serial Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, resgitro.altitud_est,registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.altura_est,registro.nombre_est, registro.serial_e]
         end
       end
 
@@ -350,13 +363,16 @@ ORDER BY
           "unidad_dimension"."unidad_medida_u",
           "estacion_dimension"."nombre_est",
           "estacion_dimension"."latitud_est",
-          "estacion_dimension"."longitud_est"
-        FROM
+          "estacion_dimension"."longitud_est",
+	  "estacion_dimension"."altura_est",
+          "estaciones"."serial_e"
+	FROM
           "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
           INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
           INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
           INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
           INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+	  INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
         WHERE
               "medidavarhc_facts"."variable_id" = '+var+'
           AND "estacion_dimension"."latitud_est" >= '+latinf+'
@@ -370,10 +386,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud","Altura", "Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud","Altura", "Estacion", "Serial Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.altura_est, registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.altura_est, registro.nombre_est, registro.serial_e]
         end
       end
 
@@ -414,13 +430,15 @@ ORDER BY
          "estacion_dimension"."nombre_est",
          "estacion_dimension"."latitud_est",
          "estacion_dimension"."longitud_est",
-         "estacion_dimension"."altura_est"
+         "estacion_dimension"."altura_est",
+	 "estaciones"."serial_e"
         FROM
          "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
          INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
          INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
          INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
          INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+	 INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
         WHERE
           "medidavarhc_facts"."variable_id" = '+var+'
           AND "estacion_dimension"."altura_est" >= '+inf+'
@@ -434,10 +452,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud","Altura","Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud","Altura","Estacion","Serial Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.altura_est,registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.longitud_est, registro.altura_est,registro.nombre_est, registro.serial_e]
         end
       end
 
@@ -484,13 +502,15 @@ ORDER BY
            "estacion_dimension"."nombre_est",
            "estacion_dimension"."latitud_est",
            "estacion_dimension"."longitud_est",
-           "estacion_dimension"."altura_est"
+           "estacion_dimension"."altura_est",
+	   "estaciones"."serial_e"
       FROM
            "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
            INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
            INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
            INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
            INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+	   INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
       WHERE
                 "medidavarhc_facts"."variable_id" = '+var+'
                 AND "estacion_dimension"."altura_est" >= '+inf+'
@@ -506,10 +526,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud","Altura" ,"Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud","Altura" ,"Estacion", "Serial Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.altura_est, registro.longitud_est, registro.nombre_est]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud_est, registro.altura_est, registro.longitud_est, registro.nombre_est, registro.serial_e]
         end
       end
 
@@ -547,7 +567,8 @@ ORDER BY
            "estaciones"."latitud",
            "estaciones"."longitud",
            "estaciones"."estado_acron",
-           "estaciones"."altura"
+           "estaciones"."altura",
+	   "estaciones"."serial_e"
       FROM
            "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
            INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
@@ -562,10 +583,10 @@ ORDER BY
                     
           csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Altura","Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Altura","Estacion", "Serial Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.estado_acron, registro.latitud, registro.longitud, registro.altura, registro.nombre]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.estado_acron, registro.latitud, registro.longitud, registro.altura, registro.nombre, registro.serial_e]
         end
       end
 
@@ -609,7 +630,8 @@ ORDER BY
            "estaciones"."nombre",
            "estaciones"."latitud",
            "estaciones"."longitud",
-           "estaciones"."altura"
+           "estaciones"."altura",
+	   "estaciones"."serial_e"
       FROM
            "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
            INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
@@ -626,10 +648,10 @@ ORDER BY
 
       csv_string = FasterCSV.generate do |csv|
          #header row
-        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Altura","Estacion"]
+        csv << ["Valor", "Unidad de medida", "Fecha", "Latitud", "Longitud", "Altura","Estacion","Serial Estacion"]
         # data rows
         @registros.each do |registro|
-          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud, registro.longitud, registro.altura, registro.nombre]
+          csv << [registro.valor_m, registro.unidad_medida_u, registro.tiempo, registro.latitud, registro.longitud, registro.altura, registro.nombre, registro.serial_e]
         end
       end
 
