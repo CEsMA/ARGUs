@@ -1,6 +1,0 @@
-select * from usuarios
-4 | ldibnanyez | 3c347653b5b2edb12569bc72855ae52d6a20131d | 17eb08810f8364089bad5932d468bde896a2392c | Luis Daniel | Ibanyez | Investigador | H | 1986-05-13 | 2008-03-28 | 02432830621 | Ingeniero | Computacion | www | ldibanyez@gmail.com |  | 
-2 | alfre | d10a79eadd6e89b8ca2eacbd2d7e424262cce14b | 9bd26ce190cebca9758033133a0c933c2c8c209f | Alfredo | Garboza | Investigador | H | 1985-06-14 | 2008-03-28 | 02432831447 | Ingeniero | Computacion | El limon | alfre_gr@yahoo.com |  | 
-1 | admin | bf7a129906f32675043ed4a63be68c90b7eb1fcc | 08df2b6335492c095d1559f42931162d7036d226 | nombre | apellido | Administrador | H | 1980-08-13 | 1990-01-05 | 02129878767 | Ingeniero | Computacion | Av Humboldt | alfredo.garboza@gmail.com |  | 
-5 | abadmota | e01fae1a57202fd5fc217980065069d4c76bf579 | bc6196dbdae07adc881d4367da0d7da3eb82fca0 | Soraya | Abad-Mota | Proveedor | M | 1980-09-04 | 2008-04-02 | 0214432535 | Ingeniero | Computación | ... | abadmota@ldc.usb.ve |  | 
-3 | ruckhaus | 114d0f9f6624c4f4af23b16ee062c194415ab3c1 | ff0c428da22bb7cbf8fdc6cdf87921c918de8ef8 | Edna | Ruckhaus | Proveedor | M | 1980-03-03 | 2008-03-26 | 02122212212 | Ingeniero | Computacion | Los guayabitos | ruckhaus@gmail.com |  | 

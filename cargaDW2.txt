@@ -1,6 +1,0 @@
-pluviosidad
-nombreEstacion | 23 | 333.4 | 656 | soyUnidad_medida | soyObservacionUnidad | diario | SoyObservacionTiempo
-1.80 | SoyUnMedicion | 12/21/2007 | 15:30 | nuevaI
-1 | SoyUnMedicion | 10/21/2007 | 15:30 | nuevaII
-1.0 | SoyUnMedicion | 10/21/2007 | 15:30 | nuevaIII
-122.0 | CarambaMeInsertaron | 9/21/2007 | 16:30 | nuev55iaII

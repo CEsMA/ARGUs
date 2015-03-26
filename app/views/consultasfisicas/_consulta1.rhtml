@@ -1,7 +1,0 @@
- <% if @fenomenos.nil?%>
-    <h2>No hay fen&oacute;menos para mostrar</h2>
-    <% @fenomenos = [] %>
- <% else %>
-    <p><label for="fenomeno_meteorologico_nombre_f">Fenómeno:</label><br/>
- <% end %>
-    <%= select("nombre", "nombre", @fenomenos) %></p>

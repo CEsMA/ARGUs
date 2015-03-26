@@ -1,8 +1,0 @@
-<% for column in VariableHidroclimatica.content_columns %>
-<p>
-  <b><%= column.human_name %>:</b> <%=h @variable_hidroclimatica.send(column.name) %>
-</p>
-<% end %>
-
-<%= link_to 'Edit', :action => 'edit', :id => @variable_hidroclimatica %> |
-<%= link_to 'Back', :action => 'list' %>
