@@ -1,0 +1,101 @@
+<%= error_messages_for 'consulta' %>
+
+<%= javascript_include_tag :defaults %>
+
+
+<script language="JavaScript">
+	function efectos(tipo) {
+		if (tipo == "predeterminado") {
+			document.getElementById("query").style.display = "none";
+		}
+		if (tipo == "noPredeterminado") {
+			document.getElementById("query").style.display = "inline";
+		}
+	}
+
+	function pasos(tipo) {
+		if (tipo == "pasoI") {
+			document.getElementById("pasoII").style.display = "none";
+			new Effect.Grow(document.getElementById("pasoI"), {duration:1.1});
+		}
+		if (tipo == "pasoII") {                          
+            document.getElementById("pasoI").style.display = "none";
+            new Effect.Appear(document.getElementById("pasoII"), {duration:1.1});
+		}
+	}
+
+        function agregar(tag){
+            document.getElementById("consultatag").value = document.getElementById("consultatag").value + " " + tag
+        }
+
+        function validar() {
+            if (document.getElementById("consulta_texto_pregunta").value == "") {
+                alert("Faltan datos, por favor regrese al paso previo");
+            }
+        }
+</script>
+
+<!--[form:consulta]-->
+
+<div id="pasoI">
+    <h2> Paso I.</h2>
+   
+    <input type="radio" name="pred" value="true" onchange="efectos('predeterminado')" checked />Predeterminada.<br />
+    <input type="radio" name="pred" value="false" onchange="efectos('noPredeterminado')" />No predeterminada.</td>  
+
+    <p><label for="consulta_texto_pregunta">Texto pregunta:</label><br/>
+    <%= text_area 'consulta', 'texto_pregunta', "cols" => 60, "rows" => 6, "maxlength" => 360%></p>
+
+    <br/>
+
+    <div id="query" style="display: none">
+	<p><label for="sql_query">Consulta SQL</label><br/>
+	<%= text_area "consulta", "sql_query", :cols => 60, :rows => 17, :maxlength => 1000 %>
+	</p>
+     </div>
+
+     <%= submit_tag "Continuar sin modificar palabras claves", :class=>"boton"%>
+     <input type="button" name="Asignar/revisar palabras claves" value="Asignar palabras claves" onclick="pasos('pasoII');"  class="boton">
+
+</div>
+
+
+<div id = "pasoII" style="display:none;">
+      <h2> Paso II.</h2>
+	  <h3> Nota: solo se inclurán las palabras claves que se listan a continuación</h3>
+      <p><label for="consultatag">Palabras claves para la consulta:</label><br/>
+      <%= text_area_tag("consultatag", content = @tagscomp.to_s, options = {:cols => 60, :rows => 3, :maxlength => 180})%>
+      </p>
+
+      <br/><br/>
+
+      <%
+       contador = 0  
+       unless @tags_pred.nil?
+           for tag in @tags_pred
+              numero = "#8B61CF"
+              if contador.modulo(2) == 0  
+                numero = "#00A520"  
+              end 
+              contador = contador +1  %>
+
+              <A href="#" ONCLICK="agregar('<%= tag%>')"><span style="color:<%= numero %>"><%= tag%></span></A> 
+          <% end 
+        end %>
+
+      <br/><br/>
+      <%= submit_tag "Enviar datos", :class=>"boton" , :onclick => "validar()"%>
+      <input type="button" name="Paso previo" value="Paso previo" onclick="pasos('pasoI');" class="boton">
+ </div>
+<!--[eoform:consulta]-->
+
+
+
+
+<script type="text/javascript"> 
+    var field1 = new LiveValidation('consulta_texto_pregunta', {onlyOnBlur: true}); 
+    var field2 = new LiveValidation('consulta_sql_query', {onlyOnBlur: true}); 
+    field1.add(Validate.Presence); 
+    field1.add( Validate.Length, { maximum: 360 })
+    field2.add( Validate.Length, { maximum: 1000 })
+</script>

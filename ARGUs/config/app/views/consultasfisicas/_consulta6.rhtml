@@ -1,0 +1,109 @@
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag "jscalendar-1.0/calendar.js" %>
+<%= javascript_include_tag "jscalendar-1.0/lang/calendar-es.js" %>
+<%= javascript_include_tag "jscalendar-1.0/calendar-setup.js" %>
+
+
+<script language="JavaScript">
+	function efectos(tipo){
+		if (tipo == "ventana") {
+			document.getElementById("estacion").style.display = "none";
+			new Effect.Grow(document.getElementById("ventana"), {duration:1.1});
+			//document.getElementById("ventana").style.display = "inline";
+			//document.getElementById("estacion").style.display = "none";
+			//new Effect.BlindDown(document.getElementById("codigoEst"));
+			//new Effect.BlindUp(document.getElementById("otros"));
+		}
+		if (tipo == "estacion") {
+			document.getElementById("estacion").style.display = "inline";
+            new Effect.Fade(document.getElementById("ventana"), {duration:1.1});
+			//document.getElementById("ventana").style.display = "none";
+			//document.getElementById("estacion").style.display = "inline";
+			//new Effect.BlindDown(document.getElementById("otros"));
+			//new Effect.BlindUp(document.getElementById("codigoEst"));
+		}
+	}
+</script>
+
+
+<script language="JavaScript">
+	function chequearDatos() {
+		for (i=0;i<document.forms[0].tipoOperacion.length;i++) {
+       		if (document.forms[0].tipoOperacion[i].checked) {
+               user_input = document.forms[0].tipoOperacion[i].value;
+       		}
+		}
+
+		if (user_input == "ventana") {
+			if (document.getElementById("longA").value == "" || document.getElementById("latA").value == "" || document.getElementById("longB").value == "" || document.getElementById("latB").value == "") {
+				alert('Error: Recuerde agregar los dos marcadores');
+				return false;
+			}
+		}
+	}
+</script>
+
+<h3> Tipo de búsqueda a realizar: </h3>
+	<div align="left">
+	<table border="0">
+		<tr>
+		 <td width="50%">Ventana Geográfica:</td>
+		 <td width="10%"><input type="radio" name="tipoOperacion" value="ventana" onchange="efectos('ventana')" checked/></td>
+		 <td width="30%">Estación:</td>
+		 <td width="10%"><input type="radio" name="tipoOperacion" value="estacion" onchange="efectos('estacion')"/></td>
+		</tr>
+	</table>
+	</div>
+	
+	<div id="ventana">
+		<%if @result.nil? %>
+			<b>Error en renderización del mapa</b>
+		<% else %>
+			<%= @result %>
+		<% end %>
+	</div>
+	
+
+	<div id="ventana_datos" style="display: none">
+	<strong> Recuerde agregar los 2 marcadores al mapa para poder consultar la estaciones dentro de una ventana geogr&iacute;fica. </strong>
+		  <p><label for="latA" >Latidud 1:</label>
+		  <%= text_field_tag :latA, params[:latA] , :readonly => true  %></p>
+		  
+		  <p><label for="longA" >Longitud 1:</label>
+		  <%= text_field_tag :longA, params[:longA], :readonly => true  %></p>
+	
+		  <p><label for="latB" >Latitud 2:</label>
+		  <%= text_field_tag :latB, params[:latB] , :readonly => true  %></p>
+		  
+		  <p><label for="longB" >Longitud 2:</label>
+		  <%= text_field_tag :longB, params[:longB] , :readonly => true %></p>
+	</div>
+	
+	<br/><br/>
+ 
+ <% if @variables.nil?%>
+    <h2>No hay fen&oacute;menos para mostrar</h2>
+    <% @variables = [] %>
+ <% else %>
+ 
+   <div id="estacion" style="display: none">
+    <p><label for="estacion_nombre">Seleccione la estación:</label><br/>
+	<%= select("nombre", "nombre", @estaciones) %></p>
+	</div>
+	
+	
+	<table class="tabla"><tr>
+    <td><label for="variable_hidro_nombre">Variable hidroclimática:</label><br/>
+	<%= select("nombre_var", "nombre_var", @variables) %></td>
+
+	<td><label for="fecha_inicio">Fecha inicio de mediciones: </label><br/>
+    <%= date_select 'rangoFecha', 'fecha_inicio'%></td>
+
+    <td><label for="fecha_fin">Fecha fin de mediciones: </label><br/>
+    <%= date_select 'rangoFecha', 'fecha_fin'%></td>
+	
+	</tr></table>
+	<br/> <br/>
+						
+ <% end %>
+    

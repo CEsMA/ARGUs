@@ -1,0 +1,2 @@
+module SolicitudReportesHelper
+end

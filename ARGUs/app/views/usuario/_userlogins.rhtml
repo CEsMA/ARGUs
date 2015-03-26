@@ -1,0 +1,9 @@
+<ul class="completeField">
+<% for usuario in @usuarioL%>
+  <li><div align="center"><strong><%=h usuario.login.to_s.strip.chomp%></strong></div>
+    <div align="center">
+      <span class="informal"><%=h usuario.email_address%></span>
+    </div>
+  </li>
+<% end -%>
+</ul>

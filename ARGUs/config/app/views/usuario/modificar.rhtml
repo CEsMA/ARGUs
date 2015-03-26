@@ -1,0 +1,12 @@
+<h1>Modificar datos de <%= current_usuario.nombre.to_s %> </h1>
+
+<ul>
+	<li> <%= link_to "Modificar datos personales", :controller => "usuario", :action => "editunico", :id => current_usuario.id %></li>
+	<li> <%= link_to "Modificar mi perfil de intereses", :controller => "usuarios_interese", :action => "list" , :id => current_usuario.id %></li>
+	<li> <%= link_to "Cambiar contraseña", :controller => "usuario", :action => "updatepassword", :login => current_usuario.login %></li>	
+</ul>
+<br/><br/><br/><br/><br/><br/>
+
+<div class="derecha">
+    <%= image_tag 'perfilesPropios.jpg'%>
+</div>

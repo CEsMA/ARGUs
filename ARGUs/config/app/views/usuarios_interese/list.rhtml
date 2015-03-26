@@ -1,0 +1,58 @@
+<h1> Listado de &aacute;reas de inter&eacute;s.</h1>
+
+
+<%= form_tag :action => 'update' %>
+ <table class="tabla">
+    <tr>
+    <td>
+        <table>
+            <% unless @checked.nil? || @checked == [] %>
+              <tr><th>Sus &aacute;reas registradas.</th></tr>
+                <% for checked in @checked %>
+                  <!--puts checked-->
+                   <tr class ="<%= cycle('list-line-odd', 'list-line-even') %>" >
+                      <td><%=h truncate(checked.interes, 20, "...") %></td>
+                      <td><%= check_box_tag('intereses[]', "#{checked.id}", checked=true) %></td>  
+                   </tr>
+                <% end %>
+            <% else %>
+              <tr><th>No posee &aacute;reas de inter&eacute;s registradas.</th></tr>
+            <% end %>
+        </table>
+    </td>
+    <td width="25"></td>
+    <td>
+    <table>
+        <% unless @areasinteres.nil? || @areasinteres == [] %>
+            <tr><th>Otras</th></tr>
+
+            <% for areasinteres in @areasinteres %>
+                <tr class ="<%= cycle('list-line-odd', 'list-line-even') %>" >
+                      <td><%=h truncate(areasinteres.interes, 25, "...")  %></td>
+                      <td><%= check_box_tag 'intereses[]', "#{areasinteres.id}" %></td>  
+                </tr>
+            <% end %>
+       <%else%>
+         <tr><th>Su perfil incluye todas las &aacute;reas registradas.</th></tr>
+  
+        <% end %>
+     </table>
+     </td>
+     </tr>
+
+</table>
+    <div class="centrado">
+        <%= submit_tag 'Actualizar', :class => "boton" %>
+    </div>
+<%= end_form_tag %>
+
+<br/>
+<br/>
+<h4>Seleccione las distintas &aacute;reas sobre las que desea que el sistema le mantenga informado.</h4>
+
+
+<br/>
+<br/>
+<div class="derecha">
+    <%= link_to image_tag("back4.png",:border => 0 ) + 'Regresar', :controller => 'usuario', :action => 'modificar', :id => @usuario %>
+</div>

@@ -1,0 +1,9 @@
+<h1>Editing variable_hidroclimatica</h1>
+
+<% form_tag :action => 'update', :id => @variable_hidroclimatica do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @variable_hidroclimatica %> |
+<%= link_to 'Back', :action => 'list' %>

@@ -1,0 +1,15 @@
+etl_execution:
+  adapter: postgresql
+  database: hidro_etl_execution
+  username: tepedino
+  password: tesis
+  host: 127.0.0.1
+  port: 5432
+
+development:
+  adapter: postgresql
+  database: hidro_development
+  username: tepedino
+  password: tesis
+  host: 127.0.0.1
+  port: 5432

@@ -1,0 +1,25 @@
+<h1><%= image_tag("candado.gif", :border => 0, :height => 55) %> Ingresar al sistema  </h1>
+
+
+<% form_tag do -%>
+    <p><label for="login">Login: </label><br/>
+    <%= text_field_tag 'login', nil, :class => "textfield" %></p>
+
+    <p><label for="password">Contrase&ntilde;a: </label><br/>
+    <%= password_field_tag 'password', nil, :class => "textfield"%></p>
+
+    <p><%= submit_tag 'Acceder', :class => "boton"%> </p>
+
+    <%=link_to "Usuarios no registrados", :controller => "usuario", :action => "new", :tipo => "user"%>   |    <%= link_to '¿Olvidaste tu contraseña?', :action => 'claveTemporal'%> 
+<% end -%>
+
+<div class="derecha" style="margin:20px 0 20px 0;">
+
+</div>
+
+<script type="text/javascript"> 
+    var field1 = new LiveValidation('login', {onlyOnSubmit: true});
+    var field2 = new LiveValidation('password', {onlyOnSubmit: true});
+    field1.add(Validate.Presence);   
+    field2.add(Validate.Presence); 
+ </script>

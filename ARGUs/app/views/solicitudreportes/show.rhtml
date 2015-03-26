@@ -1,0 +1,14 @@
+<% for column in Solicitudreporte.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @solicitudreporte.send(column.name) %>
+</p>
+<% end %>
+
+<%if current_usuario.tipo == 'Consultor' && @solicitudreporte.status == 2 %>
+<%= link_to 'Resolver', :controller => 'reportepentahos', :action => 'new', :solicitud => params[:id] %> |
+<%end%>
+<%if current_usuario.tipo == 'Consultor' && @solicitudreporte.status == 1 %>
+<%= link_to 'Auto-asignar', :action => 'asignar', :id => params[:id] %> |
+<%end%>
+<%= link_to 'Editar', :action => 'edit', :id => @solicitudreporte %> |
+<%= link_to 'Atras', :action => 'list' %>

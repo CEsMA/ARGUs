@@ -1,0 +1,16 @@
+select   distinct org from estaciones
+AC
+CVG
+DHNA
+EDELCA
+FONAIAP
+IA
+MARN
+MDEF
+MGOC
+PRIV
+RECNAT
+SAS
+SMFA
+SOC
+UCV
