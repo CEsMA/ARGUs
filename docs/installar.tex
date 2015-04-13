@@ -42,7 +42,7 @@ sudo su postgres;
 psql;
 postgres=# CREATE DATABASE hidro_development;
 postgres=# \l
-postgres=# update pg_database set encoding=8 where datname=hidro_development
+postgres=# update pg_database set encoding=8 where datname='hidro_development';
 postgres=# \l
 postgres=# CREATE USER tepedino WITH PASSWORD 'tesis';
 postgres=# GRANT ALL PRIVILEGES ON DATABASE "hidro_development" to tepedino;
