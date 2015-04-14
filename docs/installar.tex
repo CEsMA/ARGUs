@@ -13,8 +13,12 @@
 \subsection{aplicaciones}
 Los paquetes de Instalación se encuentran en \texttt{install/}.
 \begin{itemize}
-\item[]  Ruby (1.8.7)
-\item[] postgres (8.4)\footnote{funciona en esta versión.} 
+\item[] ruby1.8
+\item[] postgresql-8.4 \footnote{funciona en esta versión.} 
+\subitem[] sudo touch /etc/apt/sources.list.d/pgdg.list
+\subitem[] sudo echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+
+\subitem[] wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 \item[] rubygems\footnote[2]{instalados directamente usando \texttt{apt}.}
 \item[] psql\textsuperscript{2}
 \item[] libecpg-dev\textsuperscript{2}
