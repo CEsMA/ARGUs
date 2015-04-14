@@ -51,6 +51,7 @@ postgres=# \l
 postgres=# CREATE USER tepedino WITH PASSWORD 'tesis';
 postgres=# GRANT ALL PRIVILEGES ON DATABASE "hidro_development" to tepedino;
 postgres=# \c hidro_development
+postgres=# SET CLIENT_ENCODING TO 'latin1';
 postgres=# \i ./database/dump_hidrox.sql
 postgres=# \q
 \end{verbatim}
