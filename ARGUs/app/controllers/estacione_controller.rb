@@ -206,7 +206,7 @@ class EstacioneController < ApplicationController
          end
         end
            XSD::Charset.encoding = 'UTF8' 
-           wsdlfile = "http://127.0.0.1:3000/georeference/wsdl"     # Ubicacion del WSDL
+           wsdlfile = "http://www.argus.cesma.usb.ve/georeference/wsdl"     # Ubicacion del WSDL
            driver = SOAP::WSDLDriverFactory.new(wsdlfile).create_rpc_driver   
            @result = driver.georeference(info)
            # Sección de dinamismo para la elección de información

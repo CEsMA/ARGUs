@@ -164,7 +164,7 @@ class ConsultasfisicasController < ApplicationController
        if (params[:id_pred].to_i == 6)
          info = []
          XSD::Charset.encoding = 'UTF8' 
-         wsdlfile = "http://159.90.14.209:3000/georeference/wsdl"     
+         wsdlfile = "http://www.argus.cesma.usb.ve/georeference/wsdl"     
          driver = SOAP::WSDLDriverFactory.new(wsdlfile).create_rpc_driver   
          @result = driver.georeference(info)
          @variables = sql.execute("select nombre_hc from variable_hidroclimaticas WHERE acumulada_hc = 'N'")

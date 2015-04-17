@@ -23,7 +23,7 @@ strong {
 }
 
 a {
-	color: #87A019;
+	color: #001582;
         text-decoration: none;
 }
 
@@ -37,7 +37,7 @@ a:hover {
 	display: block;
 	margin-bottom: 0;
 	padding-bottom: 10px;
-	background: url(/images/img08.gif) no-repeat left bottom;
+	background: url(/images/img08.gif) no-repeat left bottom; 
 }
 
 .image {
@@ -54,10 +54,11 @@ a:hover {
 
 #header {
 	width: 928px;
-	height: 37px;
+	height: 20px;
 	margin: 0 auto;
-	background: #BECF74 url(/images/img02.gif) no-repeat;
-	border-bottom: 3px solid #FFFFFF;
+	background: #001582;
+	border-bottom: 2px solid #FFFFFF;
+	border-top: 10px solid #FFFFFF;
 }
 
 /* Menu */
@@ -104,9 +105,10 @@ a:hover {
 #colOne {
 	float: left;
 	width: 238px;
-	margin: 0;	padding: 0; 
+	margin: -10px;	padding: 0; 
 	display: inline;
-	background: url(/images/img05.gif) repeat-x;
+/* background: url(/images/img05.gif) repeat-x;
+*/
 }
 
 #colOne h3 {
@@ -188,7 +190,7 @@ a:hover {
 	margin-top: 0;
 	font-size: 33px;
 	font-weight: normal;
-        color: #87A019;
+        color: #001582;
         padding-left: 8px;
 }
 
@@ -255,7 +257,6 @@ a:hover {
 	width: 928px;
 	margin: 0 auto;
 	padding-top: 40px;
-	background: url(/images/img11.gif) repeat-x;
 }
 
 #footer p {
@@ -277,7 +278,7 @@ a:hover {
 
 #colOne ul.sidemenu {
 	list-style:none;
-	margin:10px 0 10px 15px;
+	margin:10px 0 10px 9px;
 	padding:0;		
 }
 #colOne ul.sidemenu li {

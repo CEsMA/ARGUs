@@ -55,14 +55,20 @@ function checkMaxLength() {
 
 <head>
 
-<title>Argus :: Portal hidroclim&aacute;tico venezolano</title>
+<title>argus: Portal hidroclim&aacute;tico venezolano</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link type="text/css" rel="Stylesheet" media="screen" href="/stylesheets/default.css"/>
 <link type="text/css" rel="Stylesheet" media="screen" href="/javascripts/jscalendar-1.0/calendar-win2k-2.css"/>
 
 </head>
 <body onload="setMaxLength()">
-<div id="header">
+<div id="content">
+<%= link_to image_tag("baner.png",:width => 750), :controller => "usuario", :action => "welcome" %>
+<%= link_to image_tag("logo-cesma.png",:width => 60), "http://www.cesma.usb.ve" %> 
+<%= link_to image_tag("logo-usb.png",:width => 60), "http://www.usb.ve" %> 
+</div>
+<div id ="header" />
+<!-- <div id="header">
   <ul id="menu">
   	<% unless (logged_in?) %>
 	<li><%= link_to "ingresar", :controller => "account", :action => "login" %></li>
@@ -71,26 +77,30 @@ function checkMaxLength() {
 	<% end %>
 	<li><%= link_to "contáctenos", :controller => "contactenos", :action => "enviarComentario" %></li>
   </ul>
-  
 </div>
-
+-->
 
 </div>
 <div id="content">
   <div id="colOne">
-    <div id="logo">
+<!--
+<div id="logo">
       <h1><a href="#">a<span class="blue">rgus</span></a></h1>
       <h2>Portal hidroClim&aacute;tico venezolano.</h2>
     </div>
-      <h1>Opciones generales</h1>
+--> 
       <ul class="sidemenu">
         <li><%= link_to "Inicio", :controller => "usuario", :action => "welcome" %></li>
-		<li> <%= link_to "V'inculos de interés", :controller => "vinculotag", :action => 'busquedavinculos' %></li>
+		<li> <%= link_to "Consultas Base de Datos", :controller => "reportesar", :action => "listado" %></li>
+		<li> <%= link_to "Manual HIDROX", "http://www.cesma.usb.ve/~andres/hidrox.pdf" %></li>
+		<li> <%= link_to "CEsMA", "http://www.cesma.usb.ve" %></li>
+		<li> <%= link_to "BWL" %></li>
+		<li> <%= link_to "USB", "http://www.usb.ve" %> </li>
 		<!-- Solo los NO Registrados (no logueados) ven esta opción -->
-		<li> <%= link_to "Georeferenciación de estaciones", :controller => "estacione", :action => "georeferenciame" %></li>
-		<li> <%= link_to "Reportes CSV", :controller => "reportesar", :action => "listado" %></li>
-                <li> <%= link_to "Repositorio", :controller => "consultasfisicas", :action => "listarOpc" %></li>
+		<li> <%= link_to "Georeferenciación de estaciones", :controller => "estacione", :action => "georeferenciame" %></li> 
+                 <li> <%= link_to "Repositorio", :controller => "consultasfisicas", :action => "listarOpc" %></li> 
 		<!-- Si no está logueado, veo la forma para entrar, si estoy en inicio. Cierro el "ul" -->
+		<!--	
 		<% unless (logged_in?) %>
 		  </ul>
 		  
@@ -128,9 +138,9 @@ function checkMaxLength() {
 			 	end
 			 end %>
  
- 		<!-- Si está logueado, muestro las opciones dependiendo del tipo de usuario -->
+ 		<!-- Si está logueado, muestro las opciones dependiendo del tipo de usuario --%>
 		<% else %>
-		  	<!-- Para el administrador -->
+		  	<!-- Para el administrador --%>
 			<% if current_usuario.tipo == "Administrador" %>
 				</ul>
 				<h1>Administrar:</h1>
@@ -143,7 +153,7 @@ function checkMaxLength() {
 				<li> <%= link_to "Solicitudes", :controller => "solicitude", :action => "list" %></li>
 				<li> <%= link_to "Requerimientos (solicitudes)", :controller => "requerimiento", :action => "list" %></li>		
 				<li> <%= link_to "Estaciones hidroclimaticas", :controller => "estacione", :action => "list" %></li>		
-				<!-- Para los proveedores -->
+				<!-- Para los proveedores --%>
 			<% elsif current_usuario.tipo == "Proveedor" %>
 				<li> <%= link_to "Estaciones hidroclimaticas", :controller => "estacione", :action => "list" %></li>
 				<li> <%= link_to "Servicios", :controller => "servicio", :action => "busquedaservicios" %></li>
@@ -153,7 +163,7 @@ function checkMaxLength() {
 				<li> <%= link_to "Reportes acumulados", :controller => "reportes", :action => "index" %></li>
 				<li> <%= link_to 'Solicitud para el Administrador', :controller => 'solicitude' , :action => 'new' %> </li>
 				<li> <%= link_to "Mis v'inculos de interés", :controller => "vinculotag", :action => "listmisvinculos" %></li>
-				<!-- Para los investigadores -->
+				<!-- Para los investigadores --%>
 			<% elsif current_usuario.tipo == "Investigador" %>
 				<li> <%= link_to "Estaciones hidroclimaticas", :controller => "estacione", :action => "list" %></li>
 				<li> <%= link_to "Servicios", :controller => "servicio", :action => "busquedaservicios" %></li>
@@ -162,11 +172,11 @@ function checkMaxLength() {
 			<% elsif current_usuario.tipo == "Consultor" %>
                                 <li> <%= link_to "Reportes", :controller => "solicitudreportes", :action => "menu" %></li>
                         <% end %>
-			<!-- Para todos y cierro el "ul" -->
+			<!-- Para todos y cierro el "ul" --%>
 			<li> <%= link_to "Modificar mis datos", :controller => "usuario", :action => "modificar", :id => current_usuario.id %></li>
 		</ul>
 		<% end %>
-      	
+    		-->  	
   </div>
 
 
@@ -197,8 +207,16 @@ function checkMaxLength() {
 
 
 <div id="footer">
-  <p>Copyright (c) 2006 Sitename.com. All rights reserved. Dise&ntilde;ado por: <a rel="nofollow" target="_blank" href="http://freecsstemplates.org/">Free CSS Templates</a>.</p>
-  <p>Modificado por: Alfredo Garboza y Gianpaolo Tepedino.</p>
+  <div id="header" />
+  <br />
+  <br />
+  <br />
+  <p> Versión: 2.1 - 17/04/2015
+  </p>
+  <p>Copyright (c) 2015 CEsMA. Todos los derechos reservados. Dise&ntilde;ado por: <a rel="nofollow" target="_blank" href="http://freecsstemplates.org/">Free CSS Templates</a>.</p>
+  <p>Alfredo Garboza y  Gianpaolo Tepedino v1
+		     <br />Andrés Sajo y Fabio Castro v2.1</p>
+ <br />
 </div>
 </body>
 </html>
