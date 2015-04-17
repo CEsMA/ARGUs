@@ -11,14 +11,26 @@
 \maketitle
 \section{Ingredientes}
 \subsection{aplicaciones}
-Los paquetes de Instalación se encuentran en \texttt{install/}.
+Los paquetes necesarios para la instalación.
 \begin{itemize}
-\item[]  Ruby (1.8.7)
-\item[] postgres (8.4)\footnote{funciona en esta versión.} 
-\item[] rubygems\footnote[2]{instalados directamente usando \texttt{apt}.}
-\item[] psql\textsuperscript{2}
-\item[] libecpg-dev\textsuperscript{2}
-\item[] libmagickwand-dev\textsuperscript{2}
+\item[] Ubuntu 14.04 ó Debian 7.0
+\item[] Ruby 1.8
+\begin{itemize}
+\verb+# apt-add-repository ppa:brightbox/ruby-ng+ (Solo Ubuntu)
+\verb+# apt-get update+
+\verb+# apt-get install ruby1.8+ (Debian y Ubuntu)
+\end{itemize}
+\item[] Postgresql 8.4 \footnote{funciona en esta versión.} 
+\begin{itemize}
+\item[] \verb+# touch /etc/apt/sources.list.d/pgdg.list+
+\item[] \verb+# echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list+
+\item[] \verb+# wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -+
+\item[] \verb+# apt-get install postgresql-8.4+
+\end{itemize}
+\item[] \verb+# apt-get install rubygems+\footnote[2]
+\item[] \verb+# apt-get install libecpg-dev+\textsuperscript{2}
+\item[] \verb+# apt-get install libmagickwand-dev+\textsuperscript{2}
+\item[] psql\footnote{instalado automáticamente al instalar postgresql-8.4.}
 \end{itemize}
 \subsection{gems}
 Las gemas se encuentran en el directorio \texttt{install/gems}. Nota: hay gemas que se requien en versiones múltiples.
@@ -47,6 +59,7 @@ postgres=# \l
 postgres=# CREATE USER tepedino WITH PASSWORD 'tesis';
 postgres=# GRANT ALL PRIVILEGES ON DATABASE "hidro_development" to tepedino;
 postgres=# \c hidro_development
+postgres=# SET CLIENT_ENCODING TO 'latin1';
 postgres=# \i ./database/dump_hidrox.sql
 postgres=# \q
 \end{verbatim}
