@@ -43,8 +43,7 @@ Instalación de las gemas: Una por una y tomando en cuenta la lista de dependeci
 \end{verbatim}
 
 \section{Configuración}
-\subsection{Usuario}
-Abrir una cuenta para el usuario Argus en \texttt{/home/argus}.
+
 
 \subsection{Postgres}
 Construir tabla, cambiar \emph{encoding} y vaciar el \emph{dump} de la base de datos. La partición donde se encuentra el archivo 
@@ -64,19 +63,21 @@ postgres=# \i ./database/dump_hidrox.sql
 postgres=# \q
 \end{verbatim}
 \subsection{Archivos de Configuración de Argus}
+\item[] cp ./install/mongrel.sh /etc/init.d
+\item[] update-rc.d mongrel.sh defaults
 \begin{verbatim}
  tar zxvf ./repo/Argus.tgz -C /opt/argus
 \end{verbatim}
 o
 \begin{verbatim}
- cd /home/argus
+
  git clone git@github.com:fabiocasmar/ARGUs.git
 \end{verbatim}
 \subsection{Mongrel Web server}
 Iniciar el servicio de Argus: 
 \begin{verbatim}
 cd /home/argus/
-sudo mongrel_rails start -p 80
+service mongrel.sh start
 \end{verbatim}
 Luego de este paso se apunta el navegador al ip de la maquina, \emph{e.g.} \texttt{http://159.90.14.201/}.
 \end{document}
