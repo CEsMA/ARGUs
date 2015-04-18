@@ -1,1 +1,17 @@
 # Logfile created on Sun Jun 13 22:10:10 -0430 2010 by /
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-18 00:34:56) [GET]
+  Session ID: 59f8831ec909d9e6908b3970e0f24032
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.01167 (85 reqs/sec) | Rendering: 0.01092 (93%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing ReportesarController#listado (for 190.199.180.163 at 2015-04-18 00:35:03) [GET]
+  Session ID: 59f8831ec909d9e6908b3970e0f24032
+  Parameters: {"action"=>"listado", "controller"=>"reportesar"}
+Rendering  within layouts/application
+Rendering reportesar/listado
+Completed in 0.00696 (143 reqs/sec) | Rendering: 0.00615 (88%) | 200 OK [http://www.argus.cesma.usb.ve/reportesar/listado]

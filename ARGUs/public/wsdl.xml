@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:typens="urn:ActionWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:ActionWebService" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Georeference" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="urn:ActionWebService" xmlns="http://www.w3.org/2001/XMLSchema">
+      <xsd:complexType name="PuntoInformadoArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="typens:PuntoInformado[]" ref="soapenc:arrayType"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PuntoInformado">
+        <xsd:all>
+          <xsd:element type="xsd:string" name="color"/>
+          <xsd:element type="xsd:string" name="latitud"/>
+          <xsd:element type="xsd:string" name="informacion"/>
+          <xsd:element type="xsd:string" name="longitud"/>
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="Georeference">
+    <part type="typens:PuntoInformadoArray" name="param0"/>
+  </message>
+  <message name="GeoreferenceResponse">
+    <part type="xsd:string" name="return"/>
+  </message>
+  <portType name="GeoreferenceGeoreferencePort">
+    <operation name="Georeference">
+      <input message="typens:Georeference"/>
+      <output message="typens:GeoreferenceResponse"/>
+    </operation>
+  </portType>
+  <binding type="typens:GeoreferenceGeoreferencePort" name="GeoreferenceGeoreferenceBinding">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="Georeference">
+      <soap:operation soapAction="/georeference/api/Georeference"/>
+      <input>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:ActionWebService" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="GeoreferenceService">
+    <port binding="typens:GeoreferenceGeoreferenceBinding" name="GeoreferenceGeoreferencePort">
+      <soap:address location="http://www.argus.cesma.usb.ve/georeference/api"/>
+    </port>
+  </service>
+</definitions>

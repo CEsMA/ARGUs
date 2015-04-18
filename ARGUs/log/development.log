@@ -54391,3 +54391,796 @@ Processing UsuarioController#welcome (for 159.90.15.21 at 2015-04-17 19:17:44) [
 Rendering  within layouts/application
 Rendering usuario/welcome
 Completed in 0.00481 (207 reqs/sec) | Rendering: 0.00445 (92%) | 200 OK [http://www.argus.cesma.usb.ve/]
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+ServicioController: missing default helper path servicio_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+GeoreferenceController: missing default helper path georeference_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /opt/argus/ARGUs/config/environment.rb:79)
+
+
+Processing ConsultasfisicasController#consultarRepositorio (for 159.90.15.21 at 2015-04-17 19:29:08) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"sql_query"=>nil, "id_pred"=>"6", "id"=>"6", "controller"=>"consultasfisicas", "title"=>"Para un conjunto de variables climáticas dadas, en un nivel de agregación provisto por el usuario, sobre una región geográfica especificada y un rango de tiempo determinado, conocer algunas variables estadísticas como las mencionadas en el punto anterior.", "action"=>"consultarRepositorio"}
+  [4;36;1mSQL (0.000562)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.002519)[0m   [0mselect nombre_f from fenomeno_meteorologicos[0m
+  [4;36;1mSQL (0.000897)[0m   [0;1mselect nombre_hc from variable_hidroclimaticas[0m
+  [4;35;1mSQL (0.000663)[0m   [0mselect nombre_generico_TO from tipo_objetos[0m
+  [4;36;1mSQL (0.004283)[0m   [0;1mselect nombre from estaciones[0m
+
+
+Mongrel::TimeoutError (Mongrel timed out this thread: shutdown):
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:675:in `rbuf_fill'
+    /usr/lib/ruby/1.8/timeout.rb:67:in `timeout'
+    /usr/lib/ruby/1.8/timeout.rb:101:in `timeout'
+    /usr/lib/ruby/1.8/net/protocol.rb:134:in `rbuf_fill'
+    /usr/lib/ruby/1.8/net/protocol.rb:116:in `readuntil'
+    /usr/lib/ruby/1.8/net/protocol.rb:126:in `readline'
+    /usr/lib/ruby/1.8/net/http.rb:2028:in `read_status_line'
+    /usr/lib/ruby/1.8/net/http.rb:2017:in `read_new'
+    /usr/lib/ruby/1.8/net/http.rb:1051:in `request'
+    /usr/lib/ruby/1.8/net/http.rb:772:in `get'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:105:in `get_content'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:116:in `start'
+    /usr/lib/ruby/1.8/net/http.rb:543:in `start'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:115:in `start'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:104:in `get_content'
+    /usr/lib/ruby/1.8/wsdl/xmlSchema/importer.rb:64:in `fetch'
+    /usr/lib/ruby/1.8/wsdl/xmlSchema/importer.rb:30:in `import'
+    /usr/lib/ruby/1.8/wsdl/importer.rb:18:in `import'
+    /usr/lib/ruby/1.8/soap/wsdlDriver.rb:124:in `import'
+    /usr/lib/ruby/1.8/soap/wsdlDriver.rb:28:in `initialize'
+    /app/controllers/consultasfisicas_controller.rb:168:in `new'
+    /app/controllers/consultasfisicas_controller.rb:168:in `consultarRepositorio'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+ServicioController: missing default helper path servicio_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+GeoreferenceController: missing default helper path georeference_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /opt/argus/ARGUs/config/environment.rb:79)
+
+
+Processing UsuarioController#welcome (for 159.90.15.21 at 2015-04-17 19:41:53) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00479 (208 reqs/sec) | Rendering: 0.00443 (92%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing EstacioneController#georeferenciame (for 159.90.15.21 at 2015-04-17 19:41:57) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"action"=>"georeferenciame", "controller"=>"estacione"}
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+ServicioController: missing default helper path servicio_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+GeoreferenceController: missing default helper path georeference_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /opt/argus/ARGUs/config/environment.rb:79)
+
+
+Processing EstacioneController#georeferenciame (for 159.90.15.21 at 2015-04-17 19:43:58) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"action"=>"georeferenciame", "controller"=>"estacione"}
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+ServicioController: missing default helper path servicio_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+GeoreferenceController: missing default helper path georeference_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /opt/argus/ARGUs/config/environment.rb:79)
+
+
+Processing EstacioneController#georeferenciame (for 159.90.15.21 at 2015-04-17 19:44:41) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"controller"=>"estacione", "action"=>"georeferenciame"}
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+ServicioController: missing default helper path servicio_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+GeoreferenceController: missing default helper path georeference_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /opt/argus/ARGUs/config/environment.rb:79)
+
+
+Processing EstacioneController#georeferenciame (for 159.90.15.21 at 2015-04-17 19:45:47) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"controller"=>"estacione", "action"=>"georeferenciame"}
+
+
+Timeout::Error (execution expired):
+    /usr/lib/ruby/1.8/timeout.rb:64:in `rbuf_fill'
+    /usr/lib/ruby/1.8/net/protocol.rb:134:in `rbuf_fill'
+    /usr/lib/ruby/1.8/net/protocol.rb:116:in `readuntil'
+    /usr/lib/ruby/1.8/net/protocol.rb:126:in `readline'
+    /usr/lib/ruby/1.8/net/http.rb:2028:in `read_status_line'
+    /usr/lib/ruby/1.8/net/http.rb:2017:in `read_new'
+    /usr/lib/ruby/1.8/net/http.rb:1051:in `request'
+    /usr/lib/ruby/1.8/net/http.rb:772:in `get'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:105:in `get_content'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:116:in `start'
+    /usr/lib/ruby/1.8/net/http.rb:543:in `start'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:115:in `start'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:104:in `get_content'
+    /usr/lib/ruby/1.8/wsdl/xmlSchema/importer.rb:64:in `fetch'
+    /usr/lib/ruby/1.8/wsdl/xmlSchema/importer.rb:30:in `import'
+    /usr/lib/ruby/1.8/wsdl/importer.rb:18:in `import'
+    /usr/lib/ruby/1.8/soap/wsdlDriver.rb:124:in `import'
+    /usr/lib/ruby/1.8/soap/wsdlDriver.rb:28:in `initialize'
+    /app/controllers/estacione_controller.rb:210:in `new'
+    /app/controllers/estacione_controller.rb:210:in `georeferenciame'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+GeoreferenceController: missing default helper path georeference_helper
+
+
+Processing GeoreferenceController#wsdl (for 159.90.14.230 at 2015-04-17 19:46:47) [GET]
+  Session ID: 7c94904abad78abb388b443bd1149743
+  Parameters: {"controller"=>"georeference", "action"=>"wsdl"}
+Sending data 
+Completed in 0.00449 (222 reqs/sec) | Rendering: 0.00002 (0%) | 200 OK [http://www.argus.cesma.usb.ve/georeference/wsdl]
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+ServicioController: missing default helper path servicio_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+GeoreferenceController: missing default helper path georeference_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /opt/argus/ARGUs/config/environment.rb:79)
+
+
+Processing EstacioneController#georeferenciame (for 159.90.15.21 at 2015-04-17 19:48:27) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"action"=>"georeferenciame", "controller"=>"estacione"}
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+ServicioController: missing default helper path servicio_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+GeoreferenceController: missing default helper path georeference_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /opt/argus/ARGUs/config/environment.rb:79)
+
+
+Processing GeoreferenceController#wsdl (for 159.90.15.21 at 2015-04-17 19:49:49) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"controller"=>"georeference", "action"=>"wsdl"}
+Sending data 
+Completed in 0.00595 (167 reqs/sec) | Rendering: 0.00003 (0%) | 200 OK [http://www.argus.cesma.usb.ve/georeference/wsdl]
+GeoreferenceController: missing default helper path georeference_helper
+
+
+Processing GeoreferenceController#wsdl (for 159.90.15.21 at 2015-04-17 19:49:50) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"controller"=>"georeference", "action"=>"wsdl"}
+Sending data 
+Completed in 0.00616 (162 reqs/sec) | Rendering: 0.00003 (0%) | 200 OK [http://www.argus.cesma.usb.ve/georeference/wsdl]
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+ServicioController: missing default helper path servicio_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+GeoreferenceController: missing default helper path georeference_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /opt/argus/ARGUs/config/environment.rb:79)
+
+
+Processing ApplicationController#index (for 159.90.15.21 at 2015-04-17 19:54:24) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/georeference/wsdl.xml" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+ServicioController: missing default helper path servicio_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+GeoreferenceController: missing default helper path georeference_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /opt/argus/ARGUs/config/environment.rb:79)
+
+
+Processing EstacioneController#georeferenciame (for 159.90.15.21 at 2015-04-17 19:55:44) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"action"=>"georeferenciame", "controller"=>"estacione"}
+
+
+Timeout::Error (execution expired):
+    /usr/lib/ruby/1.8/timeout.rb:64:in `rbuf_fill'
+    /usr/lib/ruby/1.8/net/protocol.rb:134:in `rbuf_fill'
+    /usr/lib/ruby/1.8/net/protocol.rb:116:in `readuntil'
+    /usr/lib/ruby/1.8/net/protocol.rb:126:in `readline'
+    /usr/lib/ruby/1.8/net/http.rb:2028:in `read_status_line'
+    /usr/lib/ruby/1.8/net/http.rb:2017:in `read_new'
+    /usr/lib/ruby/1.8/net/http.rb:1051:in `request'
+    /usr/lib/ruby/1.8/net/http.rb:845:in `post'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:93:in `post'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:116:in `start'
+    /usr/lib/ruby/1.8/net/http.rb:543:in `start'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:115:in `start'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:92:in `post'
+    /usr/lib/ruby/1.8/soap/streamHandler.rb:170:in `send_post'
+    /usr/lib/ruby/1.8/soap/streamHandler.rb:109:in `send'
+    /usr/lib/ruby/1.8/soap/rpc/proxy.rb:170:in `route'
+    /usr/lib/ruby/1.8/soap/rpc/proxy.rb:141:in `call'
+    /usr/lib/ruby/1.8/soap/rpc/driver.rb:178:in `call'
+    (eval):6:in `georeference'
+    /app/controllers/estacione_controller.rb:211:in `georeferenciame'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+GeoreferenceController: missing default helper path georeference_helper
+
+
+Processing GeoreferenceController#api (for 159.90.14.230 at 2015-04-17 19:56:44) [POST]
+  Session ID: 4149127d3cb29609b3ebb103576391b5
+  Parameters: {"action"=>"api", "controller"=>"georeference"}
+
+Web Service Request: Georeference(param0=>[]) Entrypoint: api
+  <?xml version="1.0" encoding="utf-8" ?>
+  <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <env:Body>
+      <n1:Georeference env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          xmlns:n1="urn:ActionWebService">
+        <param0 n2:arrayType="n1:PuntoInformado[0]"
+            xmlns:n2="http://schemas.xmlsoap.org/soap/encoding/"
+            xsi:type="n2:Array">
+        </param0>
+      </n1:Georeference>
+    </env:Body>
+  </env:Envelope>
+
+Web Service Response (0.004833): => "\n\n<div align=\"center\">\n\n<script src=\" http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAQXg9v_4YZgsHMjQDNACQQxRU8pCR_eiJ8Aijvq5aFAMflX02ShQ7Q6JFi9Y76LM_qy6ERhrZnH7Tvw\" type=\"text/javascript\"></script>\n<script type=\"text/javascript\">\n\n\n//<![CDATA[\nvar map;\nvar icon0;\nvar icon1;\n\nvar latNO;\nvar longNO;\nvar latSE;\nvar longSE;\n\nvar areaSelector;\n\nvar newpoints = new Array();\nvar highlightCircle;\nvar currentMarker;\n\naddLoadEvent(loadMap);\naddLoadEvent(addPoints);\n\n\n//Funcion que se encarga de iluminar los GIcons.\nfunction highlightCurrentMarker(type){\n      var markerPoint = currentMarker.getPoint();\n      var polyPoints = Array();\n\n      if (highlightCircle) {\n        map.removeOverlay(highlightCircle);\n      }\n\n      var mapNormalProj = G_NORMAL_MAP.getProjection();\n      var mapZoom = map.getZoom();\n      var clickedPixel = mapNormalProj.fromLatLngToPixel(markerPoint, mapZoom);\n      var polySmallRadius = 20;\n      var polyNumSides = 20;\n      var polySideLength = 18;\n\n      for (var a = 0; a<(polyNumSides+1); a++) {\n        var aRad = polySideLength*a*( Math.PI/180);\n        var polyRadius = polySmallRadius;\n               var pixelX = clickedPixel.x + polyRadius * Math.cos(aRad);\n        var pixelY = clickedPixel.y + polyRadius * Math.sin(aRad);\n        var polyPixel = new GPoint(pixelX,pixelY);\n        var polyPoint = mapNormalProj.fromPixelToLatLng(polyPixel,mapZoom);\n        polyPoints.push(polyPoint);\n      }  \n      if (type == \"draggable\") {\n           highlightCircle = new GPolygon(polyPoints,\"#000000\",2, 0.0,\"#FF0000\",.5);\n      }else{\n           highlightCircle = new GPolygon(polyPoints,\"#000000\",2,0.0,\"#FF00FF\",.5);\n      }\n    map.addOverlay(highlightCircle);\n   }\n\n\n\n\nfunction addLoadEvent(func) {\n    var oldonload = window.onload;\n    if (typeof window.onload != 'function'){\n        window.onload = func\n    } else {\n        window.onload = function() {\n            oldonload();\n            func();\n        }\n    }\n}\n \n\n\n// Agrega al mapa los 2 selectores y carga por primera vez los input fields asociados al GMarker.\nfunction createSelectors(){\n    var counter = 0;\n    var marker;\n\n    var addSelectors = GEvent.bind(map, \"click\", this, function(marker,point) {         \n            //Se define el GIcon por defecto\n            icon1 = new GIcon();\n            icon1.image = \"http://maps.google.com/mapfiles/arrow.png\";\n            icon1.iconSize = new GSize(39, 34);\n            icon1.iconAnchor = new GPoint(11, 34);\n            icon1.infoWindowAnchor = new GPoint(9, 2);\n            icon1.infoShadowAnchor = new GPoint(18, 25);  \n\n            if (counter <= 1) {\n              if (point && counter==1){\n             marker = new GMarker(point, {draggable:true, title:\"Soy un delimitador\", icon:icon1});\n             document.getElementById(\"longB\").value=marker.getPoint().lng();\n              document.getElementById(\"latB\").value=marker.getPoint().lat();\n             updatePointSelectors();\n             map.addOverlay(addMarkersEvent(\"S-E\",\"draggable\", marker, \"<br/>Upss, soy un selector.\"));\n          \n             if (areaSelector) {\n                    map.removeOverlay(areaSelector);\n                 }\n\n             areaSelector = new GPolygon([\n             new GLatLng(latNO, longNO),\n             new GLatLng(latSE, longNO),\n             new GLatLng(latSE, longSE),\n             new GLatLng(latNO, longSE),\n             new GLatLng(latNO, longNO)\n             ],\n            \"#f33f00\", 1, 1, \"#ff0000\", 0.2);\n            map.addOverlay(areaSelector);               \n\n\n              }else{\n             marker = new GMarker(point, {draggable:true, title:\"Soy un delimitador\", icon:icon1});       \n             document.getElementById(\"longA\").value=marker.getPoint().lng();\n              document.getElementById(\"latA\").value=marker.getPoint().lat();\n             updatePointSelectors();\n              map.addOverlay(addMarkersEvent(\"N-O\",\"draggable\", marker, \"<br/>Upss, soy un selector.\"));\n              }\n               counter++;\n            } else {\n                GEvent.removeListener (addSelectors);\n            }\n    });\n}\n\n//Keeps updated the points of the areaSelectors.\nfunction updatePointSelectors(){\n latNO = document.getElementById(\"latA\").value;\n longNO = document.getElementById (\"longA\").value;\n latSE = document.getElementById(\"latB\").value;\n longSE = document.getElementById(\"longB\").value;\n}\n\n\n\nfunction loadMap() {\n    map = new GMap2(document.getElementById (\"map\"));\n    map.addControl(new GLargeMapControl());\n    map.addControl(new GMapTypeControl());\n    map.setCenter(new GLatLng( 6.664607562172585, -64.248046875 ), 5, G_HYBRID_MAP);\n   \n    //Se define el GIcon por defecto\n    icon0 = new GIcon();\n    icon0.image = \"http://www.google.com/mapfiles/marker.png\";\n    icon0.iconSize = new GSize(20, 34);\n    icon0.iconAnchor = new GPoint(9, 34);\n    icon0.infoWindowAnchor = new GPoint(9, 2);\n    icon0.infoShadowAnchor = new GPoint(18, 25);\n\n    if(document.getElementById (\"longA\") && document.getElementById(\"latA\") && document.getElementById(\"longB\") && document.getElementById(\"latB\")){\n        createSelectors();\n    }\n}\n \n\n\n\n// Agrega los Gmarkers pasados como parametros.\nfunction addPoints() {\n for(var i = 0; i < newpoints.length; i++) {\n    var point = new GPoint(newpoints[i][0],newpoints[i][1]);\n    var popuphtml = newpoints[i][4] ;\n    var marker = createMarker(point,newpoints[i][2],popuphtml);\n    map.addOverlay(marker);\n }\n}\n\n\n\n// Agrega los eventos a los GIcons.\nfunction addMarkersEvent(whois,type, marker,popuphtml){\n\n     GEvent.addListener(marker, \"dragstart\", function() {\n                map.closeInfoWindow();\n         });\n   \n     GEvent.addListener(marker, \"click\", function() {\n        marker.openInfoWindowHtml (popuphtml);\n     });\n   \n      // This line highlights the marker when it's clicked\n          GEvent.addListener(marker, \"click\", function() {\n          currentMarker = marker;\n          highlightCurrentMarker(type);   \n          });\n\n      // This line highlights the marker when its moused over\n          GEvent.addListener(marker, \"mouseover\", function() {\n          currentMarker = marker;\n          highlightCurrentMarker(type);   \n          });\n\n       // This line highlights the marker while dragging and keeps updated de input fields.\n          GEvent.addListener(marker, \"drag\", function() {\n          currentMarker = marker;\n          highlightCurrentMarker(type);   \n          if(whois!=\"false\"){\n                    if(whois==\"N-O\"){       \n                document.getElementById (\"longA\").value=marker.getPoint ().lng();\n                document.getElementById(\"latA\").value=marker.getPoint().lat();\n            }else{\n                document.getElementById(\"longB\").value= marker.getPoint().lng();\n                document.getElementById(\"latB\").value=marker.getPoint().lat();\n            }\n            updatePointSelectors();\n\n            if (areaSelector) {\n                    map.removeOverlay(areaSelector);\n                }           \n          \n            areaSelector = new GPolygon([\n            new GLatLng(latNO, longNO),\n            new GLatLng(latSE, longNO),\n            new GLatLng(latSE, longSE),\n            new GLatLng(latNO, longSE),\n            new GLatLng(latNO, longNO)\n            ],\n            \"#f33f00\", 1, 1, \"#ff0000\", 0.2);\n            map.addOverlay(areaSelector);   \n            }   \n        });\n    return marker;\n}\n\n\n\n//Crea los Gmarkers que representan los puntos pasados como parametros.\nfunction createMarker(point, icon, popuphtml) {\n    var marker = new GMarker(point,icon0);\n    marker = addMarkersEvent(\"false\",\"false\", marker,popuphtml);\n    return marker;\n}\n\n\n//]]>\n    </script>\n\n  <div id=\"map\" style=\"width: 600px; height: 450px\"></div>\n</div>\n "
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <env:Body>
+      <n1:GeoreferenceResponse env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          xmlns:n1="urn:ActionWebService">
+        <return xsi:type="xsd:string">
+  
+  &lt;div align=&quot;center&quot;&gt;
+  
+  &lt;script src=&quot; http://maps.google.com/maps?file=api&amp;amp;v=2&amp;amp;key=ABQIAAAAQXg9v_4YZgsHMjQDNACQQxRU8pCR_eiJ8Aijvq5aFAMflX02ShQ7Q6JFi9Y76LM_qy6ERhrZnH7Tvw&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+  
+  
+  //&lt;![CDATA[
+  var map;
+  var icon0;
+  var icon1;
+  
+  var latNO;
+  var longNO;
+  var latSE;
+  var longSE;
+  
+  var areaSelector;
+  
+  var newpoints = new Array();
+  var highlightCircle;
+  var currentMarker;
+  
+  addLoadEvent(loadMap);
+  addLoadEvent(addPoints);
+  
+  
+  //Funcion que se encarga de iluminar los GIcons.
+  function highlightCurrentMarker(type){
+        var markerPoint = currentMarker.getPoint();
+        var polyPoints = Array();
+  
+        if (highlightCircle) {
+          map.removeOverlay(highlightCircle);
+        }
+  
+        var mapNormalProj = G_NORMAL_MAP.getProjection();
+        var mapZoom = map.getZoom();
+        var clickedPixel = mapNormalProj.fromLatLngToPixel(markerPoint, mapZoom);
+        var polySmallRadius = 20;
+        var polyNumSides = 20;
+        var polySideLength = 18;
+  
+        for (var a = 0; a&lt;(polyNumSides+1); a++) {
+          var aRad = polySideLength*a*( Math.PI/180);
+          var polyRadius = polySmallRadius;
+                 var pixelX = clickedPixel.x + polyRadius * Math.cos(aRad);
+          var pixelY = clickedPixel.y + polyRadius * Math.sin(aRad);
+          var polyPixel = new GPoint(pixelX,pixelY);
+          var polyPoint = mapNormalProj.fromPixelToLatLng(polyPixel,mapZoom);
+          polyPoints.push(polyPoint);
+        }  
+        if (type == &quot;draggable&quot;) {
+             highlightCircle = new GPolygon(polyPoints,&quot;#000000&quot;,2, 0.0,&quot;#FF0000&quot;,.5);
+        }else{
+             highlightCircle = new GPolygon(polyPoints,&quot;#000000&quot;,2,0.0,&quot;#FF00FF&quot;,.5);
+        }
+      map.addOverlay(highlightCircle);
+     }
+  
+  
+  
+  
+  function addLoadEvent(func) {
+      var oldonload = window.onload;
+      if (typeof window.onload != &apos;function&apos;){
+          window.onload = func
+      } else {
+          window.onload = function() {
+              oldonload();
+              func();
+          }
+      }
+  }
+   
+  
+  
+  // Agrega al mapa los 2 selectores y carga por primera vez los input fields asociados al GMarker.
+  function createSelectors(){
+      var counter = 0;
+      var marker;
+  
+      var addSelectors = GEvent.bind(map, &quot;click&quot;, this, function(marker,point) {         
+              //Se define el GIcon por defecto
+              icon1 = new GIcon();
+              icon1.image = &quot;http://maps.google.com/mapfiles/arrow.png&quot;;
+              icon1.iconSize = new GSize(39, 34);
+              icon1.iconAnchor = new GPoint(11, 34);
+              icon1.infoWindowAnchor = new GPoint(9, 2);
+              icon1.infoShadowAnchor = new GPoint(18, 25);  
+  
+              if (counter &lt;= 1) {
+                if (point &amp;&amp; counter==1){
+               marker = new GMarker(point, {draggable:true, title:&quot;Soy un delimitador&quot;, icon:icon1});
+               document.getElementById(&quot;longB&quot;).value=marker.getPoint().lng();
+                document.getElementById(&quot;latB&quot;).value=marker.getPoint().lat();
+               updatePointSelectors();
+               map.addOverlay(addMarkersEvent(&quot;S-E&quot;,&quot;draggable&quot;, marker, &quot;&lt;br/&gt;Upss, soy un selector.&quot;));
+            
+               if (areaSelector) {
+                      map.removeOverlay(areaSelector);
+                   }
+  
+               areaSelector = new GPolygon([
+               new GLatLng(latNO, longNO),
+               new GLatLng(latSE, longNO),
+               new GLatLng(latSE, longSE),
+               new GLatLng(latNO, longSE),
+               new GLatLng(latNO, longNO)
+               ],
+              &quot;#f33f00&quot;, 1, 1, &quot;#ff0000&quot;, 0.2);
+              map.addOverlay(areaSelector);               
+  
+  
+                }else{
+               marker = new GMarker(point, {draggable:true, title:&quot;Soy un delimitador&quot;, icon:icon1});       
+               document.getElementById(&quot;longA&quot;).value=marker.getPoint().lng();
+                document.getElementById(&quot;latA&quot;).value=marker.getPoint().lat();
+               updatePointSelectors();
+                map.addOverlay(addMarkersEvent(&quot;N-O&quot;,&quot;draggable&quot;, marker, &quot;&lt;br/&gt;Upss, soy un selector.&quot;));
+                }
+                 counter++;
+              } else {
+                  GEvent.removeListener (addSelectors);
+              }
+      });
+  }
+  
+  //Keeps updated the points of the areaSelectors.
+  function updatePointSelectors(){
+   latNO = document.getElementById(&quot;latA&quot;).value;
+   longNO = document.getElementById (&quot;longA&quot;).value;
+   latSE = document.getElementById(&quot;latB&quot;).value;
+   longSE = document.getElementById(&quot;longB&quot;).value;
+  }
+  
+  
+  
+  function loadMap() {
+      map = new GMap2(document.getElementById (&quot;map&quot;));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng( 6.664607562172585, -64.248046875 ), 5, G_HYBRID_MAP);
+     
+      //Se define el GIcon por defecto
+      icon0 = new GIcon();
+      icon0.image = &quot;http://www.google.com/mapfiles/marker.png&quot;;
+      icon0.iconSize = new GSize(20, 34);
+      icon0.iconAnchor = new GPoint(9, 34);
+      icon0.infoWindowAnchor = new GPoint(9, 2);
+      icon0.infoShadowAnchor = new GPoint(18, 25);
+  
+      if(document.getElementById (&quot;longA&quot;) &amp;&amp; document.getElementById(&quot;latA&quot;) &amp;&amp; document.getElementById(&quot;longB&quot;) &amp;&amp; document.getElementById(&quot;latB&quot;)){
+          createSelectors();
+      }
+  }
+   
+  
+  
+  
+  // Agrega los Gmarkers pasados como parametros.
+  function addPoints() {
+   for(var i = 0; i &lt; newpoints.length; i++) {
+      var point = new GPoint(newpoints[i][0],newpoints[i][1]);
+      var popuphtml = newpoints[i][4] ;
+      var marker = createMarker(point,newpoints[i][2],popuphtml);
+      map.addOverlay(marker);
+   }
+  }
+  
+  
+  
+  // Agrega los eventos a los GIcons.
+  function addMarkersEvent(whois,type, marker,popuphtml){
+  
+       GEvent.addListener(marker, &quot;dragstart&quot;, function() {
+                  map.closeInfoWindow();
+           });
+     
+       GEvent.addListener(marker, &quot;click&quot;, function() {
+          marker.openInfoWindowHtml (popuphtml);
+       });
+     
+        // This line highlights the marker when it&apos;s clicked
+            GEvent.addListener(marker, &quot;click&quot;, function() {
+            currentMarker = marker;
+            highlightCurrentMarker(type);   
+            });
+  
+        // This line highlights the marker when its moused over
+            GEvent.addListener(marker, &quot;mouseover&quot;, function() {
+            currentMarker = marker;
+            highlightCurrentMarker(type);   
+            });
+  
+         // This line highlights the marker while dragging and keeps updated de input fields.
+            GEvent.addListener(marker, &quot;drag&quot;, function() {
+            currentMarker = marker;
+            highlightCurrentMarker(type);   
+            if(whois!=&quot;false&quot;){
+                      if(whois==&quot;N-O&quot;){       
+                  document.getElementById (&quot;longA&quot;).value=marker.getPoint ().lng();
+                  document.getElementById(&quot;latA&quot;).value=marker.getPoint().lat();
+              }else{
+                  document.getElementById(&quot;longB&quot;).value= marker.getPoint().lng();
+                  document.getElementById(&quot;latB&quot;).value=marker.getPoint().lat();
+              }
+              updatePointSelectors();
+  
+              if (areaSelector) {
+                      map.removeOverlay(areaSelector);
+                  }           
+            
+              areaSelector = new GPolygon([
+              new GLatLng(latNO, longNO),
+              new GLatLng(latSE, longNO),
+              new GLatLng(latSE, longSE),
+              new GLatLng(latNO, longSE),
+              new GLatLng(latNO, longNO)
+              ],
+              &quot;#f33f00&quot;, 1, 1, &quot;#ff0000&quot;, 0.2);
+              map.addOverlay(areaSelector);   
+              }   
+          });
+      return marker;
+  }
+  
+  
+  
+  //Crea los Gmarkers que representan los puntos pasados como parametros.
+  function createMarker(point, icon, popuphtml) {
+      var marker = new GMarker(point,icon0);
+      marker = addMarkersEvent(&quot;false&quot;,&quot;false&quot;, marker,popuphtml);
+      return marker;
+  }
+  
+  
+  //]]&gt;
+      &lt;/script&gt;
+  
+    &lt;div id=&quot;map&quot; style=&quot;width: 600px; height: 450px&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+   </return>
+      </n1:GeoreferenceResponse>
+    </env:Body>
+  </env:Envelope>
+Sending data 
+Completed in 0.00931 (107 reqs/sec) | Rendering: 0.00003 (0%) | 200 OK [http://www.argus.cesma.usb.ve/georeference/api]
+
+
+Processing UsuarioController#welcome (for 159.90.15.21 at 2015-04-17 19:56:44) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00480 (208 reqs/sec) | Rendering: 0.00446 (92%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 159.90.15.21 at 2015-04-17 19:56:44) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00195 (513 reqs/sec) | Rendering: 0.00158 (81%) | 200 OK [http://www.argus.cesma.usb.ve/]
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+ServicioController: missing default helper path servicio_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+GeoreferenceController: missing default helper path georeference_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /opt/argus/ARGUs/config/environment.rb:79)
+
+
+Processing UsuarioController#welcome (for 159.90.15.21 at 2015-04-17 19:58:30) [GET]
+  Session ID: 780c43c26ca4a2a5f234c86f19bb1042
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00480 (208 reqs/sec) | Rendering: 0.00445 (92%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 186.167.243.24 at 2015-04-17 21:18:35) [GET]
+  Session ID: 9a877bc4e8832ab007d13cbbfde7c546
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00441 (226 reqs/sec) | Rendering: 0.00366 (82%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 205.211.157.18 at 2015-04-17 21:19:10) [GET]
+  Session ID: d940c202b536cc5fc46d14c33ab4b1f5
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00205 (488 reqs/sec) | Rendering: 0.00170 (82%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing ReportesarController#listado (for 205.211.157.18 at 2015-04-17 21:19:18) [GET]
+  Session ID: d940c202b536cc5fc46d14c33ab4b1f5
+  Parameters: {"action"=>"listado", "controller"=>"reportesar"}
+Rendering  within layouts/application
+Rendering reportesar/listado
+Completed in 0.00344 (290 reqs/sec) | Rendering: 0.00307 (89%) | 200 OK [http://argus.cesma.usb.ve/reportesar/listado]
+
+
+Processing ReportesarController#prepvariable (for 205.211.157.18 at 2015-04-17 21:19:21) [GET]
+  Session ID: d940c202b536cc5fc46d14c33ab4b1f5
+  Parameters: {"action"=>"prepvariable", "controller"=>"reportesar"}
+  [4;36;1mVariableDimensionAr Load (0.004376)[0m   [0;1mSELECT * FROM variable_dimension ORDER BY nombre_hc ASC[0m
+  [4;35;1mSQL (0.003560)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering reportesar/prepvariable
+Completed in 0.04437 (22 reqs/sec) | Rendering: 0.00609 (13%) | DB: 0.00794 (17%) | 200 OK [http://argus.cesma.usb.ve/reportesar/prepvariable]
+
+
+Processing ReportesarController#variable (for 205.211.157.18 at 2015-04-17 21:19:24) [POST]
+  Session ID: d940c202b536cc5fc46d14c33ab4b1f5
+  Parameters: {"commit"=>"Generar", "variable"=>{"id"=>"83"}, "action"=>"variable", "controller"=>"reportesar"}
+  [4;36;1mSQL (0.001172)[0m   [0;1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;35;1mVariableDimensionAr Load (0.000616)[0m   [0mSELECT * FROM variable_dimension WHERE (variable_dimension."id" = 83) [0m
+  [4;36;1mMedidavarhcFactAr Load (0.417113)[0m   [0;1mSELECT
+ "medidavarhc_facts"."valor_m",
+ "tiempo_dimension"."tiempo",
+ "nivelagregacion_dimension"."nivel_agregacion",
+ "unidad_dimension"."unidad_medida_u",
+ "estacion_dimension"."nombre_est",
+	 "estaciones"."serial_e"
+ FROM
+ "medidavarhc_facts" INNER JOIN "tiempo_dimension" ON "medidavarhc_facts"."tiempo_id" = "tiempo_dimension"."id"
+ INNER JOIN "variable_dimension" ON "medidavarhc_facts"."variable_id" = "variable_dimension"."id"
+ INNER JOIN "estacion_dimension" ON "medidavarhc_facts"."estacion_id" = "estacion_dimension"."id"
+ INNER JOIN "estaciones" ON "medidavarhc_facts"."estacion_id" = "estaciones"."id"
+	 INNER JOIN "nivelagregacion_dimension" ON "medidavarhc_facts"."nivelagregacion_id" = "nivelagregacion_dimension"."id"
+ INNER JOIN "unidad_dimension" ON "medidavarhc_facts"."unidad_id" = "unidad_dimension"."id"
+ WHERE
+ "medidavarhc_facts"."variable_id" = 83
+ ORDER BY
+ "estacion_dimension"."nombre_est"[0m
+  [4;35;1mSQL (0.001126)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'medidavarhc_facts'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Sending data 
+Completed in 1.24240 (0 reqs/sec) | Rendering: 0.00003 (0%) | DB: 0.42003 (33%) | 200 OK [http://argus.cesma.usb.ve/reportesar/variable]
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-18 00:24:40) [GET]
+  Session ID: 5a2df089e1d52a36795b28130ce400f8
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00453 (220 reqs/sec) | Rendering: 0.00374 (82%) | DB: 0.00000 (0%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-18 00:34:20) [GET]
+  Session ID: 59f8831ec909d9e6908b3970e0f24032
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00458 (218 reqs/sec) | Rendering: 0.00377 (82%) | DB: 0.00000 (0%) | 200 OK [http://www.argus.cesma.usb.ve/]
