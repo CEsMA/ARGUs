@@ -64,6 +64,7 @@ postgres=# \q
 \end{verbatim}
 \subsection{Archivos de Configuración de Argus}
 \item[] cp ./install/mongrel.sh /etc/init.d
+\item[] ln -s /usr/lib/insserv/insserv /usr/sbin/insserv
 \item[] update-rc.d mongrel.sh defaults
 \begin{verbatim}
  tar zxvf ./repo/Argus.tgz -C /opt/argus
