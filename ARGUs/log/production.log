@@ -15,3 +15,193 @@ Processing ReportesarController#listado (for 190.199.180.163 at 2015-04-18 00:35
 Rendering  within layouts/application
 Rendering reportesar/listado
 Completed in 0.00696 (143 reqs/sec) | Rendering: 0.00615 (88%) | 200 OK [http://www.argus.cesma.usb.ve/reportesar/listado]
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-18 00:44:31) [GET]
+  Session ID: 59f8831ec909d9e6908b3970e0f24032
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.04100 (24 reqs/sec) | Rendering: 0.04025 (98%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 62.210.132.6 at 2015-04-18 02:32:03) [GET]
+  Session ID: b68855c8c2f8f5001f99eb13c9ed658b
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.03852 (25 reqs/sec) | Rendering: 0.03775 (98%) | 200 OK [http://159.90.14.230/]
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-18 06:29:44) [GET]
+  Session ID: 2112d7bae9179405be6db218f6476c41
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.03120 (32 reqs/sec) | Rendering: 0.03105 (99%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-18 06:30:07) [GET]
+  Session ID: 8a422903f1bacb62b681ca9f9f18af2d
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00260 (385 reqs/sec) | Rendering: 0.00245 (94%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-18 07:16:44) [GET]
+  Session ID: 59f8831ec909d9e6908b3970e0f24032
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.02896 (34 reqs/sec) | Rendering: 0.02822 (97%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-18 07:21:18) [GET]
+  Session ID: 59f8831ec909d9e6908b3970e0f24032
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00122 (816 reqs/sec) | Rendering: 0.00115 (93%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing ApplicationController#index (for 97.123.105.201 at 2015-04-18 12:14:40) [GET]
+  Session ID: a3695fb1abad8ba9a59d098b7b6ad12f
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/stylesheets/images/img04.gif" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+
+
+Processing EstacioneController#georeferenciame (for 97.123.105.201 at 2015-04-18 12:14:42) [GET]
+  Session ID: a3695fb1abad8ba9a59d098b7b6ad12f
+  Parameters: {"action"=>"georeferenciame", "controller"=>"estacione"}
+
+
+Timeout::Error (execution expired):
+    /usr/lib/ruby/1.8/timeout.rb:64:in `rbuf_fill'
+    /usr/lib/ruby/1.8/net/protocol.rb:134:in `rbuf_fill'
+    /usr/lib/ruby/1.8/net/protocol.rb:116:in `readuntil'
+    /usr/lib/ruby/1.8/net/protocol.rb:126:in `readline'
+    /usr/lib/ruby/1.8/net/http.rb:2028:in `read_status_line'
+    /usr/lib/ruby/1.8/net/http.rb:2017:in `read_new'
+    /usr/lib/ruby/1.8/net/http.rb:1051:in `request'
+    /usr/lib/ruby/1.8/net/http.rb:845:in `post'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:93:in `post'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:116:in `start'
+    /usr/lib/ruby/1.8/net/http.rb:543:in `start'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:115:in `start'
+    /usr/lib/ruby/1.8/soap/netHttpClient.rb:92:in `post'
+    /usr/lib/ruby/1.8/soap/streamHandler.rb:170:in `send_post'
+    /usr/lib/ruby/1.8/soap/streamHandler.rb:109:in `send'
+    /usr/lib/ruby/1.8/soap/rpc/proxy.rb:170:in `route'
+    /usr/lib/ruby/1.8/soap/rpc/proxy.rb:141:in `call'
+    /usr/lib/ruby/1.8/soap/rpc/driver.rb:178:in `call'
+    (eval):6:in `georeference'
+    /app/controllers/estacione_controller.rb:211:in `georeferenciame'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:634:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:638:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:438:in `call'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:637:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+
+
+Processing GeoreferenceController#api (for 159.90.14.230 at 2015-04-18 12:15:42) [POST]
+  Session ID: 84cd439e465c13968752206ef5302f0f
+  Parameters: {"action"=>"api", "controller"=>"georeference"}
+Sending data 
+Completed in 0.01120 (89 reqs/sec) | Rendering: 0.00005 (0%) | 200 OK [http://www.argus.cesma.usb.ve/georeference/api]
+
+
+Processing UsuarioController#welcome (for 186.92.207.218 at 2015-04-18 20:54:29) [GET]
+  Session ID: 8cc968023997924ad8043ed7f2c7da0d
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.03143 (31 reqs/sec) | Rendering: 0.03068 (97%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 186.92.207.218 at 2015-04-18 20:54:30) [GET]
+  Session ID: ab1216ee42c5f66175feec0e7fa80573
+  Parameters: {"action"=>"welcome", "controller"=>"usuario"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.03815 (26 reqs/sec) | Rendering: 0.03801 (99%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 186.92.207.218 at 2015-04-18 21:30:50) [GET]
+  Session ID: ab1216ee42c5f66175feec0e7fa80573
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.01397 (71 reqs/sec) | Rendering: 0.01358 (97%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 186.92.207.218 at 2015-04-18 21:31:22) [GET]
+  Session ID: ab1216ee42c5f66175feec0e7fa80573
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00262 (382 reqs/sec) | Rendering: 0.00247 (94%) | 200 OK [http://www.argus.cesma.usb.ve/]
