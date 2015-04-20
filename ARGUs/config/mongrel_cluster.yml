@@ -1,0 +1,8 @@
+--- 
+servers: 2
+log_file: log/mongrel.log
+address: 127.0.0.1
+pid_file: tmp/pids/mongrel.pid
+cwd: /opt/argus/ARGUs
+port: "80"
+environment: production

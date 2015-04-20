@@ -1,10 +1,13 @@
-<h1>Por favor seleccione la variable y el estado para generar su reporte.</h1>
+<h1>Seleccione la variable 
+y la entidad federal a consultar, 
+el reporte esta limitado 
+por las fechas especificadas</h1>
 
 <% form_tag :action => 'variableestadofechas' do %>
   <p><label for="Variable">Variable:</label><br/>
     <%= collection_select("variable", "id", @variables, :id, :nombre_hc ) %>
   
-  <p><label for="Estado">Estado:</label><br/>
+  <p><label for="Estado">Entidad federal:</label><br/>
     <%= collection_select("estado", "acronimo", @estados, :acronimo_estado, :nombre ) %>
 
   <p><label for="FechaInicio">Fecha Inicial:</label></p>
