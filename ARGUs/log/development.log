@@ -56019,3 +56019,317 @@ Processing ReportesarController#prepestacionvariable (for 159.90.15.21 at 2015-0
 Rendering  within layouts/application
 Rendering reportesar/prepestacionvariable
 Completed in 0.25503 (3 reqs/sec) | Rendering: 0.03261 (12%) | DB: 0.04485 (17%) | 200 OK [http://argus.cesma.usb.ve/reportesar/prepestacionvariable]
+SimpleCaptchaController: missing default helper path simple_captcha_helper
+DescargasController: missing default helper path descargas_helper
+ServicioController: missing default helper path servicio_helper
+CargadwController: missing default helper path cargadw_helper
+ContactenosController: missing default helper path contactenos_helper
+GeoreferenceController: missing default helper path georeference_helper
+ConsultasfisicasController: missing default helper path consultasfisicas_helper
+ServicioSemanticoController: missing default helper path servicio_semantico_helper
+DEPRECATION WARNING: server_settings has been renamed smtp_settings, this warning will be removed with rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from /opt/argus/ARGUs/config/environment.rb:79)
+
+
+Processing ReportesarController#prepestacionvariable (for 159.90.15.21 at 2015-04-20 17:42:22) [GET]
+  Session ID: 56d32b3f1b999e7d5e6bda61484544b3
+  Parameters: {"controller"=>"reportesar", "action"=>"prepestacionvariable"}
+  [4;36;1mEstacione Load (0.139136)[0m   [0;1mSELECT * FROM estaciones ORDER BY nombre ASC[0m
+  [4;35;1mSQL (0.068959)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'estaciones'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [4;36;1mVariableDimensionAr Load (0.005171)[0m   [0;1mSELECT * FROM variable_dimension ORDER BY nombre_hc ASC[0m
+  [4;35;1mSQL (0.000847)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering reportesar/prepestacionvariable
+Completed in 0.56530 (1 reqs/sec) | Rendering: 0.04611 (8%) | DB: 0.21411 (37%) | 200 OK [http://argus.cesma.usb.ve/reportesar/prepestacionvariable]
+
+
+Processing UsuarioController#welcome (for 159.90.15.21 at 2015-04-20 17:42:27) [GET]
+  Session ID: 56d32b3f1b999e7d5e6bda61484544b3
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.02132 (46 reqs/sec) | Rendering: 0.02048 (96%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 190.77.122.186 at 2015-04-20 17:52:12) [GET]
+  Session ID: 3676bbe7e46203ea8dfb9ffe183e9c04
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00212 (471 reqs/sec) | Rendering: 0.00174 (82%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing ReportesarController#prepvariable (for 159.90.14.49 at 2015-04-20 18:07:32) [GET]
+  Session ID: 063acb8edb584cb3a1258008fdee8a68
+  Parameters: {"controller"=>"reportesar", "action"=>"prepvariable"}
+  [4;36;1mVariableDimensionAr Load (0.001280)[0m   [0;1mSELECT * FROM variable_dimension ORDER BY nombre_hc ASC[0m
+  [4;35;1mSQL (0.000876)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering reportesar/prepvariable
+Completed in 0.01632 (61 reqs/sec) | Rendering: 0.00746 (45%) | DB: 0.00216 (13%) | 200 OK [http://argus.cesma.usb.ve/reportesar/prepvariable]
+
+
+Processing UsuarioController#welcome (for 159.90.14.49 at 2015-04-20 18:07:36) [GET]
+  Session ID: 063acb8edb584cb3a1258008fdee8a68
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00459 (217 reqs/sec) | Rendering: 0.00375 (81%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 159.90.14.49 at 2015-04-20 18:23:57) [GET]
+  Session ID: 063acb8edb584cb3a1258008fdee8a68
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00447 (223 reqs/sec) | Rendering: 0.00371 (82%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 98.210.241.142 at 2015-04-20 18:24:58) [GET]
+  Session ID: e5c44b14b7f98372ea8f57238ef86837
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00425 (235 reqs/sec) | Rendering: 0.00352 (82%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 98.210.241.142 at 2015-04-20 19:46:48) [GET]
+  Session ID: e5c44b14b7f98372ea8f57238ef86837
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00454 (220 reqs/sec) | Rendering: 0.00375 (82%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing ReportesarController#listado (for 98.210.241.142 at 2015-04-20 19:46:55) [GET]
+  Session ID: e5c44b14b7f98372ea8f57238ef86837
+  Parameters: {"controller"=>"reportesar", "action"=>"listado"}
+Rendering  within layouts/application
+Rendering reportesar/listado
+Completed in 0.00839 (119 reqs/sec) | Rendering: 0.00791 (94%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/reportesar/listado]
+
+
+Processing UsuarioController#welcome (for 54.225.104.196 at 2015-04-20 21:27:54) [GET]
+  Session ID: 1dcb8d1db45db87cfaa4a02adb22d617
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00195 (513 reqs/sec) | Rendering: 0.00159 (81%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-20 21:28:05) [GET]
+  Session ID: ab1216ee42c5f66175feec0e7fa80573
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00219 (457 reqs/sec) | Rendering: 0.00179 (81%) | DB: 0.00000 (0%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-20 21:28:05) [GET]
+  Session ID: ab1216ee42c5f66175feec0e7fa80573
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00202 (495 reqs/sec) | Rendering: 0.00166 (82%) | DB: 0.00000 (0%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 107.21.253.49 at 2015-04-20 21:28:16) [GET]
+  Session ID: c3850c92cc9c23f2faaaa1af63895ad6
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00420 (237 reqs/sec) | Rendering: 0.00347 (82%) | DB: 0.00000 (0%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing ReportesarController#listado (for 190.199.180.163 at 2015-04-20 21:34:58) [GET]
+  Session ID: ab1216ee42c5f66175feec0e7fa80573
+  Parameters: {"controller"=>"reportesar", "action"=>"listado"}
+Rendering  within layouts/application
+Rendering reportesar/listado
+Completed in 0.00596 (167 reqs/sec) | Rendering: 0.00517 (86%) | DB: 0.00000 (0%) | 200 OK [http://www.argus.cesma.usb.ve/reportesar/listado]
+
+
+Processing ReportesarController#prepvariable (for 190.199.180.163 at 2015-04-20 21:35:03) [GET]
+  Session ID: ab1216ee42c5f66175feec0e7fa80573
+  Parameters: {"controller"=>"reportesar", "action"=>"prepvariable"}
+  [4;36;1mVariableDimensionAr Load (0.000737)[0m   [0;1mSELECT * FROM variable_dimension ORDER BY nombre_hc ASC[0m
+  [4;35;1mSQL (0.000872)[0m   [0m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = 'variable_dimension'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Rendering  within layouts/application
+Rendering reportesar/prepvariable
+Completed in 0.01283 (77 reqs/sec) | Rendering: 0.00530 (41%) | DB: 0.00161 (12%) | 200 OK [http://www.argus.cesma.usb.ve/reportesar/prepvariable]
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-20 21:35:08) [GET]
+  Session ID: ab1216ee42c5f66175feec0e7fa80573
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00208 (480 reqs/sec) | Rendering: 0.00170 (81%) | DB: 0.00000 (0%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-20 21:35:31) [GET]
+  Session ID: 40ca1e241f313ee0777bd06e223632d2
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00209 (478 reqs/sec) | Rendering: 0.00171 (81%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 190.72.237.14 at 2015-04-20 21:36:55) [GET]
+  Session ID: 863bb8f073ccb38a1a58b9bd4f903f81
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00444 (225 reqs/sec) | Rendering: 0.00368 (82%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 198.229.1.169 at 2015-04-20 21:37:53) [GET]
+  Session ID: f3302adb6084de509e66e444c54c8363
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00213 (470 reqs/sec) | Rendering: 0.00173 (81%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/]
+
+
+Processing ApplicationController#index (for 190.72.237.14 at 2015-04-20 21:38:03) [GET]
+  Session ID: 863bb8f073ccb38a1a58b9bd4f903f81
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/www.r-project.org" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ApplicationController#index (for 190.199.180.163 at 2015-04-20 21:39:31) [GET]
+  Session ID: ab1216ee42c5f66175feec0e7fa80573
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/www.r-project.org" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ApplicationController#index (for 190.199.180.163 at 2015-04-20 21:39:39) [GET]
+  Session ID: ab1216ee42c5f66175feec0e7fa80573
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/www.aviacion.mil.ve/" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:23:in `load'
+    /usr/local/bin/mongrel_rails:23
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing UsuarioController#welcome (for 190.199.180.163 at 2015-04-20 21:42:50) [GET]
+  Session ID: ab1216ee42c5f66175feec0e7fa80573
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00241 (414 reqs/sec) | Rendering: 0.00202 (83%) | DB: 0.00000 (0%) | 200 OK [http://www.argus.cesma.usb.ve/]
+
+
+Processing UsuarioController#welcome (for 190.72.237.14 at 2015-04-20 21:45:29) [GET]
+  Session ID: 863bb8f073ccb38a1a58b9bd4f903f81
+  Parameters: {"controller"=>"usuario", "action"=>"welcome"}
+Rendering  within layouts/application
+Rendering usuario/welcome
+Completed in 0.00445 (224 reqs/sec) | Rendering: 0.00368 (82%) | DB: 0.00000 (0%) | 200 OK [http://argus.cesma.usb.ve/]
