@@ -13,7 +13,13 @@
           <% while contador < (@consultasShow.size)/4 %>
               <tr class ="<%= cycle('list-line-odd', 'list-line-even') %>" >
                 <td><%= @consultasShow[1+contador*4] %></td>
-                 <td><%= link_to "[Consultar]", :action => "consultarRepositorio", :id=> @consultasShow[contador*4] ,:title => @consultasShow[1+contador*4], :id_pred => @consultasShow[2+contador*4], :sql_query => @consultasShow[3+contador*4]%></td>
+                <% if @consultasShow[contador*4] != 6 %> 
+		<td><%= link_to "[Consultar]", :action => "consultarRepositorio", :id=> @consultasShow[contador*4] ,:title => @consultasShow[1+contador*4], :id_pred => @consultasShow[2+contador*4], :sql_query => @consultasShow[3+contador*4]%></td>
+		<% else %>    
+			<td>
+			    	[Consultar]
+			</td>
+		<% end %>
               </tr>
               <% contador = contador+1 %>
           <%end%>
@@ -22,6 +28,6 @@
 
 <br/><br/><br/>
  <div class="derecha">
-      <%= link_to image_tag("back4.png",:border => 0 ) + 'Regresar', :controller=>'consultasfisicas', :action => 'listarOpc' %>
-      <%= link_to image_tag("home.png",:border => 0 ) + 'Inicio', :controller=>'usuario',:action => 'welcome' %>
+      <%= link_to 'Regresar', :controller=>'consultasfisicas', :action => 'listarOpc' %>
+     <br /> <%= link_to 'Inicio', :controller=>'usuario',:action => 'welcome' %>
 </div>

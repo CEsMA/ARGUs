@@ -1,5 +1,5 @@
 <h1>Consultas disponibles</h1>
-
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;Todas las consultas muestran las variables seleccionadas, nombre de la estación, serial de la estación, tipo de estación, acrónimo del estado al cual pertence la estación, mediciones de las mismas, la altura y fecha de toma de la muestra.</h2>
 <table border="1">
 
 
@@ -61,6 +61,10 @@
   <tr>
     <td align="center"><h4i><%= link_to "Variable, entidad federal y fechas", :controller => "reportesar", :action => "prepvariableestadofechas" %></h4i></td>
     <td align="center"><h4i>Se especifica una variable y un estado y se proveen todas sus mediciones efectuadas dentro de las fechas especificadas.</h4i></td>
+  </tr>
+  <tr>
+    <td align="center"><h4i><%= link_to "Consultas Personalizadas", :controller => "consultasfisicas", :action => "listarOpc" %></h4i></td>
+    <td align="center"><h4i>Seleccione un concepto sobre el cuál desee conocer información y realice una búsqueda.</h4i></td>
   </tr>
   
 </table>

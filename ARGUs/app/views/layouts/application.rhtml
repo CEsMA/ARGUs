@@ -92,15 +92,13 @@ function checkMaxLength() {
       <ul class="sidemenu">
         <li><%= link_to "Inicio", :controller => "usuario", :action => "welcome" %></li>
 		<li> <%= link_to "Consultas Base de Datos", :controller => "reportesar", :action => "listado" %></li>
-		<li> <%= link_to "Manual HIDROX", "http://www.cesma.usb.ve/~andres/hidrox.pdf" %></li>
+
+		<li> <%= link_to "Consultas Personalizadas", :controller => "consultasfisicas", :action => "listarOpc" %></li> 
+		<li> <%= link_to "Manual HIDROX", "http://www.cesma.usb.ve/hidrox/" %></li>
 		<li> <%= link_to "Paquete vetools", "http://cran.r-project.org/package=vetools" %></li>
 		<li> <%= link_to "CEsMA", "http://www.cesma.usb.ve" %></li>
-		<li> <%= link_to "BWL" %></li>
+		<!-- <li> <%= link_to "BWL" %></li> -->
 		<li> <%= link_to "USB", "http://www.usb.ve" %> </li>
-		<!-- Solo los NO Registrados (no logueados) ven esta opción 
-		<li> <%= link_to "Georeferenciación de estaciones", :controller => "estacione", :action => "georeferenciame" %></li> 
-                 <li> <%= link_to "Repositorio", :controller => "consultasfisicas", :action => "listarOpc" %></li> 
-		 Si no está logueado, veo la forma para entrar, si estoy en inicio. Cierro el "ul" -->
 		<!--	
 		<% unless (logged_in?) %>
 		  </ul>

